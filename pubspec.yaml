@@ -1,0 +1,97 @@
+name: ielts
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  smooth_page_indicator: ^2.0.1
+  intl: ^0.20.3
+  collection: ^1.19.1
+  flutter_svg: ^2.3.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^6.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+  - assets/images/
+
+  fonts:
+  - family: IranSansX-Demi-bold
+    fonts:
+    - asset: assets/fonts/IRANSansX-DemiBold.ttf
+
+  - family: IranSansX-black
+    fonts:
+    - asset: assets/fonts/IRANSansX-Black.ttf
+
+  - family: IranSansX-bold
+    fonts:
+    - asset: assets/fonts/IRANSansXFaNum-Bold.ttf
+
+  - family: IranSansX-extra-black
+    fonts:
+    - asset: assets/fonts/IRANSansXFaNum-ExtraBlack.ttf
+
+  - family: IranSansX-extra-bold
+    fonts:
+    - asset: assets/fonts/IRANSansX-ExtraBold.ttf
+
+  - family: IranSansX-heavy
+    fonts:
+    - asset: assets/fonts/IRANSansX-Heavy.ttf
+
+  - family: IranSansX-light
+    fonts:
+    - asset: assets/fonts/IRANSansXFaNum-Light.ttf
+
+  - family: IranSansX-medium
+    fonts:
+    - asset: assets/fonts/IRANSansXFaNum-Medium.ttf
+
+  - family: IranSansX-regular
+    fonts:
+    - asset: assets/fonts/IRANSansXFaNum-Regular.ttf
+
+  - family: IranSansX-thin
+    fonts:
+    - asset: assets/fonts/IRANSansX-Thin.ttf
+
+  - family: IranSansX-ultra-light
+    fonts:
+    - asset: assets/fonts/IRANSansX-UltraLight.ttf
+
+  - family: Gilroy-Medium
+    fonts:
+    - asset: assets/fonts/GilroyMedium.ttf
