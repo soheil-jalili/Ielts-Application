@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ielts/screens/main_screen.dart';
+import 'package:ielts/screens/login_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Directionality(
         textDirection: TextDirection.rtl,
-        child: MainScreen(),
+        child: LoginScreen(),
       ),
     );
   }

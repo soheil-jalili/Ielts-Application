@@ -106,6 +106,17 @@ class AppColors {
   );
   static Color topArrowBackgroundColor = Color(0xffFAE4E6);
 
+  // Login Screen
+  static Color loginScreenLineColor = Color(0xff797E79).withValues(alpha: 0.8);
+  static Color loginScreenPrimaryColor = Color(0xffFFA31A);
+  static Color hintTextColor = Color(0xff6D6D6D).withValues(alpha: 50);
+  static Color strokeDownTextFieldColor = Color(
+    0xff6D6D6D,
+  ).withValues(alpha: 61);
+
+  // Button Colos
+  static Color buttonBackgroundColor = Color(0xffFFA31A);
+  static Color buttonShadowColor = Color(0xffFF9900).withValues(alpha: 0.2);
 
   // Bottom Navigation
   static const Color activeBottomNavigationLabelColor = Color(0xffFFA31A);

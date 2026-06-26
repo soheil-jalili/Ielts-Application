@@ -21,6 +21,9 @@ class $AssetsImagesGen {
   AssetGenImage get timeSquare =>
       const AssetGenImage('assets/images/Time Square.png');
 
+  /// File path: assets/images/apple.png
+  AssetGenImage get apple => const AssetGenImage('assets/images/apple.png');
+
   /// File path: assets/images/blur.png
   AssetGenImage get blur => const AssetGenImage('assets/images/blur.png');
 
@@ -58,6 +61,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/german-flag.png
   AssetGenImage get germanFlag =>
       const AssetGenImage('assets/images/german-flag.png');
+
+  /// File path: assets/images/google.png
+  AssetGenImage get google => const AssetGenImage('assets/images/google.png');
 
   /// File path: assets/images/hiro hamada 1.png
   AssetGenImage get hiroHamada1 =>
@@ -209,6 +215,7 @@ class $AssetsImagesGen {
   List<dynamic> get values => [
     play,
     timeSquare,
+    apple,
     blur,
     calendar,
     circle,
@@ -220,6 +227,7 @@ class $AssetsImagesGen {
     cup2,
     freeCourseShape3,
     germanFlag,
+    google,
     hiroHamada1,
     home,
     homeActive,
