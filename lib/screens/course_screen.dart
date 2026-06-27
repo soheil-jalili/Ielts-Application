@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:ielts/gen/assets.gen.dart';
-import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/widgets/course_title.dart';
 
 class CourseScreen extends StatelessWidget {
   const CourseScreen({super.key});
@@ -17,35 +16,7 @@ class CourseScreen extends StatelessWidget {
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                child: Row(
-                  children: [
-                    Text(
-                      'دوره های آموزشی',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontFamily: FontFamily.iranSansXDemiBold,
-                      ),
-                    ),
-                    Spacer(),
-                    Text(
-                      'بازگشت',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontFamily: FontFamily.iranSansXMedium,
-                      ),
-                    ),
-                    SizedBox(width: 10),
-                    SvgPicture.asset(
-                      Assets.images.leftCheveron,
-                      colorFilter: ColorFilter.mode(
-                        Colors.black,
-                        BlendMode.srcIn,
-                      ),
-                    ),
-                  ],
-                ),
+                child: CourseTitle(title: 'دوره های آموزشی'),
               ),
             ),
 
