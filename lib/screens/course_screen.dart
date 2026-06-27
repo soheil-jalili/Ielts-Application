@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ielts/gen/assets.gen.dart';
+import 'package:ielts/screens/course_detail_screen.dart';
 import 'package:ielts/widgets/course_title.dart';
 
 class CourseScreen extends StatelessWidget {
@@ -20,22 +21,39 @@ class CourseScreen extends StatelessWidget {
               ),
             ),
 
-            SliverList.builder(
-              itemCount: 4,
-              itemBuilder: (context, index) {
-                return GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    margin: EdgeInsets.only(
-                      top: index == 0 ? 20 : 0,
-                      bottom: index == 3 ? 124 : 24,
+            SliverPadding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              sliver: SliverList.builder(
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => CourseDetailScreen(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        top: index == 0 ? 20 : 0,
+                        bottom: index == 3 ? 124 : 24,
+                      ),
+                      height: 180,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Image.asset(
+                          Assets.images.banner1.path,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    width: double.infinity,
-                    height: 180,
-                    child: Image.asset(Assets.images.banner1.path),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
           ],
         ),

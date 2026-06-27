@@ -58,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
 
       body: IndexedStack(
         index: index,
-        children: [HomeScreen(), HomeScreen(), CourseScreen()],
+        children: [HomeScreen(), HomeScreen(), CourseScreen(), CourseScreen()],
       ),
 
       bottomNavigationBar: SafeArea(

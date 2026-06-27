@@ -27,9 +27,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/banner1.png
   AssetGenImage get banner1 => const AssetGenImage('assets/images/banner1.png');
 
-  /// File path: assets/images/banner2.png
-  AssetGenImage get banner2 => const AssetGenImage('assets/images/banner2.png');
-
   /// File path: assets/images/blur.png
   AssetGenImage get blur => const AssetGenImage('assets/images/blur.png');
 
@@ -53,6 +50,10 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/course.png
   AssetGenImage get course => const AssetGenImage('assets/images/course.png');
+
+  /// File path: assets/images/course_detail_cover.png
+  AssetGenImage get courseDetailCover =>
+      const AssetGenImage('assets/images/course_detail_cover.png');
 
   /// File path: assets/images/cup.png
   AssetGenImage get cup => const AssetGenImage('assets/images/cup.png');
@@ -186,6 +187,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/star.png
   AssetGenImage get star => const AssetGenImage('assets/images/star.png');
 
+  /// File path: assets/images/support.svg
+  String get support => 'assets/images/support.svg';
+
   /// File path: assets/images/three.png
   AssetGenImage get three => const AssetGenImage('assets/images/three.png');
 
@@ -223,7 +227,6 @@ class $AssetsImagesGen {
     timeSquare,
     apple,
     banner1,
-    banner2,
     blur,
     calendar,
     circle,
@@ -231,6 +234,7 @@ class $AssetsImagesGen {
     coruseImage,
     courseActive,
     course,
+    courseDetailCover,
     cup,
     cup2,
     freeCourseShape3,
@@ -269,6 +273,7 @@ class $AssetsImagesGen {
     starColorless,
     starFill,
     star,
+    support,
     three,
     time,
     topArrow,

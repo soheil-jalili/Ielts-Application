@@ -120,7 +120,6 @@ class AppColors {
     0xff6D6D6D,
   ).withValues(alpha: 61);
 
-
   // Verification Code Screen
   static Color textFieldBorderBottomVerificationCodeScreenColor = Color(
     0xff6D6D6D,
@@ -129,6 +128,13 @@ class AppColors {
   // Button Colos
   static Color buttonBackgroundColor = Color(0xffFFA31A);
   static Color buttonShadowColor = Color(0xffFF9900).withValues(alpha: 0.2);
+
+  // Course Detail Screen
+  static Color coruseDetailScreenTabViewColor = Color(0xfffaf4e8);
+  static Color courseDetailScreenSelectedTabTextColor = Color(0xffF15223);
+  static Color courseDetailScreenShadowTabColor = Color(
+    0xff040415,
+  ).withAlpha(10);
 
   // Bottom Navigation
   static const Color activeBottomNavigationLabelColor = Color(0xffFFA31A);
