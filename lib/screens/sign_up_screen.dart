@@ -3,23 +3,23 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/forget_password_screen.dart';
-import 'package:ielts/screens/sign_up_screen.dart';
+import 'package:ielts/screens/login_screen.dart';
 import 'package:ielts/widgets/buttons.dart';
 import 'package:ielts/widgets/login_with.dart';
 import 'package:ielts/widgets/text_fied_primary.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> {
   final TextEditingController usernameController = TextEditingController();
 
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController phoneNumberController = TextEditingController();
   bool isChecked = false;
 
   @override
@@ -54,11 +54,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-          
+
               Padding(
                 padding: const EdgeInsets.only(top: 47),
                 child: Text(
-                  'وارد حساب کاربری خود شوید .',
+                  'حساب کاربری خود را ایجاد کنید .',
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: FontFamily.iranSansXBold,
@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-          
+
               Expanded(
                 child: Container(
                   margin: const EdgeInsets.fromLTRB(24, 32, 24, 16.5),
@@ -76,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Padding(
                     padding: EdgeInsets.only(
-                      top: isKeyboardOpen ? 20 : 120,
+                      top: isKeyboardOpen ? 20 : 127,
                       left: 32,
                       right: 32,
                     ),
@@ -87,16 +87,22 @@ class _LoginScreenState extends State<LoginScreen> {
                             controller: usernameController,
                             hintText: 'نام کاربری',
                           ),
-          
+
                           SizedBox(height: 24),
                           TextFieldPrimary(
                             controller: passwordController,
                             hintText: 'رمز عبور',
                             isPassword: true,
                           ),
-          
-                          SizedBox(height: 27),
-          
+                          SizedBox(height: 24),
+                          TextFieldPrimary(
+                            controller: phoneNumberController,
+                            hintText: 'شماره موبایل',
+                            isPhoneNumber: true,
+                          ),
+
+                          SizedBox(height: 10),
+
                           Row(
                             children: [
                               Checkbox(
@@ -114,7 +120,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   }
                                   return Colors.white;
                                 }),
-                                side: WidgetStateBorderSide.resolveWith((states) {
+                                side: WidgetStateBorderSide.resolveWith((
+                                  states,
+                                ) {
                                   return BorderSide(
                                     color: AppColors.loginScreenPrimaryColor,
                                     width: 2,
@@ -127,43 +135,24 @@ class _LoginScreenState extends State<LoginScreen> {
                                   vertical: -4,
                                 ),
                               ),
-          
+
                               SizedBox(width: 4),
-          
+
                               Text(
-                                'مرا بخاطر بسپار',
+                                'پذیرش قوانین و مقررات',
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontFamily: FontFamily.iranSansXMedium,
                                   color: AppColors.loginScreenPrimaryColor,
                                 ),
                               ),
-                              Spacer(),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          ForgetPasswordScreen(),
-                                    ),
-                                  );
-                                },
-                                child: Text(
-                                  'فراموشی رمز عبور',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontFamily: FontFamily.iranSansXMedium,
-                                    color: AppColors.loginScreenPrimaryColor,
-                                  ),
-                                ),
-                              ),
                             ],
                           ),
-                          SizedBox(height: 14),
-          
+                          SizedBox(height: 10),
+
                           ButtonPrimary(title: 'ورود', onPressed: () {}),
                           SizedBox(height: 16),
-          
+
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -185,7 +174,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'حساب کاربری ندارید ؟',
+                                  'حساب کاربری دارید ؟',
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
@@ -197,12 +186,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                   onTap: () {
                                     Navigator.of(context).push(
                                       MaterialPageRoute(
-                                        builder: (context) => SignupScreen(),
+                                        builder: (context) => LoginScreen(),
                                       ),
                                     );
                                   },
                                   child: Text(
-                                    'ثبت نام',
+                                    'ورود',
                                     style: TextStyle(
                                       color: AppColors.loginScreenPrimaryColor,
                                       fontSize: 16,
@@ -219,7 +208,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-          
+
               Padding(
                 padding: const EdgeInsets.only(bottom: 15.5),
                 child: Container(
