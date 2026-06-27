@@ -120,6 +120,12 @@ class AppColors {
     0xff6D6D6D,
   ).withValues(alpha: 61);
 
+
+  // Verification Code Screen
+  static Color textFieldBorderBottomVerificationCodeScreenColor = Color(
+    0xff6D6D6D,
+  ).withValues(alpha: 61);
+
   // Button Colos
   static Color buttonBackgroundColor = Color(0xffFFA31A);
   static Color buttonShadowColor = Color(0xffFF9900).withValues(alpha: 0.2);
