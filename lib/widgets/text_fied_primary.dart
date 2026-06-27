@@ -9,10 +9,12 @@ class TextFieldPrimary extends StatelessWidget {
     required this.controller,
     this.onChanged,
     this.isPassword = false,
+    this.isPhoneNumber = false,
   });
 
   final String hintText;
   final bool isPassword;
+  final bool isPhoneNumber;
   final TextEditingController controller;
   final Function(String)? onChanged;
 
@@ -22,6 +24,7 @@ class TextFieldPrimary extends StatelessWidget {
       height: 56,
       child: TextField(
         obscureText: isPassword,
+        keyboardType: isPhoneNumber ? TextInputType.phone : null,
         style: TextStyle(
           color: Colors.black,
           fontFamily: FontFamily.iranSansXRegular,
@@ -31,6 +34,7 @@ class TextFieldPrimary extends StatelessWidget {
         controller: controller,
         decoration: InputDecoration(
           hintText: hintText,
+
           hintStyle: TextStyle(
             fontSize: 20,
             fontFamily: FontFamily.iranSansXRegular,
@@ -50,6 +54,29 @@ class TextFieldPrimary extends StatelessWidget {
               width: 0.5,
             ),
           ),
+
+          suffixIcon: isPhoneNumber
+              ? Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: 0.5,
+                      height: 56,
+                      color: AppColors
+                          .forgetPasswordTextFieldPhoneSeperatorLineColor,
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      '+98',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontFamily: FontFamily.iranSansXLight,
+                      ),
+                    ),
+                  ],
+                )
+              : null,
         ),
       ),
     );

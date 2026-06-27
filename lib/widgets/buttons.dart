@@ -3,8 +3,14 @@ import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 
 class ButtonPrimary extends StatelessWidget {
-  const ButtonPrimary({super.key});
+  const ButtonPrimary({
+    super.key,
+    required this.title,
+    required this.onPressed,
+  });
 
+  final String title;
+  final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +27,7 @@ class ButtonPrimary extends StatelessWidget {
         ],
       ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           foregroundColor: AppColors.loginScreenLineColor.withValues(
             alpha: 0.2,
@@ -33,7 +39,7 @@ class ButtonPrimary extends StatelessWidget {
           elevation: 0,
         ),
         child: Text(
-          'ورود',
+          title,
           style: TextStyle(
             fontSize: 20,
             fontFamily: FontFamily.iranSansXRegular,

@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/forget_password_screen.dart';
 import 'package:ielts/widgets/buttons.dart';
 import 'package:ielts/widgets/text_fied_primary.dart';
 
@@ -135,7 +136,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             Spacer(),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        ForgetPasswordScreen(),
+                                  ),
+                                );
+                              },
                               child: Text(
                                 'فراموشی رمز عبور',
                                 style: TextStyle(
@@ -149,7 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(height: 14),
 
-                        ButtonPrimary(),
+                        ButtonPrimary(title: 'ورود', onPressed: () {}),
                         SizedBox(height: 16),
 
                         Row(
