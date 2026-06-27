@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/course_screen.dart';
 import 'package:ielts/screens/home_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -48,16 +49,16 @@ class _MainScreenState extends State<MainScreen> {
       extendBody: true,
       drawer: index == 3
           ? SafeArea(
-            child: Drawer(
+              child: Drawer(
                 backgroundColor: Colors.red,
                 child: Column(children: const [ListTile(title: Text(''))]),
               ),
-          )
+            )
           : null,
 
       body: IndexedStack(
         index: index,
-        children: [HomeScreen()],
+        children: [HomeScreen(), HomeScreen(), CourseScreen()],
       ),
 
       bottomNavigationBar: SafeArea(
@@ -114,4 +115,3 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
-

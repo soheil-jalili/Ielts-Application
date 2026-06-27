@@ -24,6 +24,12 @@ class $AssetsImagesGen {
   /// File path: assets/images/apple.png
   AssetGenImage get apple => const AssetGenImage('assets/images/apple.png');
 
+  /// File path: assets/images/banner1.png
+  AssetGenImage get banner1 => const AssetGenImage('assets/images/banner1.png');
+
+  /// File path: assets/images/banner2.png
+  AssetGenImage get banner2 => const AssetGenImage('assets/images/banner2.png');
+
   /// File path: assets/images/blur.png
   AssetGenImage get blur => const AssetGenImage('assets/images/blur.png');
 
@@ -216,6 +222,8 @@ class $AssetsImagesGen {
     play,
     timeSquare,
     apple,
+    banner1,
+    banner2,
     blur,
     calendar,
     circle,
