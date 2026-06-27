@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ielts/screens/verification_code_screen.dart';
+import 'package:ielts/screens/reset_password_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Directionality(
         textDirection: TextDirection.rtl,
-        child: VerificationCodeScreen(),
+        child: ResetPasswordScreen(),
       ),
     );
   }
