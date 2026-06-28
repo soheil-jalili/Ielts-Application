@@ -40,6 +40,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/clock.png
   AssetGenImage get clock => const AssetGenImage('assets/images/clock.png');
 
+  /// File path: assets/images/clock2.svg
+  String get clock2 => 'assets/images/clock2.svg';
+
   /// File path: assets/images/coruse_image.jpg
   AssetGenImage get coruseImage =>
       const AssetGenImage('assets/images/coruse_image.jpg');
@@ -231,6 +234,7 @@ class $AssetsImagesGen {
     calendar,
     circle,
     clock,
+    clock2,
     coruseImage,
     courseActive,
     course,

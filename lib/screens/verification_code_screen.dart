@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/widgets/buttons.dart';
+import 'package:ielts/widgets/button_primary.dart';
 
 class VerificationCodeScreen extends StatefulWidget {
   const VerificationCodeScreen({super.key});

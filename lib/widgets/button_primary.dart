@@ -7,15 +7,24 @@ class ButtonPrimary extends StatelessWidget {
     super.key,
     required this.title,
     required this.onPressed,
+    this.borderRadius = 16,
+    this.height = 56,
+    this.fontFamily = FontFamily.iranSansXRegular,
   });
 
   final String title;
+  final String fontFamily;
   final void Function() onPressed;
+  final double height;
+  final double borderRadius;
+
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 56,
+      height: height,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -34,7 +43,7 @@ class ButtonPrimary extends StatelessWidget {
           ),
           backgroundColor: AppColors.buttonBackgroundColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(borderRadius),
           ),
           elevation: 0,
         ),
@@ -42,7 +51,7 @@ class ButtonPrimary extends StatelessWidget {
           title,
           style: TextStyle(
             fontSize: 20,
-            fontFamily: FontFamily.iranSansXRegular,
+            fontFamily: fontFamily,
             color: Colors.white,
           ),
         ),

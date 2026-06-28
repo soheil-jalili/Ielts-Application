@@ -4,6 +4,7 @@ class AppColors {
   AppColors._();
 
   static Color scaffoldColor = const Color(0xffFCFCFC).withValues(alpha: 0.98);
+  static Color scaffoldColor2 = const Color(0xffF6F6F9);
   static const Color primaryColor = Color(0xffFFA31A);
 
   static const Color strokeProfileColor = Color.fromRGBO(0, 0, 0, 0.30);
@@ -128,10 +129,13 @@ class AppColors {
   // Button Colos
   static Color buttonBackgroundColor = Color(0xffFFA31A);
   static Color buttonShadowColor = Color(0xffFF9900).withValues(alpha: 0.2);
+  static const Color buttonTextColorOutlineColor = Color(0xffFFA31A);
 
   // Course Detail Screen
   static Color coruseDetailScreenTabViewColor = Color(0xfffaf4e8);
-  static Color courseDetailScreenSelectedTabTextColor = Color(0xffF15223);
+  static Color courseDetailScreenPrimaryColor = Color(0xffF15223);
+  static Color courseDetailScreenSecondaryColor = Color(0xff8B8B8B);
+  static Color courseDetailScreenSubTextColor = Color(0xff767676);
   static Color courseDetailScreenShadowTabColor = Color(
     0xff040415,
   ).withAlpha(10);

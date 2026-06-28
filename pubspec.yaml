@@ -50,7 +50,7 @@ flutter:
   fonts:
   - family: IranSansX-Demi-bold
     fonts:
-    - asset: assets/fonts/IRANSansX-DemiBold.ttf
+    - asset: assets/fonts/IRANSansXFaNum-DemiBold.ttf
 
   - family: IranSansX-black
     fonts:

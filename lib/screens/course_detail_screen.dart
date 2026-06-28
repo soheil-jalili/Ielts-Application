@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
+import 'package:ielts/extensions/string_extensions.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/widgets/button_primary.dart';
+import 'package:ielts/widgets/button_secondary.dart';
 import 'package:ielts/widgets/course_title.dart';
 
 class CourseDetailScreen extends StatefulWidget {
@@ -18,6 +21,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.scaffoldColor2,
       floatingActionButton: GestureDetector(
         onTap: () {},
         child: SvgPicture.asset(Assets.images.support),
@@ -62,7 +66,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
 
               SliverToBoxAdapter(
                 child: selectedIndex == 0
-                    ? const Text('محتوای توضیحات دوره')
+                    ? CourseDescription()
                     : selectedIndex == 1
                     ? const Text('محتوای جلسات دوره')
                     : const Text('محتوای نظرات کاربران'),
@@ -75,8 +79,175 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
   }
 }
 
-class CourseDetailTabView extends StatelessWidget {
+class CourseDescription extends StatelessWidget {
+  const CourseDescription({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 40),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(200),
+                child: Image.asset(Assets.images.mojAvatar.path),
+              ),
+
+              SizedBox(width: 12),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        'مدرس دوره :',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontFamily: FontFamily.iranSansXBold,
+                        ),
+                      ),
+                      SizedBox(width: 2),
+                      Text(
+                        'میلاد دهیامی',
+                        style: TextStyle(
+                          color: AppColors.courseDetailScreenPrimaryColor,
+                          fontSize: 16,
+                          fontFamily: FontFamily.iranSansXBold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 12),
+                  Row(
+                    children: [
+                      SvgPicture.asset(Assets.images.clock2),
+                      SizedBox(width: 8),
+                      Text(
+                        '300 دقیقه',
+                        style: TextStyle(
+                          color: AppColors.courseDetailScreenSecondaryColor,
+                          fontFamily: FontFamily.iranSansXMedium,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(top: 22, bottom: 150),
+
+            child: Column(
+              children: [
+                TitleIcon(
+                  title: 'آموزش با ترفندهای خاص و الهام  از حرکات صورت و بدن',
+                ),
+                SizedBox(height: 15),
+                TitleIcon(
+                  title: 'انتقال آسان ساختارهای ترکیبی و پیچیده زبان انگلیسی',
+                ),
+                SizedBox(height: 15),
+                TitleIcon(
+                  title: 'آموزش گرامرهای انگلیسی بر اساس ساختارهای فارسی',
+                ),
+
+                SizedBox(height: 32),
+                Text(
+                  """خرید دوره فقط مخصوص یک‌کاربر و حداکثر قابل استفاده بر روی دو دستگاه (گوشی و لپتاپ) است.
+بعد از خريد ويديوهای خود را به‌ صورت آنلاين با اینترنت نیم‌ بها تماشا كنيد.""",
+
+                  style: TextStyle(
+                    color: AppColors.courseDetailScreenSubTextColor,
+                    fontFamily: FontFamily.iranSansXMedium,
+                    fontSize: 12,
+                  ),
+                ),
+                SizedBox(height: 30),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ButtonPrimary(
+                        title: 'خرید دوره',
+                        onPressed: () {},
+                        borderRadius: 32,
+                        height: 48,
+                        fontFamily: FontFamily.iranSansXDemiBold,
+                      ),
+                    ),
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: ButtonSecondary(
+                        title: '800000'.formatWithCommas(),
+                        isItPrice: true,
+                        onPressed: () {},
+                        height: 48,
+                        borderRadius: 32,
+                        fontFamily: FontFamily.iranSansXDemiBold,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class TitleIcon extends StatelessWidget {
+  const TitleIcon({super.key, required this.title});
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        IconLeft(),
+
+        SizedBox(width: 8),
+
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 12,
+            fontFamily: FontFamily.iranSansXMedium,
+            color: AppColors.courseDetailScreenSubTextColor,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class IconLeft extends StatelessWidget {
+  const IconLeft({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.fromLTRB(6, 6, 11, 6),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(16),
+          bottomLeft: Radius.circular(16),
+          topRight: Radius.circular(56),
+          bottomRight: Radius.circular(56),
+        ),
+        color: AppColors.primaryColor,
+      ),
+      child: SvgPicture.asset(Assets.images.leftCheveron, width: 7, height: 12),
+    );
+  }
+}
+
+class CourseDetailTabView extends StatelessWidget {
   final int selectedIndex;
   final ValueChanged<int> onTabChanged;
 
@@ -133,7 +304,7 @@ class CourseDetailTabView extends StatelessWidget {
                 fontFamily: FontFamily.iranSansXDemiBold,
                 fontSize: 14,
                 color: isSelected
-                    ? AppColors.courseDetailScreenSelectedTabTextColor
+                    ? AppColors.courseDetailScreenPrimaryColor
                     : Colors.black,
               ),
             ),

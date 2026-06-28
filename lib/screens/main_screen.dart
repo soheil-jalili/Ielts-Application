@@ -48,7 +48,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       extendBody: true,
       drawer: index == 3
-          ? SafeArea(
+          ? SafeArea( 
               child: Drawer(
                 backgroundColor: Colors.red,
                 child: Column(children: const [ListTile(title: Text(''))]),
