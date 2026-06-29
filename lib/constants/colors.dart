@@ -7,6 +7,11 @@ class AppColors {
   static Color scaffoldColor2 = const Color(0xffF6F6F9);
   static const Color primaryColor = Color(0xffFFA31A);
 
+
+  static final Color shadowWhiteColor = const Color(
+    0xff7090B0,
+  ).withValues(alpha: 0.2);
+
   static const Color strokeProfileColor = Color.fromRGBO(0, 0, 0, 0.30);
 
   static final Color fillProfileColor = const Color(0xfff7b662);
@@ -136,6 +141,9 @@ class AppColors {
   static Color courseDetailScreenPrimaryColor = Color(0xffF15223);
   static Color courseDetailScreenSecondaryColor = Color(0xff8B8B8B);
   static Color courseDetailScreenSubTextColor = Color(0xff767676);
+  static Color courseDetailScreenTextLockedSessionCourse = Color(
+    0xff0F0F0F,
+  ).withAlpha(80);
   static Color courseDetailScreenShadowTabColor = Color(
     0xff040415,
   ).withAlpha(10);
@@ -146,4 +154,6 @@ class AppColors {
   static final Color bottomNavigationContainerColor = const Color(
     0xff7090B0,
   ).withValues(alpha: 0.2);
+ 
+
 }

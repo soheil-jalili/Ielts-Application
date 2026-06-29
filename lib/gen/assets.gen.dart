@@ -112,6 +112,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/left2.png
   AssetGenImage get left2 => const AssetGenImage('assets/images/left2.png');
 
+  /// File path: assets/images/lock.svg
+  String get lock => 'assets/images/lock.svg';
+
   /// File path: assets/images/moj-avatar.png
   AssetGenImage get mojAvatar =>
       const AssetGenImage('assets/images/moj-avatar.png');
@@ -133,6 +136,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/pic4.png
   AssetGenImage get pic4 => const AssetGenImage('assets/images/pic4.png');
+
+  /// File path: assets/images/play-course-detail.svg
+  String get playCourseDetail => 'assets/images/play-course-detail.svg';
 
   /// File path: assets/images/profile-active.png
   AssetGenImage get profileActive =>
@@ -255,6 +261,7 @@ class $AssetsImagesGen {
     leftShape,
     left,
     left2,
+    lock,
     mojAvatar,
     one,
     paper,
@@ -262,6 +269,7 @@ class $AssetsImagesGen {
     pic2,
     pic3,
     pic4,
+    playCourseDetail,
     profileActive,
     profile,
     profile1,

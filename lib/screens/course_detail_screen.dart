@@ -51,7 +51,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
               ),
 
               SliverPadding(
-                padding: const EdgeInsets.fromLTRB(40, 24, 40, 41),
+                padding: const EdgeInsets.fromLTRB(40, 24, 40, 0),
                 sliver: SliverToBoxAdapter(
                   child: CourseDetailTabView(
                     selectedIndex: selectedIndex,
@@ -64,15 +64,66 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                 ),
               ),
 
-              SliverToBoxAdapter(
-                child: selectedIndex == 0
-                    ? CourseDescription()
-                    : selectedIndex == 1
-                    ? const Text('محتوای جلسات دوره')
-                    : const Text('محتوای نظرات کاربران'),
-              ),
+              if (selectedIndex == 0)
+                SliverPadding(
+                  padding: const EdgeInsets.only(top: 40),
+                  sliver: SliverToBoxAdapter(child: CourseDescription()),
+                )
+              else if (selectedIndex == 1)
+                SliverPadding(
+                  padding: const EdgeInsets.only(left: 40, right: 40, top: 26),
+                  sliver: const LockedCourseSessions(),
+                )
+              else
+                const SliverToBoxAdapter(
+                  child: Center(child: Text('محتوای نظرات کاربران')),
+                ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class LockedCourseSessions extends StatelessWidget {
+  const LockedCourseSessions({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverList.builder(
+      itemCount: 10,
+      itemBuilder: (context, index) => Container(
+        height: 56,
+        margin: EdgeInsets.only(bottom: index == 9 ? 124 : 12),
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              offset: Offset(0, 16),
+              blurRadius: 48,
+              spreadRadius: -10,
+              color: AppColors.shadowWhiteColor,
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            SvgPicture.asset(Assets.images.lock),
+            SizedBox(width: 16),
+            Text(
+              'درس اول',
+              style: TextStyle(
+                fontSize: 18,
+                color: AppColors.courseDetailScreenTextLockedSessionCourse,
+                fontFamily: FontFamily.iranSansXMedium,
+              ),
+            ),
+            Spacer(),
+            SvgPicture.asset(Assets.images.playCourseDetail),
+          ],
         ),
       ),
     );
