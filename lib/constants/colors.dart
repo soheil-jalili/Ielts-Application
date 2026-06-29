@@ -7,7 +7,6 @@ class AppColors {
   static Color scaffoldColor2 = const Color(0xffF6F6F9);
   static const Color primaryColor = Color(0xffFFA31A);
 
-
   static final Color shadowWhiteColor = const Color(
     0xff7090B0,
   ).withValues(alpha: 0.2);
@@ -138,10 +137,15 @@ class AppColors {
 
   // Course Detail Screen
   static Color coruseDetailScreenTabViewColor = Color(0xfffaf4e8);
+  static Color coruseDetailScreenContainerColor = Color(0xfffaf4e8);
   static Color courseDetailScreenPrimaryColor = Color(0xffF15223);
   static Color courseDetailScreenSecondaryColor = Color(0xff8B8B8B);
   static Color courseDetailScreenSubTextColor = Color(0xff767676);
-  static Color courseDetailScreenTextLockedSessionCourse = Color(
+  static Color courseDetailScreenTextCommentColor = Color(0xff3F3F3F);
+  static Color courseDetailScreenBorderBottomTextColor = Color(0xffF15223);
+  static Color courseDetailScreenTextColor = Color(0xffF15223);
+  static Color courseDetailScreenMessageColor = Color(0xff333333);
+  static Color courseDetailScreenTextLockedSessionCourseColor = Color(
     0xff0F0F0F,
   ).withAlpha(80);
   static Color courseDetailScreenShadowTabColor = Color(
@@ -154,6 +158,4 @@ class AppColors {
   static final Color bottomNavigationContainerColor = const Color(
     0xff7090B0,
   ).withValues(alpha: 0.2);
- 
-
 }

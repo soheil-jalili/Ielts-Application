@@ -21,8 +21,15 @@ class $AssetsImagesGen {
   AssetGenImage get timeSquare =>
       const AssetGenImage('assets/images/Time Square.png');
 
+  /// File path: assets/images/admin_avatar.png
+  AssetGenImage get adminAvatar =>
+      const AssetGenImage('assets/images/admin_avatar.png');
+
   /// File path: assets/images/apple.png
   AssetGenImage get apple => const AssetGenImage('assets/images/apple.png');
+
+  /// File path: assets/images/avatar.png
+  AssetGenImage get avatar => const AssetGenImage('assets/images/avatar.png');
 
   /// File path: assets/images/banner1.png
   AssetGenImage get banner1 => const AssetGenImage('assets/images/banner1.png');
@@ -234,7 +241,9 @@ class $AssetsImagesGen {
   List<dynamic> get values => [
     play,
     timeSquare,
+    adminAvatar,
     apple,
+    avatar,
     banner1,
     blur,
     calendar,

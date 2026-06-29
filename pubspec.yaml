@@ -21,6 +21,7 @@ dependencies:
   intl: ^0.20.3
   collection: ^1.19.1
   flutter_svg: ^2.3.0
+  sliver_tools: ^0.2.12
 dev_dependencies:
   flutter_test:
     sdk: flutter

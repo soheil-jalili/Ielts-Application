@@ -4,9 +4,13 @@ import 'package:ielts/constants/colors.dart';
 import 'package:ielts/extensions/string_extensions.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/login_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/button_secondary.dart';
 import 'package:ielts/widgets/course_title.dart';
+import 'package:ielts/widgets/icon_left.dart';
+import 'package:ielts/widgets/title_icon.dart';
+import 'package:sliver_tools/sliver_tools.dart';
 
 class CourseDetailScreen extends StatefulWidget {
   const CourseDetailScreen({super.key});
@@ -75,13 +79,207 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                   sliver: const LockedCourseSessions(),
                 )
               else
-                const SliverToBoxAdapter(
-                  child: Center(child: Text('محتوای نظرات کاربران')),
+                SliverPadding(
+                  padding: EdgeInsets.only(top: 32, left: 20, right: 20),
+                  sliver: UserComment(),
                 ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class UserComment extends StatelessWidget {
+  const UserComment({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiSliver(
+      children: [
+        SliverToBoxAdapter(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 3),
+                    child: IconLeft(),
+                  ),
+                  SizedBox(width: 7),
+                  Column(
+                    children: [
+                      Text(
+                        'نظرات',
+                        style: TextStyle(
+                          fontFamily: FontFamily.iranSansXExtraBold,
+                          color: AppColors.courseDetailScreenTextCommentColor,
+                        ),
+                      ),
+                      Container(
+                        width: 48,
+                        height: 3,
+                        decoration: BoxDecoration(
+                          color:
+                              AppColors.courseDetailScreenBorderBottomTextColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 24),
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 26),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(18),
+                  color: AppColors.coruseDetailScreenContainerColor,
+                ),
+                height: 54,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'برای ثبت نظر خود ابتدا وارد ',
+                      style: TextStyle(
+                        fontFamily: FontFamily.iranSansXDemiBold,
+                      ),
+                    ),
+
+                    Column(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => LoginScreen(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            'حساب کاربری ',
+                            style: TextStyle(
+                              fontFamily: FontFamily.iranSansXDemiBold,
+                              color: AppColors.courseDetailScreenTextColor,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 74,
+                          color:
+                              AppColors.courseDetailScreenBorderBottomTextColor,
+                          height: 1,
+                        ),
+                      ],
+                    ),
+
+                    Text(
+                      'خود شوید.',
+                      style: TextStyle(
+                        fontFamily: FontFamily.iranSansXDemiBold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        SliverList.builder(
+          itemCount: 10,
+          itemBuilder: (context, index) => Container(
+            margin: EdgeInsets.only(bottom: index == 9 ? 124 : 16),
+            height: 160,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              color: Colors.white,
+            ),
+
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, right: 8),
+                  child: Row(
+                    children: [
+                      Image.asset(Assets.images.avatar.path),
+                      SizedBox(width: 8),
+                      Text(
+                        'لیلا زارع',
+                        style: TextStyle(
+                          fontFamily: FontFamily.iranSansXMedium,
+                          fontSize: 12,
+                          color: AppColors.courseDetailScreenSubTextColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(right: 48),
+                  child: Text(
+                    'حتی با این که دوره آفلاین بود، پشتیبانی بسیار عالی داشتند.👌',
+                    style: TextStyle(
+                      fontFamily: FontFamily.iranSansXMedium,
+                      fontSize: 10,
+                      color: AppColors.courseDetailScreenMessageColor,
+                    ),
+                  ),
+                ),
+
+                Container(
+                  width: double.infinity,
+                  height: 1,
+                  margin: EdgeInsets.fromLTRB(24, 17.5, 24, 4),
+                  decoration: BoxDecoration(
+                    color: AppColors.courseDetailScreenBorderBottomTextColor,
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(right: 28),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 32,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(200),
+                          child: Image.asset(Assets.images.adminAvatar.path),
+                        ),
+                      ),
+                      SizedBox(width: 8),
+                      Text(
+                        'ادمین',
+                        style: TextStyle(
+                          fontFamily: FontFamily.iranSansXMedium,
+                          fontSize: 12,
+                          color: AppColors.courseDetailScreenSubTextColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(right: 68, top: 8),
+                  child: Text(
+                    'خداروشکر که از تدریس اساتید و پشتیبانی رضایت داشتید❤',
+                    style: TextStyle(
+                      fontFamily: FontFamily.iranSansXMedium,
+                      fontSize: 10,
+                      color: AppColors.courseDetailScreenMessageColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -93,37 +291,41 @@ class LockedCourseSessions extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList.builder(
       itemCount: 10,
-      itemBuilder: (context, index) => Container(
-        height: 56,
-        margin: EdgeInsets.only(bottom: index == 9 ? 124 : 12),
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: [
-            BoxShadow(
-              offset: Offset(0, 16),
-              blurRadius: 48,
-              spreadRadius: -10,
-              color: AppColors.shadowWhiteColor,
-            ),
-          ],
-        ),
-        child: Row(
-          children: [
-            SvgPicture.asset(Assets.images.lock),
-            SizedBox(width: 16),
-            Text(
-              'درس اول',
-              style: TextStyle(
-                fontSize: 18,
-                color: AppColors.courseDetailScreenTextLockedSessionCourse,
-                fontFamily: FontFamily.iranSansXMedium,
+      itemBuilder: (context, index) => GestureDetector(
+        onTap: () {},
+        child: Container(
+          height: 56,
+          margin: EdgeInsets.only(bottom: index == 9 ? 124 : 12),
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                offset: Offset(0, 16),
+                blurRadius: 48,
+                spreadRadius: -10,
+                color: AppColors.shadowWhiteColor,
               ),
-            ),
-            Spacer(),
-            SvgPicture.asset(Assets.images.playCourseDetail),
-          ],
+            ],
+          ),
+          child: Row(
+            children: [
+              SvgPicture.asset(Assets.images.lock),
+              SizedBox(width: 16),
+              Text(
+                'درس اول',
+                style: TextStyle(
+                  fontSize: 18,
+                  color:
+                      AppColors.courseDetailScreenTextLockedSessionCourseColor,
+                  fontFamily: FontFamily.iranSansXMedium,
+                ),
+              ),
+              Spacer(),
+              SvgPicture.asset(Assets.images.playCourseDetail),
+            ],
+          ),
         ),
       ),
     );
@@ -249,51 +451,6 @@ class CourseDescription extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class TitleIcon extends StatelessWidget {
-  const TitleIcon({super.key, required this.title});
-  final String title;
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconLeft(),
-
-        SizedBox(width: 8),
-
-        Text(
-          title,
-          style: TextStyle(
-            fontSize: 12,
-            fontFamily: FontFamily.iranSansXMedium,
-            color: AppColors.courseDetailScreenSubTextColor,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class IconLeft extends StatelessWidget {
-  const IconLeft({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.fromLTRB(6, 6, 11, 6),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(16),
-          bottomLeft: Radius.circular(16),
-          topRight: Radius.circular(56),
-          bottomRight: Radius.circular(56),
-        ),
-        color: AppColors.primaryColor,
-      ),
-      child: SvgPicture.asset(Assets.images.leftCheveron, width: 7, height: 12),
     );
   }
 }
