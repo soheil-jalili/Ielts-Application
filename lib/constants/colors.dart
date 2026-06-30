@@ -5,6 +5,7 @@ class AppColors {
 
   static Color scaffoldColor = const Color(0xffFCFCFC).withValues(alpha: 0.98);
   static Color scaffoldColor2 = const Color(0xffF6F6F9);
+
   static const Color primaryColor = Color(0xffFFA31A);
 
   static final Color shadowWhiteColor = const Color(
@@ -18,6 +19,7 @@ class AppColors {
   static const Color primaryTextColor = Color.fromRGBO(0, 0, 0, 0.80);
   static const Color secondaryTextColor = Color.fromRGBO(0, 0, 0, 0.60);
   static const Color tertiaryTextColor = Color.fromRGBO(0, 0, 0, 0.50);
+  static const Color quaternaryTextColor = Color.fromRGBO(0, 0, 0, 0.80);
 
   static const Color greenColor = Color(0xff37E353);
   static const Color greenDarkerColor = Color(0xff21BA3A);
@@ -151,6 +153,36 @@ class AppColors {
   static Color courseDetailScreenShadowTabColor = Color(
     0xff040415,
   ).withAlpha(10);
+
+  // Search Screen
+  static Color hintTextSearchScreenColor = Color(0xff3C3C43).withAlpha(60);
+  static Color borderSearchScreenColor = Color(0xffCECECE);
+  static Color verticalLineSearchScreenColor = Color(0xff979eae);
+  static Color borderBottomSearchResultSearchScreenColor = Color(0xfff4f6f9);
+  static Color fillStarSearchScreenColor = Color(0xffFAA224).withAlpha(20);
+  static Color rateTextSearchScreenColor = Color(0xffFAA224);
+  static Color activContainereSearchScreenColor = Color(
+    0xffFFA31A,
+  ).withAlpha(75);
+  static Color fillContainereSearchScreenColor = Color(0xffF6F6F9);
+  static Color searchResultTextSearchScreenColor = Color(0xff404040);
+  static const Color containerLeftIconSearchScreenColor = Color.fromRGBO(
+    0,
+    0,
+    0,
+    0.60,
+  );
+  static const Color horizentalLineSearchScreenColor = Color.fromRGBO(
+    0,
+    0,
+    0,
+    0.30,
+  );
+  static Color popularSearchTextSearchScreenColor = Color(0xff404040);
+
+  // Shimmer
+  static Color baseColorShimmer = Color(0xFFEDEDED);
+  static Color highlightColorShimmer = Color(0xFFF5F5F5);
 
   // Bottom Navigation
   static const Color activeBottomNavigationLabelColor = Color(0xffFFA31A);

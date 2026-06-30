@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 
-class CourseTitle extends StatelessWidget {
-  const CourseTitle({super.key, required this.title});
+class TitleAndBack extends StatelessWidget {
+  const TitleAndBack({super.key, required this.title});
 
   final String title;
   @override

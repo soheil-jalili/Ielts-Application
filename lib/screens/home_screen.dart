@@ -1,13 +1,14 @@
 import 'dart:ui';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/extensions/string_extensions.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/models/skill_model.dart';
+import 'package:ielts/widgets/student_and_learn_language.dart';
 import 'package:ielts/widgets/title_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:collection/collection.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -74,185 +75,158 @@ class TopOfTheMonth extends StatelessWidget {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
         childCount: 2,
-        (context, index) => TopOfTheMonthBox(index: index),
-      ),
-    );
-  }
-}
-
-class TopOfTheMonthBox extends StatelessWidget {
-  const TopOfTheMonthBox({super.key, required this.index});
-  final int index;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: index == 1 ? 24 : 8, right: 21, left: 19),
-      height: 76,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 32,
-            spreadRadius: -10,
-            color: AppColors.shadowTopOfMonthColor,
-            offset: Offset(0, 16),
+        (context, index) => Container(
+          margin: EdgeInsets.only(
+            bottom: index == 1 ? 24 : 8,
+            right: 21,
+            left: 19,
           ),
-        ],
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 52,
-            height: 52,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18),
-              border: Border.all(
-                width: 1,
-                color: AppColors.borderAvatarTopOfMonthColor,
-              ),
-            ),
-            margin: EdgeInsets.only(right: 10, left: 8),
-            padding: EdgeInsets.all(2),
-            child: Stack(
-              clipBehavior: Clip.none,
-              children: [
-                Image.asset(
-                  Assets.images.mojAvatar.path,
-                  width: 48,
-                  height: 48,
-                  fit: BoxFit.cover,
-                ),
-                Positioned(
-                  left: -6,
-                  top: -6,
-                  child: Image.asset(Assets.images.germanFlag.path),
-                ),
-              ],
-            ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'مجتبی یزدان پناه',
-                style: TextStyle(
-                  fontFamily: FontFamily.iranSansXDemiBold,
-                  color: Colors.black,
-                  fontSize: 12,
-                ),
-              ),
-              SizedBox(height: 4),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 3),
-                    child: Text(
-                      'سطح C2',
-                      style: TextStyle(
-                        color: AppColors.tertiaryTextColor,
-                        fontSize: 8,
-                        fontFamily: FontFamily.iranSansXMedium,
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(
-                    height: 16,
-                    child: VerticalDivider(
-                      color: Colors.grey,
-                      thickness: 1,
-                      width: 6,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 3),
-                    child: Text(
-                      'تراز 52',
-                      style: TextStyle(
-                        color: AppColors.tertiaryTextColor,
-                        fontSize: 8,
-                        fontFamily: FontFamily.iranSansXMedium,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16,
-                    child: VerticalDivider(
-                      color: Colors.grey,
-                      thickness: 1,
-                      width: 6,
-                    ),
-                  ),
-                  ...['گرامر', 'مکالمه', 'شنیداری'].mapIndexed(
-                    (index, e) => Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 3),
-                          child: Text(
-                            e,
-                            style: TextStyle(
-                              color: AppColors.tertiaryTextColor,
-                              fontSize: 8,
-                              fontFamily: FontFamily.iranSansXMedium,
-                            ),
-                          ),
-                        ),
-                        if (index < 2) ...{
-                          SizedBox(
-                            height: 16,
-                            child: VerticalDivider(
-                              color: Colors.grey,
-                              thickness: 1,
-                              width: 6,
-                            ),
-                          ),
-                        },
-                      ],
-                    ),
-                  ),
-                ],
+          height: 76,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 32,
+                spreadRadius: -10,
+                color: AppColors.shadowTopOfMonthColor,
+                offset: Offset(0, 16),
               ),
             ],
           ),
-          Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      '15200'.formatWithCommas(),
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: AppColors.primaryColor,
-                        fontFamily: FontFamily.iranSansXRegular,
-                      ),
+          child: Row(
+            children: [
+              StudentAndLanguageBox(index: index),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'مجتبی یزدان پناه',
+                    style: TextStyle(
+                      fontFamily: FontFamily.iranSansXDemiBold,
+                      color: Colors.black,
+                      fontSize: 12,
                     ),
-                    SizedBox(width: 5),
-                    Image.asset(Assets.images.cup.path, width: 15, height: 15),
+                  ),
+                  SizedBox(height: 4),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 3),
+                        child: Text(
+                          'سطح C2',
+                          style: TextStyle(
+                            color: AppColors.tertiaryTextColor,
+                            fontSize: 8,
+                            fontFamily: FontFamily.iranSansXMedium,
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(
+                        height: 16,
+                        child: VerticalDivider(
+                          color: Colors.grey,
+                          thickness: 1,
+                          width: 6,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 3),
+                        child: Text(
+                          'تراز 52',
+                          style: TextStyle(
+                            color: AppColors.tertiaryTextColor,
+                            fontSize: 8,
+                            fontFamily: FontFamily.iranSansXMedium,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 16,
+                        child: VerticalDivider(
+                          color: Colors.grey,
+                          thickness: 1,
+                          width: 6,
+                        ),
+                      ),
+                      ...['گرامر', 'مکالمه', 'شنیداری'].mapIndexed(
+                        (index, e) => Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 3,
+                              ),
+                              child: Text(
+                                e,
+                                style: TextStyle(
+                                  color: AppColors.tertiaryTextColor,
+                                  fontSize: 8,
+                                  fontFamily: FontFamily.iranSansXMedium,
+                                ),
+                              ),
+                            ),
+                            if (index < 2) ...{
+                              SizedBox(
+                                height: 16,
+                                child: VerticalDivider(
+                                  color: Colors.grey,
+                                  thickness: 1,
+                                  width: 6,
+                                ),
+                              ),
+                            },
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          '15200'.formatWithCommas(),
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: AppColors.primaryColor,
+                            fontFamily: FontFamily.iranSansXRegular,
+                          ),
+                        ),
+                        SizedBox(width: 5),
+                        Image.asset(
+                          Assets.images.cup.path,
+                          width: 15,
+                          height: 15,
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 8),
+
+                    Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: AppColors.topArrowBackgroundColor,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Image.asset(Assets.images.topArrow.path),
+                    ),
                   ],
                 ),
-                SizedBox(height: 8),
-
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    color: AppColors.topArrowBackgroundColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Image.asset(Assets.images.topArrow.path),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

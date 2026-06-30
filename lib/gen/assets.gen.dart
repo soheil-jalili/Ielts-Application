@@ -71,6 +71,12 @@ class $AssetsImagesGen {
   /// File path: assets/images/cup2.png
   AssetGenImage get cup2 => const AssetGenImage('assets/images/cup2.png');
 
+  /// File path: assets/images/delete-input.svg
+  String get deleteInput => 'assets/images/delete-input.svg';
+
+  /// File path: assets/images/fire.svg
+  String get fire => 'assets/images/fire.svg';
+
   /// File path: assets/images/free_course_shape3.png
   AssetGenImage get freeCourseShape3 =>
       const AssetGenImage('assets/images/free_course_shape3.png');
@@ -122,9 +128,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/lock.svg
   String get lock => 'assets/images/lock.svg';
 
+  /// File path: assets/images/mic.svg
+  String get mic => 'assets/images/mic.svg';
+
   /// File path: assets/images/moj-avatar.png
   AssetGenImage get mojAvatar =>
       const AssetGenImage('assets/images/moj-avatar.png');
+
+  /// File path: assets/images/not-found.svg
+  String get notFound => 'assets/images/not-found.svg';
 
   /// File path: assets/images/one.png
   AssetGenImage get one => const AssetGenImage('assets/images/one.png');
@@ -149,6 +161,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/play_unlock.svg
   String get playUnlock => 'assets/images/play_unlock.svg';
+
+  /// File path: assets/images/plus.svg
+  String get plus => 'assets/images/plus.svg';
 
   /// File path: assets/images/profile-active.png
   AssetGenImage get profileActive =>
@@ -183,6 +198,9 @@ class $AssetsImagesGen {
   AssetGenImage get searchActive =>
       const AssetGenImage('assets/images/search_active.png');
 
+  /// File path: assets/images/search_search_screen.svg
+  String get searchSearchScreen => 'assets/images/search_search_screen.svg';
+
   /// File path: assets/images/shape_free_course.png
   AssetGenImage get shapeFreeCourse =>
       const AssetGenImage('assets/images/shape_free_course.png');
@@ -191,9 +209,15 @@ class $AssetsImagesGen {
   AssetGenImage get shapeFreeCourse2 =>
       const AssetGenImage('assets/images/shape_free_course2.png');
 
+  /// File path: assets/images/sort.svg
+  String get sort => 'assets/images/sort.svg';
+
   /// File path: assets/images/spain-flag.png
   AssetGenImage get spainFlag =>
       const AssetGenImage('assets/images/spain-flag.png');
+
+  /// File path: assets/images/star-bold.svg
+  String get starBold => 'assets/images/star-bold.svg';
 
   /// File path: assets/images/star-colorless.png
   AssetGenImage get starColorless =>
@@ -218,6 +242,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/top-arrow.png
   AssetGenImage get topArrow =>
       const AssetGenImage('assets/images/top-arrow.png');
+
+  /// File path: assets/images/trash.svg
+  String get trash => 'assets/images/trash.svg';
 
   /// File path: assets/images/travel.png
   AssetGenImage get travel => const AssetGenImage('assets/images/travel.png');
@@ -262,6 +289,8 @@ class $AssetsImagesGen {
     courseDetailCover,
     cup,
     cup2,
+    deleteInput,
+    fire,
     freeCourseShape3,
     germanFlag,
     google,
@@ -277,7 +306,9 @@ class $AssetsImagesGen {
     left,
     left2,
     lock,
+    mic,
     mojAvatar,
+    notFound,
     one,
     paper,
     pic1,
@@ -286,6 +317,7 @@ class $AssetsImagesGen {
     pic4,
     playCourseDetail,
     playUnlock,
+    plus,
     profileActive,
     profile,
     profile1,
@@ -295,9 +327,12 @@ class $AssetsImagesGen {
     russia,
     search,
     searchActive,
+    searchSearchScreen,
     shapeFreeCourse,
     shapeFreeCourse2,
+    sort,
     spainFlag,
+    starBold,
     starColorless,
     starFill,
     star,
@@ -305,6 +340,7 @@ class $AssetsImagesGen {
     three,
     time,
     topArrow,
+    trash,
     travel,
     treeOfWord,
     two,

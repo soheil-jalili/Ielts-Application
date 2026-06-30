@@ -4,6 +4,7 @@ import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/screens/course_screen.dart';
 import 'package:ielts/screens/home_screen.dart';
+import 'package:ielts/screens/search_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -48,7 +49,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       extendBody: true,
       drawer: index == 3
-          ? SafeArea( 
+          ? SafeArea(
               child: Drawer(
                 backgroundColor: Colors.red,
                 child: Column(children: const [ListTile(title: Text(''))]),
@@ -58,7 +59,7 @@ class _MainScreenState extends State<MainScreen> {
 
       body: IndexedStack(
         index: index,
-        children: [HomeScreen(), HomeScreen(), CourseScreen(), CourseScreen()],
+        children: [HomeScreen(), SearchScreen(), CourseScreen()],
       ),
 
       bottomNavigationBar: SafeArea(

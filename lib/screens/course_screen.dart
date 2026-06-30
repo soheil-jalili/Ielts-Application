@@ -19,7 +19,7 @@ class CourseScreen extends StatelessWidget {
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                child: CourseTitle(title: 'دوره های آموزشی'),
+                child: TitleAndBack(title: 'دوره های آموزشی'),
               ),
             ),
 

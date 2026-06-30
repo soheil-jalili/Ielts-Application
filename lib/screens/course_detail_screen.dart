@@ -40,7 +40,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                  child: CourseTitle(title: 'آموزش گرامر با بازی'),
+                  child: TitleAndBack(title: 'آموزش گرامر با بازی'),
                 ),
               ),
 
@@ -52,7 +52,9 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: selectedIndex == 1 && courseParticipant
-                        ? VideoPlayer(videoUrl: 'https://vjs.zencdn.net/v/oceans.mp4',)
+                        ? VideoPlayer(
+                            videoUrl: 'https://vjs.zencdn.net/v/oceans.mp4',
+                          )
                         : Image.asset(Assets.images.courseDetailCover.path),
                   ),
                 ),
@@ -72,7 +74,6 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                 ),
               ),
 
-  
               if (selectedIndex == 0)
                 SliverPadding(
                   padding: const EdgeInsets.only(top: 40),
@@ -114,7 +115,7 @@ class _VideoPlayerState extends State<VideoPlayer> {
 
     BetterPlayerConfiguration betterPlayerConfiguration =
         BetterPlayerConfiguration(
-          fit: BoxFit.contain,
+          fit: BoxFit.fill,
           autoPlay: false,
           looping: false,
         );
