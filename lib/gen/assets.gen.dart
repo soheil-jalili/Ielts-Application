@@ -147,6 +147,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/play-course-detail.svg
   String get playCourseDetail => 'assets/images/play-course-detail.svg';
 
+  /// File path: assets/images/play_unlock.svg
+  String get playUnlock => 'assets/images/play_unlock.svg';
+
   /// File path: assets/images/profile-active.png
   AssetGenImage get profileActive =>
       const AssetGenImage('assets/images/profile-active.png');
@@ -226,6 +229,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/two.png
   AssetGenImage get two => const AssetGenImage('assets/images/two.png');
 
+  /// File path: assets/images/unlock.svg
+  String get unlock => 'assets/images/unlock.svg';
+
   /// File path: assets/images/video-image.png
   AssetGenImage get videoImage =>
       const AssetGenImage('assets/images/video-image.png');
@@ -279,6 +285,7 @@ class $AssetsImagesGen {
     pic3,
     pic4,
     playCourseDetail,
+    playUnlock,
     profileActive,
     profile,
     profile1,
@@ -301,6 +308,7 @@ class $AssetsImagesGen {
     travel,
     treeOfWord,
     two,
+    unlock,
     videoImage,
     womanProfile,
     zero,
