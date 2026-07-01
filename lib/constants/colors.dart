@@ -180,6 +180,15 @@ class AppColors {
   );
   static Color popularSearchTextSearchScreenColor = Color(0xff404040);
 
+  // Teacher Screen
+  static Color strokeAvatarTeacherScreenColor = Color(0xff000000).withAlpha(30);
+  static Color primaryTextTeacherScreenColor = Color(0xff787878);
+  static Color secondaryTeacherScreenColor = Color(0xffFFA31A);
+  static Color hintTextTeacherScreenColor = Color(0xff6D6D6D).withAlpha(50);
+  static Color shadowContainerTeacherScreenColor = Color(
+    0xff7090B0,
+  ).withAlpha(20);
+
   // Shimmer
   static Color baseColorShimmer = Color(0xFFEDEDED);
   static Color highlightColorShimmer = Color(0xFFF5F5F5);

@@ -34,12 +34,19 @@ class $AssetsImagesGen {
   /// File path: assets/images/banner1.png
   AssetGenImage get banner1 => const AssetGenImage('assets/images/banner1.png');
 
+  /// File path: assets/images/banner_teacher_screen.png
+  AssetGenImage get bannerTeacherScreen =>
+      const AssetGenImage('assets/images/banner_teacher_screen.png');
+
   /// File path: assets/images/blur.png
   AssetGenImage get blur => const AssetGenImage('assets/images/blur.png');
 
   /// File path: assets/images/calendar.png
   AssetGenImage get calendar =>
       const AssetGenImage('assets/images/calendar.png');
+
+  /// File path: assets/images/calender.svg
+  String get calender => 'assets/images/calender.svg';
 
   /// File path: assets/images/circle.png
   AssetGenImage get circle => const AssetGenImage('assets/images/circle.png');
@@ -87,6 +94,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/google.png
   AssetGenImage get google => const AssetGenImage('assets/images/google.png');
+
+  /// File path: assets/images/hat.svg
+  String get hat => 'assets/images/hat.svg';
 
   /// File path: assets/images/hiro hamada 1.png
   AssetGenImage get hiroHamada1 =>
@@ -230,6 +240,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/star.png
   AssetGenImage get star => const AssetGenImage('assets/images/star.png');
 
+  /// File path: assets/images/student.svg
+  String get student => 'assets/images/student.svg';
+
   /// File path: assets/images/support.svg
   String get support => 'assets/images/support.svg';
 
@@ -278,8 +291,10 @@ class $AssetsImagesGen {
     apple,
     avatar,
     banner1,
+    bannerTeacherScreen,
     blur,
     calendar,
+    calender,
     circle,
     clock,
     clock2,
@@ -294,6 +309,7 @@ class $AssetsImagesGen {
     freeCourseShape3,
     germanFlag,
     google,
+    hat,
     hiroHamada1,
     home,
     homeActive,
@@ -336,6 +352,7 @@ class $AssetsImagesGen {
     starColorless,
     starFill,
     star,
+    student,
     support,
     three,
     time,

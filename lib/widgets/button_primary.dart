@@ -9,6 +9,8 @@ class ButtonPrimary extends StatelessWidget {
     required this.onPressed,
     this.borderRadius = 16,
     this.height = 56,
+    this.width = double.infinity,
+    this.fontSize = 20,
     this.fontFamily = FontFamily.iranSansXRegular,
   });
 
@@ -16,14 +18,14 @@ class ButtonPrimary extends StatelessWidget {
   final String fontFamily;
   final void Function() onPressed;
   final double height;
+  final double width;
   final double borderRadius;
-
-
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: width,
       height: height,
       decoration: BoxDecoration(
         boxShadow: [
@@ -50,7 +52,7 @@ class ButtonPrimary extends StatelessWidget {
         child: Text(
           title,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: fontSize,
             fontFamily: fontFamily,
             color: Colors.white,
           ),

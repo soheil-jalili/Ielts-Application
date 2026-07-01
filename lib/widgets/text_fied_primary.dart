@@ -7,12 +7,14 @@ class TextFieldPrimary extends StatelessWidget {
     super.key,
     required this.hintText,
     required this.controller,
+     this.hintFontSize = 20,
     this.onChanged,
     this.isPassword = false,
     this.isPhoneNumber = false,
   });
 
   final String hintText;
+  final double hintFontSize;
   final bool isPassword;
   final bool isPhoneNumber;
   final TextEditingController controller;
@@ -36,7 +38,7 @@ class TextFieldPrimary extends StatelessWidget {
           hintText: hintText,
 
           hintStyle: TextStyle(
-            fontSize: 20,
+            fontSize: hintFontSize,
             fontFamily: FontFamily.iranSansXRegular,
             color: AppColors.hintTextColor,
           ),
