@@ -14,6 +14,7 @@ class TeacherScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.scaffoldColor2,
       body: SafeArea(
         bottom: false,
         child: CustomScrollView(
@@ -97,13 +98,26 @@ class TeacherScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 8),
-                    Text(
-                      'تدریس : آیلتس ، تافل',
-                      style: TextStyle(
-                        color: AppColors.primaryTextTeacherScreenColor,
-                        fontSize: 12,
-                        fontFamily: FontFamily.iranSansXRegular,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'تدریس : ',
+                          style: TextStyle(
+                            color: AppColors.primaryTextTeacherScreenColor,
+                            fontSize: 12,
+                            fontFamily: FontFamily.iranSansXRegular,
+                          ),
+                        ),
+                        Text(
+                          'آیلتس ، تافل',
+                          style: TextStyle(
+                            color: AppColors.primaryTextTeacherScreenColor,
+                            fontSize: 12,
+                            fontFamily: FontFamily.iranSansXRegular,
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(height: 8),
                     Row(
@@ -136,10 +150,8 @@ class TeacherScreen extends StatelessWidget {
                     SizedBox(height: 16),
                     Center(
                       child: Wrap(
-                        alignment: WrapAlignment
-                            .center, 
-                        runAlignment: WrapAlignment
-                            .center, 
+                        alignment: WrapAlignment.center,
+                        runAlignment: WrapAlignment.center,
                         spacing: 13,
                         runSpacing: 8,
                         children: [
