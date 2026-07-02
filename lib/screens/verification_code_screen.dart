@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/widgets/button_primary.dart';
+import 'package:ielts/widgets/horizental_line.dart';
 
 class VerificationCodeScreen extends StatefulWidget {
   const VerificationCodeScreen({super.key});
@@ -99,8 +100,11 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                               TextFieldVerificationCode(
                                 controller: textFieldCode1,
                                 focusNode: textFieldFocusNode1,
-                                onChanged: (value) =>
-                                    _nextField(value, textFieldFocusNode2, null),
+                                onChanged: (value) => _nextField(
+                                  value,
+                                  textFieldFocusNode2,
+                                  null,
+                                ),
                               ),
                               const SizedBox(width: 24),
                               TextFieldVerificationCode(
@@ -126,8 +130,11 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                               TextFieldVerificationCode(
                                 controller: textFieldCode4,
                                 focusNode: textFieldFocusNode4,
-                                onChanged: (value) =>
-                                    _nextField(value, null, textFieldFocusNode3),
+                                onChanged: (value) => _nextField(
+                                  value,
+                                  null,
+                                  textFieldFocusNode3,
+                                ),
                               ),
                             ],
                           ),
@@ -159,17 +166,7 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 15.5),
-              child: Container(
-                width: 180,
-                height: 6,
-                decoration: BoxDecoration(
-                  color: AppColors.loginScreenLineColor,
-                  borderRadius: BorderRadius.circular(100),
-                ),
-              ),
-            ),
+            HorizentalLine(),
           ],
         ),
       ),

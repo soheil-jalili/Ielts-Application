@@ -151,6 +151,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/one.png
   AssetGenImage get one => const AssetGenImage('assets/images/one.png');
 
+  /// File path: assets/images/online-test-quiz.svg
+  String get onlineTestQuiz => 'assets/images/online-test-quiz.svg';
+
   /// File path: assets/images/paper.png
   AssetGenImage get paper => const AssetGenImage('assets/images/paper.png');
 
@@ -210,6 +213,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/search_search_screen.svg
   String get searchSearchScreen => 'assets/images/search_search_screen.svg';
+
+  /// File path: assets/images/shape-quiz.svg
+  String get shapeQuiz => 'assets/images/shape-quiz.svg';
 
   /// File path: assets/images/shape_free_course.png
   AssetGenImage get shapeFreeCourse =>
@@ -326,6 +332,7 @@ class $AssetsImagesGen {
     mojAvatar,
     notFound,
     one,
+    onlineTestQuiz,
     paper,
     pic1,
     pic2,
@@ -344,6 +351,7 @@ class $AssetsImagesGen {
     search,
     searchActive,
     searchSearchScreen,
+    shapeQuiz,
     shapeFreeCourse,
     shapeFreeCourse2,
     sort,

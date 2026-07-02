@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/widgets/button_primary.dart';
+import 'package:ielts/widgets/horizental_line.dart';
 import 'package:ielts/widgets/text_fied_primary.dart';
 
 class ForgetPasswordScreen extends StatefulWidget {
@@ -80,17 +81,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.only(bottom: 15.5),
-              child: Container(
-                width: 180,
-                height: 6,
-                decoration: BoxDecoration(
-                  color: AppColors.loginScreenLineColor,
-                  borderRadius: BorderRadius.circular(100),
-                ),
-              ),
-            ),
+            HorizentalLine(),
           ],
         ),
       ),

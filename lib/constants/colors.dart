@@ -189,6 +189,10 @@ class AppColors {
     0xff7090B0,
   ).withAlpha(20);
 
+  // Quiz Screen
+  static Color subTextQuizScreenColor = Color(0xff515151);
+
+
   // Shimmer
   static Color baseColorShimmer = Color(0xFFEDEDED);
   static Color highlightColorShimmer = Color(0xFFF5F5F5);
