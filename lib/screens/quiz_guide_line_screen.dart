@@ -3,12 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/quiz_guide_line_screen.dart';
+import 'package:ielts/screens/quiz_landing_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
-class QuizLandingScreen extends StatelessWidget {
-  const QuizLandingScreen({super.key});
+class QuizGuideLineScreen extends StatelessWidget {
+  const QuizGuideLineScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,16 +49,14 @@ class QuizLandingScreen extends StatelessWidget {
                           Center(
                             child: Padding(
                               padding: const EdgeInsets.only(top: 60),
-                              child: SvgPicture.asset(
-                                Assets.images.onlineTestQuiz,
-                              ),
+                              child: SvgPicture.asset(Assets.images.dictionary),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 25, bottom: 24),
                             child: Center(
                               child: Text(
-                                'آزمون تعیین سطح',
+                                'توضیحات آزمون',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 24,
@@ -69,39 +67,16 @@ class QuizLandingScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 32),
-                      Text.rich(
-                        TextSpan(
-                          children: [
-                            const TextSpan(text: 'نمیدونی از کجا باید '),
-                            TextSpan(
-                              text: 'شروع',
-                              style: TextStyle(color: AppColors.primaryColor),
-                            ),
-                            const TextSpan(text: ' کنی؟'),
-                          ],
-                        ),
-                        style: TextStyle(
-                          color: AppColors.subTextQuizScreenColor,
-                          fontSize: 26,
-                          fontFamily: FontFamily.iranSansXDemiBold,
-                        ),
-                      ),
-                      const SizedBox(height: 16),
+
+                      const SizedBox(height: 56),
+
                       Text(
-                        'اینجا میتونی سطح خودتو بسنجی!',
-                        style: TextStyle(
-                          color: AppColors.subTextQuizScreenColor,
-                          fontSize: 20,
-                          fontFamily: FontFamily.iranSansXDemiBold,
-                        ),
-                      ),
-                      const SizedBox(height: 24),
-                      Text(
-                        '''ما در این اپلیکیشن برای شما امکانی را فراهم 
-کرده ایم تا شما با یک آزمون تعیین سطح  مهارت
-زبان خود را سنجش کنید و با توجه به آن آموزش 
-خود را شروع کنید .''',
+                        '''این آزمون شامل 30 سوال 3 امتیازی می باشد و در 
+مجموع  90 امتیاز دارد :
+در صورتی که به سوال پاسخ ندهید 0 امتیاز
+در صورتی که به سوال پاسخ اشتباه دهید 1- امتیاز
+و در صورتی که به سوال پاسخ درست دهید 3 امتیاز 
+دریافت خواهید کرد.''',
                         style: TextStyle(
                           color: AppColors.subTextQuizScreenColor,
                           fontSize: 16,
@@ -110,23 +85,22 @@ class QuizLandingScreen extends StatelessWidget {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 32),
+
+                      SizedBox(height: 48),
+
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 35),
-                        child: ButtonPrimary(
-                          title: 'بزن بریم',
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => QuizGuideLineScreen(),
-                              ),
-                            );
-                          },
-                        ),
+                        child: ButtonPrimary(title: 'بعدی', onPressed: () {}),
                       ),
                       const SizedBox(height: 24),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => QuizLandingScreen(),
+                            ),
+                          );
+                        },
                         child: Text(
                           'بازگشت',
                           style: TextStyle(
@@ -136,7 +110,7 @@ class QuizLandingScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 24),
+                      const SizedBox(height: 16),
                     ],
                   ),
                 ),

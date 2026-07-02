@@ -81,6 +81,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/delete-input.svg
   String get deleteInput => 'assets/images/delete-input.svg';
 
+  /// File path: assets/images/dictionary.svg
+  String get dictionary => 'assets/images/dictionary.svg';
+
   /// File path: assets/images/fire.svg
   String get fire => 'assets/images/fire.svg';
 
@@ -311,6 +314,7 @@ class $AssetsImagesGen {
     cup,
     cup2,
     deleteInput,
+    dictionary,
     fire,
     freeCourseShape3,
     germanFlag,
