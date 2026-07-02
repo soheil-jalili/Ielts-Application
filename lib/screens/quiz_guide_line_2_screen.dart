@@ -3,12 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/quiz_guide_line_screen.dart';
+import 'package:ielts/screens/quiz_landing_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
-class QuizLandingScreen extends StatelessWidget {
-  const QuizLandingScreen({super.key});
+class QuizGuideLine2Screen extends StatelessWidget {
+  const QuizGuideLine2Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,16 +49,14 @@ class QuizLandingScreen extends StatelessWidget {
                           Center(
                             child: Padding(
                               padding: const EdgeInsets.only(top: 60),
-                              child: SvgPicture.asset(
-                                Assets.images.onlineTestQuiz,
-                              ),
+                              child: SvgPicture.asset(Assets.images.guidline2),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 25, bottom: 24),
                             child: Center(
                               child: Text(
-                                'آزمون تعیین سطح',
+                               'سطوح انگلیسی چیست ؟',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 24,
@@ -69,64 +67,41 @@ class QuizLandingScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 32),
-                      Text.rich(
-                        TextSpan(
-                          children: [
-                            const TextSpan(text: 'نمیدونی از کجا باید '),
-                            TextSpan(
-                              text: 'شروع',
-                              style: TextStyle(color: AppColors.primaryColor),
-                            ),
-                            const TextSpan(text: ' کنی؟'),
-                          ],
-                        ),
-                        style: TextStyle(
-                          color: AppColors.subTextQuizScreenColor,
-                          fontSize: 26,
-                          fontFamily: FontFamily.iranSansXDemiBold,
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                      Text(
-                        'اینجا میتونی سطح خودتو بسنجی!',
-                        style: TextStyle(
-                          color: AppColors.subTextQuizScreenColor,
-                          fontSize: 20,
-                          fontFamily: FontFamily.iranSansXDemiBold,
-                        ),
-                      ),
-                      const SizedBox(height: 24),
+
+                      const SizedBox(height: 56),
+
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 33),
-                        child: Text(
-                          '''ما در این اپلیکیشن برای شما امکانی را فراهم کرده‌ایم تا شما با یک آزمون تعیین سطح مهارت زبان خود را سنجش کنید و با توجه به آن آموزش خود را شروع کنید.''',
-                          style: TextStyle(
-                            color: AppColors.subTextQuizScreenColor,
-                            fontSize: 16,
-                            fontFamily: FontFamily.iranSansXRegular,
-                            height: 2.0,
+                        padding: const EdgeInsets.symmetric(horizontal: 24),
+                        child: Directionality(
+                          textDirection: TextDirection.rtl,
+                          child: Text(
+                            '''زبان انگلیسی دارای سطوح مختلفی می‌باشد که زبان‌آموز بر اساس آن از لحاظ دانش زبانی سنجیده می‌شود و برای یادگیری زبان انگلیسی بر اساس این سطوح دسته‌بندی می‌شود، هر سطح نشان‌دهنده میزان مهارت زبان‌آموز برای دریافت مدرک‌های بین‌المللی زبان است.''',
+                            style: TextStyle(
+                              color: AppColors.subTextQuizScreenColor,
+                              fontSize: 16,
+                              fontFamily: FontFamily.iranSansXRegular,
+                              height: 2.0,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
-                          textAlign: TextAlign.center,
                         ),
                       ),
-                      const SizedBox(height: 32),
+
+                      SizedBox(height: 48),
+
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 35),
-                        child: ButtonPrimary(
-                          title: 'بزن بریم',
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => QuizGuideLineScreen(),
-                              ),
-                            );
-                          },
-                        ),
+                        child: ButtonPrimary(title: 'بعدی', onPressed: () {}),
                       ),
                       const SizedBox(height: 24),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => QuizLandingScreen(),
+                            ),
+                          );
+                        },
                         child: Text(
                           'بازگشت',
                           style: TextStyle(
@@ -136,7 +111,7 @@ class QuizLandingScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 24),
+                      const SizedBox(height: 16),
                     ],
                   ),
                 ),

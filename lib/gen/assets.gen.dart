@@ -98,6 +98,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/google.png
   AssetGenImage get google => const AssetGenImage('assets/images/google.png');
 
+  /// File path: assets/images/guidline2.svg
+  String get guidline2 => 'assets/images/guidline2.svg';
+
   /// File path: assets/images/hat.svg
   String get hat => 'assets/images/hat.svg';
 
@@ -319,6 +322,7 @@ class $AssetsImagesGen {
     freeCourseShape3,
     germanFlag,
     google,
+    guidline2,
     hat,
     hiroHamada1,
     home,

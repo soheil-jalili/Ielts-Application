@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/quiz_guide_line_2_screen.dart';
 import 'package:ielts/screens/quiz_landing_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
@@ -70,27 +71,40 @@ class QuizGuideLineScreen extends StatelessWidget {
 
                       const SizedBox(height: 56),
 
-                      Text(
-                        '''این آزمون شامل 30 سوال 3 امتیازی می باشد و در 
-مجموع  90 امتیاز دارد :
-در صورتی که به سوال پاسخ ندهید 0 امتیاز
-در صورتی که به سوال پاسخ اشتباه دهید 1- امتیاز
-و در صورتی که به سوال پاسخ درست دهید 3 امتیاز 
-دریافت خواهید کرد.''',
-                        style: TextStyle(
-                          color: AppColors.subTextQuizScreenColor,
-                          fontSize: 16,
-                          fontFamily: FontFamily.iranSansXRegular,
-                          height: 2.0,
+                      Directionality(
+                        textDirection: TextDirection.rtl,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
+                          child: Text(
+                            '''این آزمون شامل ۳۰ سوال ۳ امتیازی می‌باشد و در مجموع ۹۰ امتیاز دارد:
+در صورتی که به سوال پاسخ ندهید ۰ امتیاز،
+در صورتی که به سوال پاسخ اشتباه دهید ۱- امتیاز،
+و در صورتی که به سوال پاسخ درست دهید ۳ امتیاز دریافت خواهید کرد.''',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: AppColors.subTextQuizScreenColor,
+                              fontSize: 16,
+                              fontFamily: FontFamily.iranSansXRegular,
+                              height: 2.0,
+                            ),
+                          ),
                         ),
-                        textAlign: TextAlign.center,
                       ),
 
                       SizedBox(height: 48),
 
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 35),
-                        child: ButtonPrimary(title: 'بعدی', onPressed: () {}),
+                        child: ButtonPrimary(
+                          title: 'بعدی',
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => QuizGuideLine2Screen(),
+                              ),
+                            );
+                          },
+                        ),
                       ),
                       const SizedBox(height: 24),
                       GestureDetector(
