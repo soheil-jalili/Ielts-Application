@@ -203,6 +203,9 @@ class $AssetsImagesGen {
   AssetGenImage get profileCard =>
       const AssetGenImage('assets/images/profile_card.png');
 
+  /// File path: assets/images/raising.svg
+  String get raising => 'assets/images/raising.svg';
+
   /// File path: assets/images/right-shape.png
   AssetGenImage get rightShape =>
       const AssetGenImage('assets/images/right-shape.png');
@@ -354,6 +357,7 @@ class $AssetsImagesGen {
     profile1,
     profile2,
     profileCard,
+    raising,
     rightShape,
     russia,
     search,

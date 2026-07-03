@@ -191,6 +191,7 @@ class AppColors {
 
   // Quiz Screen
   static Color subTextQuizScreenColor = Color(0xff515151);
+  static Color tablePrimaryQuizScreenColor = Color(0xff49495F);
 
 
   // Shimmer

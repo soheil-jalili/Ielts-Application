@@ -3,13 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/quiz_guide_line_3_screen.dart';
-import 'package:ielts/screens/quiz_guide_line_screen.dart';
+import 'package:ielts/screens/quiz_landing_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
-class QuizGuideLine2Screen extends StatelessWidget {
-  const QuizGuideLine2Screen({super.key});
+class QuizGuideLine3Screen extends StatelessWidget {
+  const QuizGuideLine3Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,14 +49,14 @@ class QuizGuideLine2Screen extends StatelessWidget {
                           Center(
                             child: Padding(
                               padding: const EdgeInsets.only(top: 60),
-                              child: SvgPicture.asset(Assets.images.guidline2),
+                              child: SvgPicture.asset(Assets.images.raising),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 25, bottom: 24),
                             child: Center(
                               child: Text(
-                                'سطوح انگلیسی چیست ؟',
+                                'من در چه سطحی ام ؟',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 24,
@@ -69,14 +68,14 @@ class QuizGuideLine2Screen extends StatelessWidget {
                         ],
                       ),
 
-                      const SizedBox(height: 56),
+                      const SizedBox(height: 32),
 
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24),
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
                         child: Directionality(
                           textDirection: TextDirection.rtl,
                           child: Text(
-                            '''زبان انگلیسی دارای سطوح مختلفی می‌باشد که زبان‌آموز بر اساس آن از لحاظ دانش زبانی سنجیده می‌شود و برای یادگیری زبان انگلیسی بر اساس این سطوح دسته‌بندی می‌شود، هر سطح نشان‌دهنده میزان مهارت زبان‌آموز برای دریافت مدرک‌های بین‌المللی زبان است.''',
+                            "بستگی به میزان امتیازی است که به‌دست می‌آورید، با توجه به جدول زیر سطح شما مشخص می‌شود.",
                             style: TextStyle(
                               color: AppColors.subTextQuizScreenColor,
                               fontSize: 16,
@@ -88,19 +87,71 @@ class QuizGuideLine2Screen extends StatelessWidget {
                         ),
                       ),
 
-                      SizedBox(height: 48),
+                      SizedBox(height: 24.53),
 
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Table(
+                          textDirection: TextDirection.rtl,
+                          border: TableBorder.all(
+                            color: AppColors.tablePrimaryQuizScreenColor,
+                            width: 0.95,
+                          ),
+
+                          columnWidths: const {
+                            0: FlexColumnWidth(1.1),
+                            1: FlexColumnWidth(2),
+                            2: FlexColumnWidth(1.1),
+                            3: FlexColumnWidth(2),
+                          },
+                          defaultVerticalAlignment:
+                              TableCellVerticalAlignment.middle,
+                          children: [
+                            TableRow(
+                              children: [
+                                _buildTableCell("سطح", isHeader: true),
+                                _buildTableCell("مجموع امتیاز", isHeader: true),
+                                _buildTableCell("سطح", isHeader: true),
+                                _buildTableCell("مجموع امتیاز", isHeader: true),
+                              ],
+                            ),
+
+                            TableRow(
+                              children: [
+                                _buildTableCell("A1"),
+                                _buildTableCell("0 الی 15"),
+                                _buildTableCell("A2"),
+                                _buildTableCell("16 الی 30"),
+                              ],
+                            ),
+
+                            TableRow(
+                              children: [
+                                _buildTableCell("B1"),
+                                _buildTableCell("31 الی 45"),
+                                _buildTableCell("B2"),
+                                _buildTableCell("46 الی 60"),
+                              ],
+                            ),
+
+                            TableRow(
+                              children: [
+                                _buildTableCell("C1"),
+                                _buildTableCell("61 الی 75"),
+                                _buildTableCell("C2"),
+                                _buildTableCell("76 الی 90"),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(height: 32.53),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 35),
                         child: ButtonPrimary(
-                          title: 'بعدی',
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => QuizGuideLine3Screen(),
-                              ),
-                            );
-                          },
+                          title: 'شروع آزمون',
+                          onPressed: () {},
                         ),
                       ),
                       const SizedBox(height: 24),
@@ -108,7 +159,7 @@ class QuizGuideLine2Screen extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => QuizGuideLineScreen(),
+                              builder: (context) => QuizLandingScreen(),
                             ),
                           );
                         },
@@ -129,6 +180,23 @@ class QuizGuideLine2Screen extends StatelessWidget {
             ),
             HorizentalLine(bottomSpace: 18),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTableCell(String text, {bool isHeader = false}) {
+    return Padding(
+      padding: isHeader
+          ? EdgeInsets.symmetric(vertical: 7)
+          : EdgeInsets.symmetric(vertical: 10),
+      child: Text(
+        text,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 15.16,
+          fontFamily: FontFamily.iranSansXRegular,
+          color: AppColors.tablePrimaryQuizScreenColor,
         ),
       ),
     );
