@@ -203,8 +203,14 @@ class $AssetsImagesGen {
   AssetGenImage get profileCard =>
       const AssetGenImage('assets/images/profile_card.png');
 
+  /// File path: assets/images/quiz_screen_top_shape.svg
+  String get quizScreenTopShape => 'assets/images/quiz_screen_top_shape.svg';
+
   /// File path: assets/images/raising.svg
   String get raising => 'assets/images/raising.svg';
+
+  /// File path: assets/images/result.svg
+  String get result => 'assets/images/result.svg';
 
   /// File path: assets/images/right-shape.png
   AssetGenImage get rightShape =>
@@ -357,7 +363,9 @@ class $AssetsImagesGen {
     profile1,
     profile2,
     profileCard,
+    quizScreenTopShape,
     raising,
+    result,
     rightShape,
     russia,
     search,

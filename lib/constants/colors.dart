@@ -86,6 +86,12 @@ class AppColors {
     Color(0xffFEBE19),
   ];
 
+
+  // Custom Radio Button 
+    static const Color radioButtonFillColor = Color(0xff74769C);
+    static const Color radioButtonStrokeColor = Color(0xffBDC1D3);
+
+
   // Profile Gradient Color
   static final List<Color> profileOneColor = [
     const Color(0xffF5B544).withValues(alpha: 0.0),
@@ -192,11 +198,15 @@ class AppColors {
   // Quiz Screen
   static Color subTextQuizScreenColor = Color(0xff515151);
   static Color tablePrimaryQuizScreenColor = Color(0xff49495F);
-
+  static Color answerContainerQuizScreenColor = Color(0xffBDC1D3);
+  static Color timerTextQuizScreenColor = Color(0xff0F0F0F).withAlpha(70);
 
   // Shimmer
   static Color baseColorShimmer = Color(0xFFEDEDED);
   static Color highlightColorShimmer = Color(0xFFF5F5F5);
+
+  // Circle Indicator
+  static Color circleIndicatorPromary = Color(0xff13BF4D);
 
   // Bottom Navigation
   static const Color activeBottomNavigationLabelColor = Color(0xffFFA31A);

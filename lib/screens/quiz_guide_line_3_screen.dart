@@ -4,6 +4,7 @@ import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/screens/quiz_landing_screen.dart';
+import 'package:ielts/screens/quiz_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
@@ -151,7 +152,13 @@ class QuizGuideLine3Screen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 35),
                         child: ButtonPrimary(
                           title: 'شروع آزمون',
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) => QuizScreen(),
+                              ),
+                            );
+                          },
                         ),
                       ),
                       const SizedBox(height: 24),
