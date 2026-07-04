@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ielts/screens/quiz_landing_screen.dart';
+import 'package:ielts/screens/quiz_score_overview_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Directionality(
         textDirection: TextDirection.rtl,
-        child: QuizLandingScreen(),
+        child: QuizScoreOverviewScreen(),
       ),
     );
   }

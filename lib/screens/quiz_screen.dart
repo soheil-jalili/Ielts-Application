@@ -143,7 +143,7 @@ class QuizScreen extends StatelessWidget {
                       ),
                     ),
                     progressColor: AppColors.circleIndicatorPromary,
-                    backgroundColor: Colors.grey.shade200,
+                    backgroundColor: Colors.white,
                     circularStrokeCap: CircularStrokeCap.round,
                   ),
                 ),
