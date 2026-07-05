@@ -26,7 +26,9 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
 
         color: widget.isClicked ? AppColors.radioButtonFillColor : null,
       ),
-      child: widget.isClicked ? Icon(Icons.check, size: 14,color:Colors.white) : null,
+      child: widget.isClicked
+          ? Icon(Icons.check, size: 14, color: Colors.white)
+          : null,
     );
   }
 }

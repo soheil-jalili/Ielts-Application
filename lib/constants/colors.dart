@@ -86,11 +86,9 @@ class AppColors {
     Color(0xffFEBE19),
   ];
 
-
-  // Custom Radio Button 
-    static const Color radioButtonFillColor = Color(0xff74769C);
-    static const Color radioButtonStrokeColor = Color(0xffBDC1D3);
-
+  // Custom Radio Button
+  static const Color radioButtonFillColor = Color(0xff74769C);
+  static const Color radioButtonStrokeColor = Color(0xffBDC1D3);
 
   // Profile Gradient Color
   static final List<Color> profileOneColor = [
@@ -200,6 +198,13 @@ class AppColors {
   static Color tablePrimaryQuizScreenColor = Color(0xff49495F);
   static Color answerContainerQuizScreenColor = Color(0xffBDC1D3);
   static Color timerTextQuizScreenColor = Color(0xff0F0F0F).withAlpha(70);
+  static Color answerContainerCorrectAnswerQuizResultScreen = Color(0xff13BF4D);
+  static Color answerContainerIncorrectAnswerQuizResultScreen = Color(
+    0xffE81739,
+  );
+  static Color answerContainerSelectedStrokeQuizScreenColor = Color(0xff74769C);
+
+
 
   // Shimmer
   static Color baseColorShimmer = Color(0xFFEDEDED);
@@ -207,6 +212,13 @@ class AppColors {
 
   // Circle Indicator
   static Color circleIndicatorPromary = Color(0xff13BF4D);
+
+
+  // Utils
+  // Time Up Dialog
+  static Color borderInsideTimeUpDialogColor = Color(0xff9DA3BD);
+  static Color primaryTimeUpDialogColor = Color(0xff858AAC);
+
 
   // Bottom Navigation
   static const Color activeBottomNavigationLabelColor = Color(0xffFFA31A);

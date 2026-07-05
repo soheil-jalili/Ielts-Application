@@ -1,17 +1,25 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
+import 'package:ielts/screens/quiz_score_overview_screen.dart';
+import 'package:ielts/widgets/answer_container.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/widgets/back_icon.dart';
 import 'package:ielts/widgets/button_primary.dart';
-import 'package:ielts/widgets/custom_radio.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
-class QuizScreen extends StatelessWidget {
+class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
 
+  @override
+  State<QuizScreen> createState() => _QuizScreenState();
+}
+
+class _QuizScreenState extends State<QuizScreen> {
+  int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,7 +90,7 @@ class QuizScreen extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(24, 87, 24, 64),
                             child: Text(
-                              "This is my friend.\n_______ name is Peter.",
+                              "This is my friend\n_______ name is Peter.",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 24,
@@ -95,10 +103,17 @@ class QuizScreen extends StatelessWidget {
                           ),
                         ),
 
-                        AnswerContainer(),
-                        AnswerContainer(),
-                        AnswerContainer(),
-                        AnswerContainer(),
+                        ...['her', 'our', 'yours', 'his'].mapIndexed(
+                          (i, e) => AnswerContainer(
+                            title: e,
+                            isSelected: selectedIndex == i,
+                            onTap: () {
+                              setState(() {
+                                selectedIndex = i;
+                              });
+                            },
+                          ),
+                        ),
                         Spacer(),
                         Padding(
                           padding: const EdgeInsets.only(
@@ -106,7 +121,17 @@ class QuizScreen extends StatelessWidget {
                             right: 35,
                             bottom: 47,
                           ),
-                          child: ButtonPrimary(title: 'بعدی', onPressed: () {}),
+                          child: ButtonPrimary(
+                            title: 'بعدی',
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      QuizScoreOverviewScreen(),
+                                ),
+                              );
+                            },
+                          ),
                         ),
                       ],
                     ),
@@ -152,44 +177,6 @@ class QuizScreen extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class AnswerContainer extends StatelessWidget {
-  const AnswerContainer({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      child: Container(
-        margin: EdgeInsets.fromLTRB(35, 0, 35, 24),
-        height: 56,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-            width: 1,
-            color: AppColors.answerContainerQuizScreenColor,
-          ),
-        ),
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: CustomRadioButton(isClicked: true),
-            ),
-
-            Text(
-              'her',
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: FontFamily.iranSansXLight,
-              ),
-            ),
-          ],
-        ),
-      ),
-      onTap: () {},
     );
   }
 }

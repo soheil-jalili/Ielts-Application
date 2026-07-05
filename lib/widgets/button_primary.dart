@@ -12,6 +12,7 @@ class ButtonPrimary extends StatelessWidget {
     this.width = double.infinity,
     this.fontSize = 20,
     this.fontFamily = FontFamily.iranSansXRegular,
+    this.fillColor,
   });
 
   final String title;
@@ -21,6 +22,7 @@ class ButtonPrimary extends StatelessWidget {
   final double width;
   final double borderRadius;
   final double fontSize;
+  final Color? fillColor;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class ButtonPrimary extends StatelessWidget {
           foregroundColor: AppColors.loginScreenLineColor.withValues(
             alpha: 0.2,
           ),
-          backgroundColor: AppColors.buttonBackgroundColor,
+          backgroundColor: fillColor ?? AppColors.buttonBackgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),

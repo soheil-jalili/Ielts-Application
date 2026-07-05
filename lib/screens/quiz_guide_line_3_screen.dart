@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/quiz_landing_screen.dart';
 import 'package:ielts/screens/quiz_screen.dart';
+import 'package:ielts/widgets/back_quiz.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
@@ -162,23 +162,7 @@ class QuizGuideLine3Screen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 24),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => QuizLandingScreen(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          'بازگشت',
-                          style: TextStyle(
-                            color: AppColors.primaryColor,
-                            fontSize: 16,
-                            fontFamily: FontFamily.iranSansXMedium,
-                          ),
-                        ),
-                      ),
+                      BackQuiz(onTap: () {}),
                       const SizedBox(height: 16),
                     ],
                   ),
