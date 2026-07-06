@@ -78,6 +78,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/cup2.png
   AssetGenImage get cup2 => const AssetGenImage('assets/images/cup2.png');
 
+  /// File path: assets/images/daily_challenge_guid_line_2.svg
+  String get dailyChallengeGuidLine2 =>
+      'assets/images/daily_challenge_guid_line_2.svg';
+
   /// File path: assets/images/daily_challenge_guide_line_1.svg
   String get dailyChallengeGuideLine1 =>
       'assets/images/daily_challenge_guide_line_1.svg';
@@ -165,6 +169,18 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/not-found.svg
   String get notFound => 'assets/images/not-found.svg';
+
+  /// File path: assets/images/onboarding1.svg
+  String get onboarding1 => 'assets/images/onboarding1.svg';
+
+  /// File path: assets/images/onboarding2.svg
+  String get onboarding2 => 'assets/images/onboarding2.svg';
+
+  /// File path: assets/images/onboarding3.svg
+  String get onboarding3 => 'assets/images/onboarding3.svg';
+
+  /// File path: assets/images/onboarding4.svg
+  String get onboarding4 => 'assets/images/onboarding4.svg';
 
   /// File path: assets/images/one.png
   AssetGenImage get one => const AssetGenImage('assets/images/one.png');
@@ -337,6 +353,7 @@ class $AssetsImagesGen {
     courseDetailCover,
     cup,
     cup2,
+    dailyChallengeGuidLine2,
     dailyChallengeGuideLine1,
     dailyChallengeLeftShape,
     dailyChallengeRightShape,
@@ -363,6 +380,10 @@ class $AssetsImagesGen {
     mic,
     mojAvatar,
     notFound,
+    onboarding1,
+    onboarding2,
+    onboarding3,
+    onboarding4,
     one,
     onlineTestQuiz,
     paper,
