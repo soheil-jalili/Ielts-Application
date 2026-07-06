@@ -78,6 +78,18 @@ class $AssetsImagesGen {
   /// File path: assets/images/cup2.png
   AssetGenImage get cup2 => const AssetGenImage('assets/images/cup2.png');
 
+  /// File path: assets/images/daily_challenge_guide_line_1.svg
+  String get dailyChallengeGuideLine1 =>
+      'assets/images/daily_challenge_guide_line_1.svg';
+
+  /// File path: assets/images/daily_challenge_left_shape.svg
+  String get dailyChallengeLeftShape =>
+      'assets/images/daily_challenge_left_shape.svg';
+
+  /// File path: assets/images/daily_challenge_right_shape.svg
+  String get dailyChallengeRightShape =>
+      'assets/images/daily_challenge_right_shape.svg';
+
   /// File path: assets/images/delete-input.svg
   String get deleteInput => 'assets/images/delete-input.svg';
 
@@ -325,6 +337,9 @@ class $AssetsImagesGen {
     courseDetailCover,
     cup,
     cup2,
+    dailyChallengeGuideLine1,
+    dailyChallengeLeftShape,
+    dailyChallengeRightShape,
     deleteInput,
     dictionary,
     fire,
