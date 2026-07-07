@@ -3,12 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/onboarding_3.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
-class Onboarding2 extends StatelessWidget {
-  const Onboarding2({super.key});
+class Onboarding3 extends StatelessWidget {
+  const Onboarding3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class Onboarding2 extends StatelessWidget {
                 top: 0,
                 left: 0,
                 right: 0,
-                child: SvgPicture.asset(Assets.images.onboarding2),
+                child: SvgPicture.asset(Assets.images.onboarding3),
               ),
 
               Positioned(
@@ -47,11 +46,17 @@ class Onboarding2 extends StatelessWidget {
                         child: Text.rich(
                           TextSpan(
                             children: [
-                              const TextSpan(text: 'قدم به قدم به سوی '),
+                              const TextSpan(text: 'با زبان‌آموزی، '),
                               TextSpan(
-                                text: 'تسلط',
+                                text: 'آینده‌ات',
                                 style: TextStyle(color: AppColors.primaryColor),
                               ),
+                              const TextSpan(text: ' را '),
+                              TextSpan(
+                                text: 'روشن‌تر',
+                                style: TextStyle(color: AppColors.primaryColor),
+                              ),
+                              const TextSpan(text: ' کن!'),
                             ],
                             style: TextStyle(
                               color: Colors.black,
@@ -63,26 +68,23 @@ class Onboarding2 extends StatelessWidget {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 48),
+                        padding: const EdgeInsets.symmetric(horizontal: 84),
                         child: Text.rich(
                           textAlign: TextAlign.center,
-                          maxLines: 3,
+                          maxLines: 2,
                           TextSpan(
                             children: [
-                              const TextSpan(text: 'هر روز یک قدم به '),
+                              const TextSpan(text: 'همین '),
                               TextSpan(
-                                text: 'تسلط',
+                                text: 'امروز',
                                 style: TextStyle(color: AppColors.primaryColor),
                               ),
-                              const TextSpan(
-                                text:
-                                    ' نزدیک‌تر شوید و از هر مکانی که هستید، به ',
-                              ),
+                              const TextSpan(text: '، سفرت به سوی '),
                               TextSpan(
-                                text: 'راحتی',
+                                text: 'یادگیری',
                                 style: TextStyle(color: AppColors.primaryColor),
                               ),
-                              const TextSpan(text: ' زبان جدیدی را بیاموزید.'),
+                              const TextSpan(text: ' را آغاز کن...'),
                             ],
                             style: TextStyle(
                               color: Colors.black,
@@ -98,14 +100,8 @@ class Onboarding2 extends StatelessWidget {
                       SizedBox(
                         width: 230,
                         child: ButtonPrimary(
-                          title: 'بعدی',
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => Onboarding3(),
-                              ),
-                            );
-                          },
+                          title: 'شروع یادگیری',
+                          onPressed: () {},
                         ),
                       ),
                       SizedBox(height: 21),
@@ -145,7 +141,7 @@ class Onboarding2 extends StatelessWidget {
                         color: AppColors.progressBarBackgroundColor,
                       ),
                       child: FractionallySizedBox(
-                        widthFactor: 2 / 3,
+                        widthFactor: 3 / 3,
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
