@@ -21,26 +21,35 @@ class _MainScreenState extends State<MainScreen> {
     final isActive = index == itemIndex;
     final labels = ['خانه', 'جستجو', 'دوره‌ها', 'پروفایل'];
 
-    return GestureDetector(
-      onTap: () => setState(() => index = itemIndex),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SvgPicture.asset(isActive ? activeIcon : icon, height: 24),
-          const SizedBox(height: 6),
-          Text(
-            labels[itemIndex],
-            style: TextStyle(
-              fontSize: 10,
-              fontFamily: isActive
-                  ? FontFamily.iranSansXDemiBold
-                  : FontFamily.iranSansXMedium,
-              color: isActive
-                  ? AppColors.activeBottomNavigationLabelColor
-                  : AppColors.deactiveBottomNavigationLabelColor,
-            ),
+    return Expanded(
+      child: GestureDetector(
+        onTap: () => setState(() => index = itemIndex),
+        behavior: HitTestBehavior.opaque,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SvgPicture.asset(isActive ? activeIcon : icon, height: 24),
+              const SizedBox(height: 6),
+              Text(
+                labels[itemIndex],
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 10,
+                  fontFamily: isActive
+                      ? FontFamily.iranSansXDemiBold
+                      : FontFamily.iranSansXMedium,
+                  color: isActive
+                      ? AppColors.activeBottomNavigationLabelColor
+                      : AppColors.deactiveBottomNavigationLabelColor,
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
