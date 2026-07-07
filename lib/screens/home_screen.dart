@@ -21,46 +21,49 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: AppColors.scaffoldColor,
       body: SafeArea(
         bottom: false,
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: Profile()),
-
-            SliverToBoxAdapter(child: TitleHomeScreen()),
-
-            SliverToBoxAdapter(
-              child: CourseBoxesAndIndicator(pageController: pageController),
-            ),
-
-            SliverToBoxAdapter(child: HomeBanner()),
-            SliverToBoxAdapter(child: FreeCourse()),
-
-            SliverToBoxAdapter(
-              child: TitlePage(title: 'انتخاب', titleColor: 'مهارت'),
-            ),
-
-            SliverToBoxAdapter(child: Skills()),
-
-            SliverToBoxAdapter(child: Courses()),
-
-            SliverToBoxAdapter(child: CafeSection()),
-
-            SliverToBoxAdapter(
-              child: TitlePage(title: 'آموزش های', titleColor: 'ویدیویی'),
-            ),
-
-            SliverToBoxAdapter(child: VideoCourse()),
-
-            SliverToBoxAdapter(
-              child: TitlePage(title: 'برترین های', titleColor: 'ماه'),
-            ),
-
-            SliverPadding(
-              padding: const EdgeInsets.only(top: 16),
-              sliver: TopOfTheMonth(),
-            ),
-
-            SliverPadding(padding: EdgeInsets.only(bottom: 90)),
-          ],
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(child: Profile()),
+          
+              SliverToBoxAdapter(child: TitleHomeScreen()),
+          
+              SliverToBoxAdapter(
+                child: CourseBoxesAndIndicator(pageController: pageController),
+              ),
+          
+              SliverToBoxAdapter(child: HomeBanner()),
+              SliverToBoxAdapter(child: FreeCourse()),
+          
+              SliverToBoxAdapter(
+                child: TitlePage(title: 'انتخاب', titleColor: 'مهارت'),
+              ),
+          
+              SliverToBoxAdapter(child: Skills()),
+          
+              SliverToBoxAdapter(child: Courses()),
+          
+              SliverToBoxAdapter(child: CafeSection()),
+          
+              SliverToBoxAdapter(
+                child: TitlePage(title: 'آموزش های', titleColor: 'ویدیویی'),
+              ),
+          
+              SliverToBoxAdapter(child: VideoCourse()),
+          
+              SliverToBoxAdapter(
+                child: TitlePage(title: 'برترین های', titleColor: 'ماه'),
+              ),
+          
+              SliverPadding(
+                padding: const EdgeInsets.only(top: 16),
+                sliver: TopOfTheMonth(),
+              ),
+          
+              SliverPadding(padding: EdgeInsets.only(bottom: 90)),
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
@@ -25,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(isActive ? activeIcon : icon, height: 24),
+          SvgPicture.asset(isActive ? activeIcon : icon, height: 24),
           const SizedBox(height: 6),
           Text(
             labels[itemIndex],
@@ -46,68 +47,59 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBody: true,
-      drawer: index == 3
-          ? SafeArea(
-              child: Drawer(
-                backgroundColor: Colors.red,
-                child: Column(children: const [ListTile(title: Text(''))]),
-              ),
-            )
-          : null,
-
-      body: IndexedStack(
-        index: index,
-        children: [HomeScreen(), SearchScreen(), CourseScreen()],
-      ),
-
-      bottomNavigationBar: SafeArea(
-        bottom: false,
-        child: Container(
-          clipBehavior: Clip.none,
-          color: Colors.transparent,
-          child: Container(
-            margin: const EdgeInsets.only(bottom: 16, left: 21, right: 21),
-            height: 81,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(16),
-              boxShadow: [
-                BoxShadow(
-                  offset: const Offset(0, 16),
-                  blurRadius: 32,
-                  spreadRadius: -10,
-                  color: AppColors.bottomNavigationContainerColor,
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        extendBody: true,
+        drawer: index == 3
+            ? SafeArea(
+                child: Drawer(
+                  backgroundColor: Colors.red,
+                  child: Column(children: const [ListTile(title: Text(''))]),
                 ),
-              ],
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 28.5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _item(
-                    0,
-                    Assets.images.home.path,
-                    Assets.images.homeActive.path,
-                  ),
-                  _item(
-                    1,
-                    Assets.images.search.path,
-                    Assets.images.searchActive.path,
-                  ),
-                  _item(
-                    2,
-                    Assets.images.course.path,
-                    Assets.images.courseActive.path,
-                  ),
-                  _item(
-                    3,
-                    Assets.images.profile.path,
-                    Assets.images.profileActive.path,
+              )
+            : null,
+
+        body: IndexedStack(
+          index: index,
+          children: [HomeScreen(), SearchScreen(), CourseScreen()],
+        ),
+
+        bottomNavigationBar: SafeArea(
+          bottom: false,
+          child: Container(
+            clipBehavior: Clip.none,
+            color: Colors.transparent,
+            child: Container(
+              margin: const EdgeInsets.only(bottom: 16, left: 21, right: 21),
+              height: 81,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    offset: const Offset(0, 16),
+                    blurRadius: 32,
+                    spreadRadius: -10,
+                    color: AppColors.bottomNavigationContainerColor,
                   ),
                 ],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 28.5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _item(0, Assets.images.home, Assets.images.homeActive),
+                    _item(1, Assets.images.search, Assets.images.searchActive),
+                    _item(2, Assets.images.video, Assets.images.videoActive),
+                    _item(
+                      3,
+                      Assets.images.profile,
+                      Assets.images.profileActive,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

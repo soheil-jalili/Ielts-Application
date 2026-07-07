@@ -64,13 +64,6 @@ class $AssetsImagesGen {
   AssetGenImage get coruseImage =>
       const AssetGenImage('assets/images/coruse_image.jpg');
 
-  /// File path: assets/images/course-active.png
-  AssetGenImage get courseActive =>
-      const AssetGenImage('assets/images/course-active.png');
-
-  /// File path: assets/images/course.png
-  AssetGenImage get course => const AssetGenImage('assets/images/course.png');
-
   /// File path: assets/images/course_detail_cover.png
   AssetGenImage get courseDetailCover =>
       const AssetGenImage('assets/images/course_detail_cover.png');
@@ -127,12 +120,11 @@ class $AssetsImagesGen {
   AssetGenImage get hiroHamada1 =>
       const AssetGenImage('assets/images/hiro hamada 1.png');
 
-  /// File path: assets/images/home.png
-  AssetGenImage get home => const AssetGenImage('assets/images/home.png');
+  /// File path: assets/images/home.svg
+  String get home => 'assets/images/home.svg';
 
-  /// File path: assets/images/home_active.png
-  AssetGenImage get homeActive =>
-      const AssetGenImage('assets/images/home_active.png');
+  /// File path: assets/images/home_active.svg
+  String get homeActive => 'assets/images/home_active.svg';
 
   /// File path: assets/images/italy.png
   AssetGenImage get italy => const AssetGenImage('assets/images/italy.png');
@@ -215,12 +207,8 @@ class $AssetsImagesGen {
   /// File path: assets/images/plus.svg
   String get plus => 'assets/images/plus.svg';
 
-  /// File path: assets/images/profile-active.png
-  AssetGenImage get profileActive =>
-      const AssetGenImage('assets/images/profile-active.png');
-
-  /// File path: assets/images/profile.png
-  AssetGenImage get profile => const AssetGenImage('assets/images/profile.png');
+  /// File path: assets/images/profile.svg
+  String get profile => 'assets/images/profile.svg';
 
   /// File path: assets/images/profile1.png
   AssetGenImage get profile1 =>
@@ -229,6 +217,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/profile2.png
   AssetGenImage get profile2 =>
       const AssetGenImage('assets/images/profile2.png');
+
+  /// File path: assets/images/profile_active.svg
+  String get profileActive => 'assets/images/profile_active.svg';
 
   /// File path: assets/images/profile_card.png
   AssetGenImage get profileCard =>
@@ -250,12 +241,11 @@ class $AssetsImagesGen {
   /// File path: assets/images/russia.png
   AssetGenImage get russia => const AssetGenImage('assets/images/russia.png');
 
-  /// File path: assets/images/search.png
-  AssetGenImage get search => const AssetGenImage('assets/images/search.png');
+  /// File path: assets/images/search.svg
+  String get search => 'assets/images/search.svg';
 
-  /// File path: assets/images/search_active.png
-  AssetGenImage get searchActive =>
-      const AssetGenImage('assets/images/search_active.png');
+  /// File path: assets/images/search_active.svg
+  String get searchActive => 'assets/images/search_active.svg';
 
   /// File path: assets/images/search_search_screen.svg
   String get searchSearchScreen => 'assets/images/search_search_screen.svg';
@@ -328,6 +318,12 @@ class $AssetsImagesGen {
   AssetGenImage get videoImage =>
       const AssetGenImage('assets/images/video-image.png');
 
+  /// File path: assets/images/video.svg
+  String get video => 'assets/images/video.svg';
+
+  /// File path: assets/images/video_active.svg
+  String get videoActive => 'assets/images/video_active.svg';
+
   /// File path: assets/images/woman_profile.png
   AssetGenImage get womanProfile =>
       const AssetGenImage('assets/images/woman_profile.png');
@@ -352,8 +348,6 @@ class $AssetsImagesGen {
     clock,
     clock2,
     coruseImage,
-    courseActive,
-    course,
     courseDetailCover,
     cup,
     cup2,
@@ -398,10 +392,10 @@ class $AssetsImagesGen {
     playCourseDetail,
     playUnlock,
     plus,
-    profileActive,
     profile,
     profile1,
     profile2,
+    profileActive,
     profileCard,
     quizScreenTopShape,
     raising,
@@ -431,6 +425,8 @@ class $AssetsImagesGen {
     two,
     unlock,
     videoImage,
+    video,
+    videoActive,
     womanProfile,
     zero,
   ];
