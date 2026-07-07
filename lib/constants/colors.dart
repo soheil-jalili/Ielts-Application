@@ -204,8 +204,6 @@ class AppColors {
   );
   static Color answerContainerSelectedStrokeQuizScreenColor = Color(0xff74769C);
 
-
-
   // Shimmer
   static Color baseColorShimmer = Color(0xFFEDEDED);
   static Color highlightColorShimmer = Color(0xFFF5F5F5);
@@ -213,12 +211,12 @@ class AppColors {
   // Circle Indicator
   static Color circleIndicatorPromary = Color(0xff13BF4D);
 
-
   // Utils
   // Time Up Dialog
   static Color borderInsideTimeUpDialogColor = Color(0xff9DA3BD);
   static Color primaryTimeUpDialogColor = Color(0xff858AAC);
-
+  // Progress Bar Onboarding
+  static Color progressBarBackgroundColor = Color(0xffFFFBEA);
 
   // Bottom Navigation
   static const Color activeBottomNavigationLabelColor = Color(0xffFFA31A);
