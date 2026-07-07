@@ -31,6 +31,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/avatar.png
   AssetGenImage get avatar => const AssetGenImage('assets/images/avatar.png');
 
+  /// File path: assets/images/back-icon.svg
+  String get backIcon => 'assets/images/back-icon.svg';
+
   /// File path: assets/images/banner1.png
   AssetGenImage get banner1 => const AssetGenImage('assets/images/banner1.png');
 
@@ -339,6 +342,7 @@ class $AssetsImagesGen {
     adminAvatar,
     apple,
     avatar,
+    backIcon,
     banner1,
     bannerTeacherScreen,
     blur,

@@ -3,12 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/onboarding_2.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
-class Onboarding1 extends StatelessWidget {
-  const Onboarding1({super.key});
+class Onboarding2 extends StatelessWidget {
+  const Onboarding2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +17,12 @@ class Onboarding1 extends StatelessWidget {
           textDirection: TextDirection.rtl,
           child: Stack(
             clipBehavior: Clip.none,
-
             children: [
               Positioned(
                 top: 0,
                 left: 0,
                 right: 0,
-                child: SvgPicture.asset(Assets.images.onboarding1),
+                child: SvgPicture.asset(Assets.images.onboarding2),
               ),
 
               Positioned(
@@ -44,22 +42,16 @@ class Onboarding1 extends StatelessWidget {
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 74, bottom: 65),
+                        padding: const EdgeInsets.symmetric(vertical: 65),
                         child: Text.rich(
                           TextSpan(
                             children: [
-                              TextSpan(text: 'دنیای '),
+                              const TextSpan(text: 'قدم به قدم به سوی '),
                               TextSpan(
-                                text: 'تازه ',
-                                style: TextStyle(color: AppColors.primaryColor),
-                              ),
-                              TextSpan(text: 'با یادگیری '),
-                              TextSpan(
-                                text: 'زبان',
+                                text: 'تسلط',
                                 style: TextStyle(color: AppColors.primaryColor),
                               ),
                             ],
-
                             style: TextStyle(
                               color: Colors.black,
                               fontFamily: FontFamily.iranSansXBold,
@@ -70,28 +62,26 @@ class Onboarding1 extends StatelessWidget {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 65),
+                        padding: const EdgeInsets.symmetric(horizontal: 48),
                         child: Text.rich(
                           textAlign: TextAlign.center,
-                          maxLines: 2,
+                          maxLines: 3,
                           TextSpan(
                             children: [
-                              TextSpan(text: 'یادگیری یک زبان '),
+                              const TextSpan(text: 'هر روز یک قدم به '),
                               TextSpan(
-                                text: 'جدید',
+                                text: 'تسلط',
                                 style: TextStyle(color: AppColors.primaryColor),
                               ),
-                              TextSpan(text: '، دنیای تازه‌ای از '),
+                              const TextSpan(
+                                text:
+                                    ' نزدیک‌تر شوید و از هر مکانی که هستید، به ',
+                              ),
                               TextSpan(
-                                text: 'فرصت‌ها',
+                                text: 'راحتی',
                                 style: TextStyle(color: AppColors.primaryColor),
                               ),
-                              TextSpan(text: ' و '),
-                              TextSpan(
-                                text: 'ارتباطات',
-                                style: TextStyle(color: AppColors.primaryColor),
-                              ),
-                              TextSpan(text: ' را برای شما باز می‌کند.'),
+                              const TextSpan(text: ' زبان جدیدی را بیاموزید.'),
                             ],
                             style: TextStyle(
                               color: Colors.black,
@@ -106,16 +96,7 @@ class Onboarding1 extends StatelessWidget {
                       Spacer(),
                       SizedBox(
                         width: 230,
-                        child: ButtonPrimary(
-                          title: 'بعدی',
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => Onboarding2(),
-                              ),
-                            );
-                          },
-                        ),
+                        child: ButtonPrimary(title: 'بعدی', onPressed: () {}),
                       ),
                       SizedBox(height: 21),
                       HorizentalLine(bottomSpace: 26, width: 200),
@@ -154,13 +135,21 @@ class Onboarding1 extends StatelessWidget {
                         color: AppColors.progressBarBackgroundColor,
                       ),
                       child: FractionallySizedBox(
-                        widthFactor: 1 / 3,
+                        widthFactor: 2 / 3,
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
                             color: AppColors.primaryColor,
                           ),
                         ),
+                      ),
+                    ),
+                    Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 16),
+                      child: GestureDetector(
+                        onTap: () => Navigator.pop(context),
+                        child: SvgPicture.asset(Assets.images.backIcon),
                       ),
                     ),
                   ],
