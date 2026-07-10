@@ -146,7 +146,7 @@ class AppColors {
   static Color coruseDetailScreenContainerColor = Color(0xfffaf4e8);
   static Color courseDetailScreenPrimaryColor = Color(0xffF15223);
   static Color courseDetailScreenSecondaryColor = Color(0xff8B8B8B);
-  static Color courseDetailScreenSubTextColor = Color(0xff767676);
+  static const Color courseDetailScreenSubTextColor = Color(0xff767676);
   static Color courseDetailScreenTextCommentColor = Color(0xff3F3F3F);
   static Color courseDetailScreenBorderBottomTextColor = Color(0xffF15223);
   static Color courseDetailScreenTextColor = Color(0xffF15223);
@@ -217,6 +217,20 @@ class AppColors {
   static Color primaryTimeUpDialogColor = Color(0xff858AAC);
   // Progress Bar Onboarding
   static Color progressBarBackgroundColor = Color(0xffFFFBEA);
+
+  // Profile Screen
+  static final Color achievementBoxShadowProfileScreenColor = const Color(
+    0xff7090B0,
+  ).withAlpha(20);
+  static const Color bannerProfileScreenColor = Color(0xffFFFBEA);
+  static Color primaryTopTextProfileScreenColor = const Color(0xffF6F6F9);
+  static Color primarySubTextProfileScreenColor = const Color(0xffc1c1c1);
+  static Color chartGridProfileScreenColor = const Color(0xffdcdcdc);
+  static Color chartTextProfileScreenColor = const Color(0xffB0B0B0);
+  static Color percentAchievementColor = const Color(0xff929292);
+  static Color backgroundPercentCircleColor = const Color(0xffE8E8E8);
+  static Color percentTextColor = const Color(0xffA6A6A6);
+  static Color tooltipProfileScreenColor = const Color(0xff1A1A1A);
 
   // Bottom Navigation
   static const Color activeBottomNavigationLabelColor = Color(0xffFFA31A);

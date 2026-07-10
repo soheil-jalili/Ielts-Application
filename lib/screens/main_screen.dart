@@ -5,7 +5,10 @@ import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/screens/course_screen.dart';
 import 'package:ielts/screens/home_screen.dart';
+import 'package:ielts/screens/profile_screen.dart';
 import 'package:ielts/screens/search_screen.dart';
+
+final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -59,19 +62,34 @@ class _MainScreenState extends State<MainScreen> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        key: scaffoldKey,
         extendBody: true,
         drawer: index == 3
             ? SafeArea(
                 child: Drawer(
-                  backgroundColor: Colors.red,
-                  child: Column(children: const [ListTile(title: Text(''))]),
+                  backgroundColor: Colors.white,
+                  child: Column(
+                    children: const [
+                      ListTile(title: Text('پروفایل')),
+                      ListTile(title: Text('فایل های اخیر')),
+                      ListTile(title: Text('مورد علاقه ها')),
+                      ListTile(title: Text('لیست ها')),
+                      ListTile(title: Text('تنظیمات')),
+                      ListTile(title: Text('خروج از حساب')),
+                    ],
+                  ),
                 ),
               )
             : null,
 
         body: IndexedStack(
           index: index,
-          children: [HomeScreen(), SearchScreen(), CourseScreen()],
+          children: [
+            HomeScreen(),
+            SearchScreen(),
+            CourseScreen(),
+            ProfileScreen(),
+          ],
         ),
 
         bottomNavigationBar: SafeArea(

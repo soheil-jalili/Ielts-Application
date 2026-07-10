@@ -6,6 +6,7 @@ import 'package:ielts/extensions/string_extensions.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/models/skill_model.dart';
+import 'package:ielts/widgets/profile_avatar.dart';
 import 'package:ielts/widgets/student_and_learn_language.dart';
 import 'package:ielts/widgets/title_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -26,41 +27,41 @@ class HomeScreen extends StatelessWidget {
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(child: Profile()),
-          
+
               SliverToBoxAdapter(child: TitleHomeScreen()),
-          
+
               SliverToBoxAdapter(
                 child: CourseBoxesAndIndicator(pageController: pageController),
               ),
-          
+
               SliverToBoxAdapter(child: HomeBanner()),
               SliverToBoxAdapter(child: FreeCourse()),
-          
+
               SliverToBoxAdapter(
                 child: TitlePage(title: 'انتخاب', titleColor: 'مهارت'),
               ),
-          
+
               SliverToBoxAdapter(child: Skills()),
-          
+
               SliverToBoxAdapter(child: Courses()),
-          
+
               SliverToBoxAdapter(child: CafeSection()),
-          
+
               SliverToBoxAdapter(
                 child: TitlePage(title: 'آموزش های', titleColor: 'ویدیویی'),
               ),
-          
+
               SliverToBoxAdapter(child: VideoCourse()),
-          
+
               SliverToBoxAdapter(
                 child: TitlePage(title: 'برترین های', titleColor: 'ماه'),
               ),
-          
+
               SliverPadding(
                 padding: const EdgeInsets.only(top: 16),
                 sliver: TopOfTheMonth(),
               ),
-          
+
               SliverPadding(padding: EdgeInsets.only(bottom: 90)),
             ],
           ),
@@ -1794,22 +1795,8 @@ class Profile extends StatelessWidget {
       margin: EdgeInsets.fromLTRB(20, 30, 27, 38),
       child: Row(
         children: [
-          Container(
-            width: 53,
-            height: 53,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: AppColors.strokeProfileColor,
-                width: 0.7,
-              ),
-            ),
-            child: Image.asset(Assets.images.hiroHamada1.path),
-          ),
-
+          ProfileAvatar(),
           SizedBox(width: 6),
-
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

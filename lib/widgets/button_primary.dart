@@ -53,6 +53,7 @@ class ButtonPrimary extends StatelessWidget {
         ),
         child: Text(
           title,
+          maxLines: 1,
           style: TextStyle(
             fontSize: fontSize,
             fontFamily: fontFamily,

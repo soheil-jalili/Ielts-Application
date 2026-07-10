@@ -34,8 +34,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/back-icon.svg
   String get backIcon => 'assets/images/back-icon.svg';
 
+  /// File path: assets/images/banner1-profile.png
+  AssetGenImage get banner1Profile =>
+      const AssetGenImage('assets/images/banner1-profile.png');
+
   /// File path: assets/images/banner1.png
   AssetGenImage get banner1 => const AssetGenImage('assets/images/banner1.png');
+
+  /// File path: assets/images/banner2-profile.svg
+  String get banner2Profile => 'assets/images/banner2-profile.svg';
 
   /// File path: assets/images/banner_teacher_screen.png
   AssetGenImage get bannerTeacherScreen =>
@@ -67,6 +74,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/course_detail_cover.png
   AssetGenImage get courseDetailCover =>
       const AssetGenImage('assets/images/course_detail_cover.png');
+
+  /// File path: assets/images/cup-colorless.png
+  AssetGenImage get cupColorless =>
+      const AssetGenImage('assets/images/cup-colorless.png');
+
+  /// File path: assets/images/cup-fill.png
+  AssetGenImage get cupFill =>
+      const AssetGenImage('assets/images/cup-fill.png');
 
   /// File path: assets/images/cup.png
   AssetGenImage get cup => const AssetGenImage('assets/images/cup.png');
@@ -112,6 +127,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/guidline2.svg
   String get guidline2 => 'assets/images/guidline2.svg';
+
+  /// File path: assets/images/hamber_menu.svg
+  String get hamberMenu => 'assets/images/hamber_menu.svg';
 
   /// File path: assets/images/hat.svg
   String get hat => 'assets/images/hat.svg';
@@ -185,6 +203,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/paper.png
   AssetGenImage get paper => const AssetGenImage('assets/images/paper.png');
+
+  /// File path: assets/images/pen.svg
+  String get pen => 'assets/images/pen.svg';
 
   /// File path: assets/images/pic1.png
   AssetGenImage get pic1 => const AssetGenImage('assets/images/pic1.png');
@@ -260,6 +281,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/shape_free_course2.png
   AssetGenImage get shapeFreeCourse2 =>
       const AssetGenImage('assets/images/shape_free_course2.png');
+
+  /// File path: assets/images/shape_profile_1.svg
+  String get shapeProfile1 => 'assets/images/shape_profile_1.svg';
+
+  /// File path: assets/images/shape_profile_2.svg
+  String get shapeProfile2 => 'assets/images/shape_profile_2.svg';
+
+  /// File path: assets/images/shape_profile_3.svg
+  String get shapeProfile3 => 'assets/images/shape_profile_3.svg';
 
   /// File path: assets/images/sort.svg
   String get sort => 'assets/images/sort.svg';
@@ -339,7 +369,9 @@ class $AssetsImagesGen {
     apple,
     avatar,
     backIcon,
+    banner1Profile,
     banner1,
+    banner2Profile,
     bannerTeacherScreen,
     blur,
     calendar,
@@ -349,6 +381,8 @@ class $AssetsImagesGen {
     clock2,
     coruseImage,
     courseDetailCover,
+    cupColorless,
+    cupFill,
     cup,
     cup2,
     dailyChallengeGuidLine2,
@@ -362,6 +396,7 @@ class $AssetsImagesGen {
     germanFlag,
     google,
     guidline2,
+    hamberMenu,
     hat,
     hiroHamada1,
     home,
@@ -385,6 +420,7 @@ class $AssetsImagesGen {
     one,
     onlineTestQuiz,
     paper,
+    pen,
     pic1,
     pic2,
     pic3,
@@ -408,6 +444,9 @@ class $AssetsImagesGen {
     shapeQuiz,
     shapeFreeCourse,
     shapeFreeCourse2,
+    shapeProfile1,
+    shapeProfile2,
+    shapeProfile3,
     sort,
     spainFlag,
     starBold,
