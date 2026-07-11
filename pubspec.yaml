@@ -97,6 +97,10 @@ flutter:
     fonts:
     - asset: assets/fonts/IRANSansX-UltraLight.ttf
 
+  - family: Gilroy-Regular
+    fonts:
+    - asset: assets/fonts/GilroyRegular.ttf
+
   - family: Gilroy-Medium
     fonts:
     - asset: assets/fonts/GilroyMedium.ttf

@@ -232,6 +232,10 @@ class AppColors {
   static Color percentTextColor = const Color(0xffA6A6A6);
   static Color tooltipProfileScreenColor = const Color(0xff1A1A1A);
 
+  // Drawer
+  static Color logoutTextDrawerColor = const Color(0xffFF1D1D);
+  static Color drawerBackgroundColor = const Color(0xffFCFCFC);
+
   // Bottom Navigation
   static const Color activeBottomNavigationLabelColor = Color(0xffFFA31A);
   static const Color deactiveBottomNavigationLabelColor = Color(0xff141313);

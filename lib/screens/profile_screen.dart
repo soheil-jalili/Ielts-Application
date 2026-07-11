@@ -124,7 +124,7 @@ class ProfileScreen extends StatelessWidget {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {
-                              scaffoldKey.currentState?.openDrawer();
+                              scaffoldKey.currentState?.openEndDrawer();
                             },
                             child: SvgPicture.asset(Assets.images.hamberMenu),
                           ),

@@ -61,6 +61,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/circle.png
   AssetGenImage get circle => const AssetGenImage('assets/images/circle.png');
 
+  /// File path: assets/images/clock-drawer.svg
+  String get clockDrawer => 'assets/images/clock-drawer.svg';
+
   /// File path: assets/images/clock.png
   AssetGenImage get clock => const AssetGenImage('assets/images/clock.png');
 
@@ -111,6 +114,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/dictionary.svg
   String get dictionary => 'assets/images/dictionary.svg';
 
+  /// File path: assets/images/down.svg
+  String get down => 'assets/images/down.svg';
+
   /// File path: assets/images/fire.svg
   String get fire => 'assets/images/fire.svg';
 
@@ -134,6 +140,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/hat.svg
   String get hat => 'assets/images/hat.svg';
 
+  /// File path: assets/images/heart.svg
+  String get heart => 'assets/images/heart.svg';
+
   /// File path: assets/images/hiro hamada 1.png
   AssetGenImage get hiroHamada1 =>
       const AssetGenImage('assets/images/hiro hamada 1.png');
@@ -143,6 +152,12 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/home_active.svg
   String get homeActive => 'assets/images/home_active.svg';
+
+  /// File path: assets/images/horizental-line-circle.svg
+  String get horizentalLineCircle => 'assets/images/horizental-line-circle.svg';
+
+  /// File path: assets/images/info.svg
+  String get info => 'assets/images/info.svg';
 
   /// File path: assets/images/italy.png
   AssetGenImage get italy => const AssetGenImage('assets/images/italy.png');
@@ -172,6 +187,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/lock.svg
   String get lock => 'assets/images/lock.svg';
+
+  /// File path: assets/images/logout.svg
+  String get logout => 'assets/images/logout.svg';
 
   /// File path: assets/images/mic.svg
   String get mic => 'assets/images/mic.svg';
@@ -228,6 +246,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/plus.svg
   String get plus => 'assets/images/plus.svg';
 
+  /// File path: assets/images/profile-drawer.svg
+  String get profileDrawer => 'assets/images/profile-drawer.svg';
+
   /// File path: assets/images/profile.svg
   String get profile => 'assets/images/profile.svg';
 
@@ -271,6 +292,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/search_search_screen.svg
   String get searchSearchScreen => 'assets/images/search_search_screen.svg';
 
+  /// File path: assets/images/setting.svg
+  String get setting => 'assets/images/setting.svg';
+
   /// File path: assets/images/shape-quiz.svg
   String get shapeQuiz => 'assets/images/shape-quiz.svg';
 
@@ -290,6 +314,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/shape_profile_3.svg
   String get shapeProfile3 => 'assets/images/shape_profile_3.svg';
+
+  /// File path: assets/images/share.svg
+  String get share => 'assets/images/share.svg';
 
   /// File path: assets/images/sort.svg
   String get sort => 'assets/images/sort.svg';
@@ -344,6 +371,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/unlock.svg
   String get unlock => 'assets/images/unlock.svg';
 
+  /// File path: assets/images/up.svg
+  String get up => 'assets/images/up.svg';
+
   /// File path: assets/images/video-image.png
   AssetGenImage get videoImage =>
       const AssetGenImage('assets/images/video-image.png');
@@ -377,6 +407,7 @@ class $AssetsImagesGen {
     calendar,
     calender,
     circle,
+    clockDrawer,
     clock,
     clock2,
     coruseImage,
@@ -391,6 +422,7 @@ class $AssetsImagesGen {
     dailyChallengeRightShape,
     deleteInput,
     dictionary,
+    down,
     fire,
     freeCourseShape3,
     germanFlag,
@@ -398,9 +430,12 @@ class $AssetsImagesGen {
     guidline2,
     hamberMenu,
     hat,
+    heart,
     hiroHamada1,
     home,
     homeActive,
+    horizentalLineCircle,
+    info,
     italy,
     keyboard,
     lamp,
@@ -410,6 +445,7 @@ class $AssetsImagesGen {
     left,
     left2,
     lock,
+    logout,
     mic,
     mojAvatar,
     notFound,
@@ -428,6 +464,7 @@ class $AssetsImagesGen {
     playCourseDetail,
     playUnlock,
     plus,
+    profileDrawer,
     profile,
     profile1,
     profile2,
@@ -441,12 +478,14 @@ class $AssetsImagesGen {
     search,
     searchActive,
     searchSearchScreen,
+    setting,
     shapeQuiz,
     shapeFreeCourse,
     shapeFreeCourse2,
     shapeProfile1,
     shapeProfile2,
     shapeProfile3,
+    share,
     sort,
     spainFlag,
     starBold,
@@ -463,6 +502,7 @@ class $AssetsImagesGen {
     treeOfWord,
     two,
     unlock,
+    up,
     videoImage,
     video,
     videoActive,

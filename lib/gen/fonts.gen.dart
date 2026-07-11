@@ -14,6 +14,9 @@ class FontFamily {
   /// Font family: Gilroy-Medium
   static const String gilroyMedium = 'Gilroy-Medium';
 
+  /// Font family: Gilroy-Regular
+  static const String gilroyRegular = 'Gilroy-Regular';
+
   /// Font family: IranSansX-Demi-bold
   static const String iranSansXDemiBold = 'IranSansX-Demi-bold';
 
