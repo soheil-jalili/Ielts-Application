@@ -218,6 +218,9 @@ class AppColors {
   // Progress Bar Onboarding
   static Color progressBarBackgroundColor = Color(0xffFFFBEA);
 
+  //Study Analytics Status
+  static Color backgroundColorStudyAnalyticsStatusDialogBoxColor = Color(0xffF0F0F4);
+
   // Profile Screen
   static final Color achievementBoxShadowProfileScreenColor = const Color(
     0xff7090B0,

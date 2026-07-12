@@ -291,7 +291,8 @@ class _MainScreenState extends State<MainScreen> {
                         ),
                       ),
                       ListTile(
-                        onTap: () {},
+                        onTap: () {
+                        },
                         leading: SvgPicture.asset(Assets.images.logout),
                         title: Text(
                           'خروج از حساب',
