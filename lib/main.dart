@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ielts/screens/onboarding_1.dart';
+import 'package:ielts/screens/daily_challenge_games.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Directionality(
         textDirection: TextDirection.rtl,
-        child: Onboarding1(),
+        child: DailyChallengeGames(),
       ),
     );
   }

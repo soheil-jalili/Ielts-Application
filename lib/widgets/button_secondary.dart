@@ -8,7 +8,9 @@ class ButtonSecondary extends StatelessWidget {
     required this.title,
     required this.onPressed,
     this.borderRadius = 16,
+    this.fontSize = 16,
     this.height = 48,
+    this.width = double.infinity,
     this.backgroundColor = Colors.white,
     this.textColor = AppColors.buttonTextColorOutlineColor,
     this.fontFamily = FontFamily.iranSansXRegular,
@@ -17,7 +19,9 @@ class ButtonSecondary extends StatelessWidget {
 
   final String title;
   final String fontFamily;
+  final double width;
   final double height;
+  final double fontSize;
   final void Function() onPressed;
 
   final double borderRadius;
@@ -28,12 +32,13 @@ class ButtonSecondary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 56,
+      width: width,
+      height: height,
 
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.zero,
           foregroundColor: AppColors.loginScreenLineColor.withValues(
             alpha: 0.2,
           ),
@@ -69,8 +74,9 @@ class ButtonSecondary extends StatelessWidget {
               )
             : Text(
                 title,
+                maxLines: 1,
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: fontSize,
                   fontFamily: fontFamily,
                   color: textColor,
                 ),

@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/widgets/course_title.dart';
+import 'package:ielts/widgets/title_and_back.dart';
 import 'package:ielts/widgets/student_and_learn_language.dart';
 import 'package:shimmer/shimmer.dart';
 

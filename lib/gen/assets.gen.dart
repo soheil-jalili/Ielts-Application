@@ -70,6 +70,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/clock2.svg
   String get clock2 => 'assets/images/clock2.svg';
 
+  /// File path: assets/images/controller.png
+  AssetGenImage get controller =>
+      const AssetGenImage('assets/images/controller.png');
+
   /// File path: assets/images/coruse_image.jpg
   AssetGenImage get coruseImage =>
       const AssetGenImage('assets/images/coruse_image.jpg');
@@ -91,6 +95,18 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/cup2.png
   AssetGenImage get cup2 => const AssetGenImage('assets/images/cup2.png');
+
+  /// File path: assets/images/daily-profile-1.png
+  AssetGenImage get dailyProfile1 =>
+      const AssetGenImage('assets/images/daily-profile-1.png');
+
+  /// File path: assets/images/daily-profile-2.png
+  AssetGenImage get dailyProfile2 =>
+      const AssetGenImage('assets/images/daily-profile-2.png');
+
+  /// File path: assets/images/daily-profile-3.png
+  AssetGenImage get dailyProfile3 =>
+      const AssetGenImage('assets/images/daily-profile-3.png');
 
   /// File path: assets/images/daily_challenge_guid_line_2.svg
   String get dailyChallengeGuidLine2 =>
@@ -295,6 +311,12 @@ class $AssetsImagesGen {
   /// File path: assets/images/setting.svg
   String get setting => 'assets/images/setting.svg';
 
+  /// File path: assets/images/shape-a.svg
+  String get shapeA => 'assets/images/shape-a.svg';
+
+  /// File path: assets/images/shape-c.svg
+  String get shapeC => 'assets/images/shape-c.svg';
+
   /// File path: assets/images/shape-quiz.svg
   String get shapeQuiz => 'assets/images/shape-quiz.svg';
 
@@ -410,12 +432,16 @@ class $AssetsImagesGen {
     clockDrawer,
     clock,
     clock2,
+    controller,
     coruseImage,
     courseDetailCover,
     cupColorless,
     cupFill,
     cup,
     cup2,
+    dailyProfile1,
+    dailyProfile2,
+    dailyProfile3,
     dailyChallengeGuidLine2,
     dailyChallengeGuideLine1,
     dailyChallengeLeftShape,
@@ -479,6 +505,8 @@ class $AssetsImagesGen {
     searchActive,
     searchSearchScreen,
     setting,
+    shapeA,
+    shapeC,
     shapeQuiz,
     shapeFreeCourse,
     shapeFreeCourse2,

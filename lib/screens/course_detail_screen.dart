@@ -7,7 +7,7 @@ import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/screens/login_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/button_secondary.dart';
-import 'package:ielts/widgets/course_title.dart';
+import 'package:ielts/widgets/title_and_back.dart';
 import 'package:ielts/widgets/icon_left.dart';
 import 'package:ielts/widgets/title_icon.dart';
 import 'package:sliver_tools/sliver_tools.dart';

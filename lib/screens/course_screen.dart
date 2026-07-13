@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/screens/course_detail_screen.dart';
-import 'package:ielts/widgets/course_title.dart';
+import 'package:ielts/widgets/title_and_back.dart';
 
 class CourseScreen extends StatelessWidget {
   const CourseScreen({super.key});

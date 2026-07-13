@@ -4,9 +4,10 @@ import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 
 class TitleAndBack extends StatelessWidget {
-  const TitleAndBack({super.key, required this.title});
+  const TitleAndBack({super.key, required this.title, this.onTap});
 
   final String title;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,12 +21,15 @@ class TitleAndBack extends StatelessWidget {
           ),
         ),
         Spacer(),
-        Text(
-          'بازگشت',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 16,
-            fontFamily: FontFamily.iranSansXMedium,
+        GestureDetector(
+          onTap: onTap,
+          child: Text(
+            'بازگشت',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontFamily: FontFamily.iranSansXMedium,
+            ),
           ),
         ),
         SizedBox(width: 10),

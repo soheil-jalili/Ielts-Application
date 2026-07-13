@@ -219,7 +219,9 @@ class AppColors {
   static Color progressBarBackgroundColor = Color(0xffFFFBEA);
 
   //Study Analytics Status
-  static Color backgroundColorStudyAnalyticsStatusDialogBoxColor = Color(0xffF0F0F4);
+  static Color backgroundColorStudyAnalyticsStatusDialogBoxColor = Color(
+    0xffF0F0F4,
+  );
 
   // Profile Screen
   static final Color achievementBoxShadowProfileScreenColor = const Color(
@@ -234,6 +236,18 @@ class AppColors {
   static Color backgroundPercentCircleColor = const Color(0xffE8E8E8);
   static Color percentTextColor = const Color(0xffA6A6A6);
   static Color tooltipProfileScreenColor = const Color(0xff1A1A1A);
+
+  // Daily Challenge Screen
+  static Color subTextDailyChallengeScreenColor = Color(0xff515151);
+  static Color a1ContainerBackgroundColor = Color(0xffFFD246);
+  static Color b1C1ContainerBackgroundColor = Color(0xffFFBD1B);
+  static Color c1ContainerBackgroundColor = Color(0xffFFA31A);
+  static Color a2ContainerBackgroundColor = Color(0xff7CC2FD);
+  static Color b2ContainerBackgroundColor = Color(0xff36A5FA);
+  static Color c2ContainerBackgroundColor = Color(0xff1474C9);
+  static Color primaryABC1Color = Color(0xff98400F);
+  static Color primaryABC2ButtonTextColor = Color(0xff1684DA);
+  static Color borderUserColor = Color(0xff444046);
 
   // Drawer
   static Color logoutTextDrawerColor = const Color(0xffFF1D1D);
