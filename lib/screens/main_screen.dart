@@ -84,8 +84,7 @@ class _MainScreenState extends State<MainScreen> {
                             GestureDetector(
                               onTap: () =>
                                   scaffoldKey.currentState?.closeEndDrawer(),
-                              behavior: HitTestBehavior
-                                  .opaque, 
+                              behavior: HitTestBehavior.opaque,
                               child: SvgPicture.asset(
                                 Assets.images.leftCheveron,
                                 colorFilter: ColorFilter.mode(
@@ -146,7 +145,11 @@ class _MainScreenState extends State<MainScreen> {
                               ),
                             ),
                             SizedBox(width: 16),
-                            SvgPicture.asset(showRecentFiles ? Assets.images.up : Assets.images.down),
+                            SvgPicture.asset(
+                              showRecentFiles
+                                  ? Assets.images.up
+                                  : Assets.images.down,
+                            ),
                           ],
                         ),
                       ),
@@ -229,7 +232,9 @@ class _MainScreenState extends State<MainScreen> {
                               ),
                             ),
                             SizedBox(width: 16),
-                           SvgPicture.asset(showList ? Assets.images.up : Assets.images.down),
+                            SvgPicture.asset(
+                              showList ? Assets.images.up : Assets.images.down,
+                            ),
                           ],
                         ),
                       ),
@@ -291,8 +296,7 @@ class _MainScreenState extends State<MainScreen> {
                         ),
                       ),
                       ListTile(
-                        onTap: () {
-                        },
+                        onTap: () {},
                         leading: SvgPicture.asset(Assets.images.logout),
                         title: Text(
                           'خروج از حساب',

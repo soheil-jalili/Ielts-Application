@@ -10,8 +10,8 @@ import 'package:ielts/widgets/button_outline_primar.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
-class Onboarding4 extends StatelessWidget {
-  const Onboarding4({super.key});
+class Onboarding4Screen extends StatelessWidget {
+  const Onboarding4Screen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,7 @@ import 'package:ielts/screens/login_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 import 'package:ielts/widgets/login_with.dart';
-import 'package:ielts/widgets/text_fied_primary.dart';
+import 'package:ielts/widgets/text_field_primary.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});

@@ -17,6 +17,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/Play.png
   AssetGenImage get play => const AssetGenImage('assets/images/Play.png');
 
+  /// File path: assets/images/RussiaFlag.png
+  AssetGenImage get russiaFlag =>
+      const AssetGenImage('assets/images/RussiaFlag.png');
+
   /// File path: assets/images/Time Square.png
   AssetGenImage get timeSquare =>
       const AssetGenImage('assets/images/Time Square.png');
@@ -50,6 +54,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/blur.png
   AssetGenImage get blur => const AssetGenImage('assets/images/blur.png');
+
+  /// File path: assets/images/britain.svg
+  String get britain => 'assets/images/britain.svg';
 
   /// File path: assets/images/calendar.png
   AssetGenImage get calendar =>
@@ -130,15 +137,24 @@ class $AssetsImagesGen {
   /// File path: assets/images/dictionary.svg
   String get dictionary => 'assets/images/dictionary.svg';
 
+  /// File path: assets/images/down-make-account.svg
+  String get downMakeAccount => 'assets/images/down-make-account.svg';
+
   /// File path: assets/images/down.svg
   String get down => 'assets/images/down.svg';
 
   /// File path: assets/images/fire.svg
   String get fire => 'assets/images/fire.svg';
 
+  /// File path: assets/images/france.svg
+  String get france => 'assets/images/france.svg';
+
   /// File path: assets/images/free_course_shape3.png
   AssetGenImage get freeCourseShape3 =>
       const AssetGenImage('assets/images/free_course_shape3.png');
+
+  /// File path: assets/images/gender.svg
+  String get gender => 'assets/images/gender.svg';
 
   /// File path: assets/images/german-flag.png
   AssetGenImage get germanFlag =>
@@ -175,6 +191,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/info.svg
   String get info => 'assets/images/info.svg';
 
+  /// File path: assets/images/italy-flag.svg
+  String get italyFlag => 'assets/images/italy-flag.svg';
+
   /// File path: assets/images/italy.png
   AssetGenImage get italy => const AssetGenImage('assets/images/italy.png');
 
@@ -190,6 +209,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/left-cheveron.svg
   String get leftCheveron => 'assets/images/left-cheveron.svg';
+
+  /// File path: assets/images/left-make.svg
+  String get leftMake => 'assets/images/left-make.svg';
 
   /// File path: assets/images/left-shape.png
   AssetGenImage get leftShape =>
@@ -265,6 +287,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/profile-drawer.svg
   String get profileDrawer => 'assets/images/profile-drawer.svg';
 
+  /// File path: assets/images/profile-make.png
+  AssetGenImage get profileMake =>
+      const AssetGenImage('assets/images/profile-make.png');
+
   /// File path: assets/images/profile.svg
   String get profile => 'assets/images/profile.svg';
 
@@ -295,6 +321,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/right-shape.png
   AssetGenImage get rightShape =>
       const AssetGenImage('assets/images/right-shape.png');
+
+  /// File path: assets/images/right.svg
+  String get right => 'assets/images/right.svg';
 
   /// File path: assets/images/russia.png
   AssetGenImage get russia => const AssetGenImage('assets/images/russia.png');
@@ -416,6 +445,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<dynamic> get values => [
     play,
+    russiaFlag,
     timeSquare,
     adminAvatar,
     apple,
@@ -426,6 +456,7 @@ class $AssetsImagesGen {
     banner2Profile,
     bannerTeacherScreen,
     blur,
+    britain,
     calendar,
     calender,
     circle,
@@ -448,9 +479,12 @@ class $AssetsImagesGen {
     dailyChallengeRightShape,
     deleteInput,
     dictionary,
+    downMakeAccount,
     down,
     fire,
+    france,
     freeCourseShape3,
+    gender,
     germanFlag,
     google,
     guidline2,
@@ -462,11 +496,13 @@ class $AssetsImagesGen {
     homeActive,
     horizentalLineCircle,
     info,
+    italyFlag,
     italy,
     keyboard,
     lamp,
     laugh,
     leftCheveron,
+    leftMake,
     leftShape,
     left,
     left2,
@@ -491,6 +527,7 @@ class $AssetsImagesGen {
     playUnlock,
     plus,
     profileDrawer,
+    profileMake,
     profile,
     profile1,
     profile2,
@@ -500,6 +537,7 @@ class $AssetsImagesGen {
     raising,
     result,
     rightShape,
+    right,
     russia,
     search,
     searchActive,

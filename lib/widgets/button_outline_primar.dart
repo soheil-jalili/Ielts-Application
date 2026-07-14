@@ -34,6 +34,8 @@ class ButtonOutlinePrimary extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.zero,
+
           foregroundColor: AppColors.loginScreenLineColor.withValues(
             alpha: 0.2,
           ),
@@ -42,8 +44,8 @@ class ButtonOutlinePrimary extends StatelessWidget {
             borderRadius: BorderRadius.circular(borderRadius),
             side: BorderSide(color: strokeColor, width: 2),
           ),
-
           elevation: 0,
+          splashFactory: NoSplash.splashFactory,
         ),
         child: Text(
           title,

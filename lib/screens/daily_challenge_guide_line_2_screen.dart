@@ -3,12 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/daily_challenge_guide_line_1.dart';
+import 'package:ielts/screens/daily_challenge_guide_line_1_screen.dart';
 import 'package:ielts/widgets/back_quiz.dart';
 import 'package:ielts/widgets/button_primary.dart';
 
-class DailyChallengeGuideLine2 extends StatelessWidget {
-  const DailyChallengeGuideLine2({super.key});
+class DailyChallengeGuideLine2Screen extends StatelessWidget {
+  const DailyChallengeGuideLine2Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -137,7 +137,7 @@ class DailyChallengeGuideLine2 extends StatelessWidget {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    DailyChallengeGuideLine1(),
+                                    DailyChallengeGuideLine1Screen(),
                               ),
                             );
                           },

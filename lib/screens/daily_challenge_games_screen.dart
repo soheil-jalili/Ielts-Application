@@ -88,8 +88,8 @@ List<GamesModel> games = [
   ),
 ];
 
-class DailyChallengeGames extends StatelessWidget {
-  const DailyChallengeGames({super.key});
+class DailyChallengeGamesScreen extends StatelessWidget {
+  const DailyChallengeGamesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

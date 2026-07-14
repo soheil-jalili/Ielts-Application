@@ -2,19 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 
-class TextFieldPrimary extends StatelessWidget {
-  const TextFieldPrimary({
+class TextFieldOptional extends StatelessWidget {
+  const TextFieldOptional({
     super.key,
     required this.hintText,
     required this.controller,
-     this.hintFontSize = 20,
+    this.hintFontSize = 20,
     this.onChanged,
     this.isPassword = false,
     this.isPhoneNumber = false,
+    this.width,
   });
 
   final String hintText;
   final double hintFontSize;
+  final double? width;
   final bool isPassword;
   final bool isPhoneNumber;
   final TextEditingController controller;
@@ -24,6 +26,7 @@ class TextFieldPrimary extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 56,
+      width: width,
       child: TextField(
         obscureText: isPassword,
         keyboardType: isPhoneNumber ? TextInputType.phone : null,
@@ -35,12 +38,26 @@ class TextFieldPrimary extends StatelessWidget {
         onChanged: onChanged,
         controller: controller,
         decoration: InputDecoration(
-          hintText: hintText,
-
-          hintStyle: TextStyle(
-            fontSize: hintFontSize,
-            fontFamily: FontFamily.iranSansXRegular,
-            color: AppColors.hintTextColor,
+          hint: Row(
+            children: [
+              Text(
+                hintText,
+                style: TextStyle(
+                  fontSize: hintFontSize,
+                  fontFamily: FontFamily.iranSansXRegular,
+                  color: AppColors.hintTextColor,
+                ),
+              ),
+              SizedBox(width: 2,),
+              Text(
+                '(اختیاری)',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontFamily: FontFamily.iranSansXRegular,
+                  color: AppColors.hintTextColor,
+                ),
+              ),
+            ],
           ),
 
           enabledBorder: UnderlineInputBorder(

@@ -3,7 +3,7 @@ import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
-import 'package:ielts/widgets/text_fied_primary.dart';
+import 'package:ielts/widgets/text_field_primary.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   const ResetPasswordScreen({super.key});

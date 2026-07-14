@@ -249,6 +249,14 @@ class AppColors {
   static Color primaryABC2ButtonTextColor = Color(0xff1684DA);
   static Color borderUserColor = Color(0xff444046);
 
+
+  // Make Account
+  static Color languageBoxContainerColor = Color(0xffF1F1F1);
+  static Color bornDateColor = Color(0xffB5B5B5);
+  static Color bornDateContainerColor = Color(0xffF6F6F9);
+  static Color topBarMakeAccountContainerColor =  Color(0xffFDD97A);
+
+
   // Drawer
   static Color logoutTextDrawerColor = const Color(0xffFF1D1D);
   static Color drawerBackgroundColor = const Color(0xffFCFCFC);
