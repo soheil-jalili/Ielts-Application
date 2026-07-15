@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ielts/screens/daily_games_1_screen.dart';
-import 'package:ielts/screens/make_account_screen.dart';
+import 'package:ielts/screens/daily_games_list_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Directionality(
         textDirection: TextDirection.rtl,
-        child: MakeAccountScreen(),
+        child: DailyGamesListScreen(),
       ),
     );
   }

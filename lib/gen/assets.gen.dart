@@ -77,6 +77,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/clock2.svg
   String get clock2 => 'assets/images/clock2.svg';
 
+  /// File path: assets/images/container-games1-shape-full.svg
+  String get containerGames1ShapeFull =>
+      'assets/images/container-games1-shape-full.svg';
+
+  /// File path: assets/images/controller-daily-games1.png
+  AssetGenImage get controllerDailyGames1 =>
+      const AssetGenImage('assets/images/controller-daily-games1.png');
+
   /// File path: assets/images/controller.png
   AssetGenImage get controller =>
       const AssetGenImage('assets/images/controller.png');
@@ -102,6 +110,18 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/cup2.png
   AssetGenImage get cup2 => const AssetGenImage('assets/images/cup2.png');
+
+  /// File path: assets/images/daily-games1.svg
+  String get dailyGames1 => 'assets/images/daily-games1.svg';
+
+  /// File path: assets/images/daily-games2.svg
+  String get dailyGames2 => 'assets/images/daily-games2.svg';
+
+  /// File path: assets/images/daily-games3.svg
+  String get dailyGames3 => 'assets/images/daily-games3.svg';
+
+  /// File path: assets/images/daily-games4.svg
+  String get dailyGames4 => 'assets/images/daily-games4.svg';
 
   /// File path: assets/images/daily-profile-1.png
   AssetGenImage get dailyProfile1 =>
@@ -346,6 +366,13 @@ class $AssetsImagesGen {
   /// File path: assets/images/shape-c.svg
   String get shapeC => 'assets/images/shape-c.svg';
 
+  /// File path: assets/images/shape-container-games1-right.svg
+  String get shapeContainerGames1Right =>
+      'assets/images/shape-container-games1-right.svg';
+
+  /// File path: assets/images/shape-container.svg
+  String get shapeContainer => 'assets/images/shape-container.svg';
+
   /// File path: assets/images/shape-quiz.svg
   String get shapeQuiz => 'assets/images/shape-quiz.svg';
 
@@ -463,6 +490,8 @@ class $AssetsImagesGen {
     clockDrawer,
     clock,
     clock2,
+    containerGames1ShapeFull,
+    controllerDailyGames1,
     controller,
     coruseImage,
     courseDetailCover,
@@ -470,6 +499,10 @@ class $AssetsImagesGen {
     cupFill,
     cup,
     cup2,
+    dailyGames1,
+    dailyGames2,
+    dailyGames3,
+    dailyGames4,
     dailyProfile1,
     dailyProfile2,
     dailyProfile3,
@@ -545,6 +578,8 @@ class $AssetsImagesGen {
     setting,
     shapeA,
     shapeC,
+    shapeContainerGames1Right,
+    shapeContainer,
     shapeQuiz,
     shapeFreeCourse,
     shapeFreeCourse2,
