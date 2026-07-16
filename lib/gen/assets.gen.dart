@@ -85,6 +85,10 @@ class $AssetsImagesGen {
   AssetGenImage get controllerDailyGames1 =>
       const AssetGenImage('assets/images/controller-daily-games1.png');
 
+  /// File path: assets/images/controller-game-details.png
+  AssetGenImage get controllerGameDetails =>
+      const AssetGenImage('assets/images/controller-game-details.png');
+
   /// File path: assets/images/controller.png
   AssetGenImage get controller =>
       const AssetGenImage('assets/images/controller.png');
@@ -373,6 +377,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/shape-container.svg
   String get shapeContainer => 'assets/images/shape-container.svg';
 
+  /// File path: assets/images/shape-game-details.svg
+  String get shapeGameDetails => 'assets/images/shape-game-details.svg';
+
   /// File path: assets/images/shape-quiz.svg
   String get shapeQuiz => 'assets/images/shape-quiz.svg';
 
@@ -492,6 +499,7 @@ class $AssetsImagesGen {
     clock2,
     containerGames1ShapeFull,
     controllerDailyGames1,
+    controllerGameDetails,
     controller,
     coruseImage,
     courseDetailCover,
@@ -580,6 +588,7 @@ class $AssetsImagesGen {
     shapeC,
     shapeContainerGames1Right,
     shapeContainer,
+    shapeGameDetails,
     shapeQuiz,
     shapeFreeCourse,
     shapeFreeCourse2,

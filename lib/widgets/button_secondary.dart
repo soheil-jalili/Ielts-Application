@@ -50,6 +50,7 @@ class ButtonSecondary extends StatelessWidget {
         ),
         child: isItPrice
             ? Row(
+              mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     title,

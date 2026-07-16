@@ -4,13 +4,12 @@ import 'package:ielts/constants/colors.dart';
 import 'package:ielts/extensions/string_extensions.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/login_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/button_secondary.dart';
+import 'package:ielts/widgets/tab_view_custom.dart';
 import 'package:ielts/widgets/title_and_back.dart';
-import 'package:ielts/widgets/icon_left.dart';
 import 'package:ielts/widgets/title_icon.dart';
-import 'package:sliver_tools/sliver_tools.dart';
+import 'package:ielts/widgets/user_comment.dart';
 import 'package:better_player_plus/better_player_plus.dart';
 
 class CourseDetailScreen extends StatefulWidget {
@@ -26,15 +25,16 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.scaffoldColor2,
-      floatingActionButton: GestureDetector(
-        onTap: () {},
-        child: SvgPicture.asset(Assets.images.support),
-      ),
-      body: SafeArea(
-        child: Directionality(
-          textDirection: TextDirection.rtl,
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        backgroundColor: AppColors.scaffoldColor2,
+        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+        floatingActionButton: GestureDetector(
+          onTap: () {},
+          child: SvgPicture.asset(Assets.images.support),
+        ),
+        body: SafeArea(
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(
@@ -70,6 +70,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                         selectedIndex = newIndex;
                       });
                     },
+                    titles: ['توضیحات دوره', 'جلسات دوره', 'نظرات کاربران'],
                   ),
                 ),
               ),
@@ -138,199 +139,6 @@ class _VideoPlayerState extends State<VideoPlayer> {
   @override
   Widget build(BuildContext context) {
     return BetterPlayer(controller: _betterPlayerController);
-  }
-}
-
-class UserComment extends StatelessWidget {
-  const UserComment({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MultiSliver(
-      children: [
-        SliverToBoxAdapter(
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 3),
-                    child: IconLeft(),
-                  ),
-                  SizedBox(width: 7),
-                  Column(
-                    children: [
-                      Text(
-                        'نظرات',
-                        style: TextStyle(
-                          fontFamily: FontFamily.iranSansXExtraBold,
-                          color: AppColors.courseDetailScreenTextCommentColor,
-                        ),
-                      ),
-                      Container(
-                        width: 48,
-                        height: 3,
-                        decoration: BoxDecoration(
-                          color:
-                              AppColors.courseDetailScreenBorderBottomTextColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 24),
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 26),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18),
-                  color: AppColors.coruseDetailScreenContainerColor,
-                ),
-                height: 54,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'برای ثبت نظر خود ابتدا وارد ',
-                      style: TextStyle(
-                        fontFamily: FontFamily.iranSansXDemiBold,
-                      ),
-                    ),
-
-                    Column(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => LoginScreen(),
-                              ),
-                            );
-                          },
-                          child: Text(
-                            'حساب کاربری ',
-                            style: TextStyle(
-                              fontFamily: FontFamily.iranSansXDemiBold,
-                              color: AppColors.courseDetailScreenTextColor,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 74,
-                          color:
-                              AppColors.courseDetailScreenBorderBottomTextColor,
-                          height: 1,
-                        ),
-                      ],
-                    ),
-
-                    Text(
-                      'خود شوید.',
-                      style: TextStyle(
-                        fontFamily: FontFamily.iranSansXDemiBold,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-
-        SliverList.builder(
-          itemCount: 10,
-          itemBuilder: (context, index) => Container(
-            margin: EdgeInsets.only(bottom: index == 9 ? 124 : 16),
-            height: 160,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              color: Colors.white,
-            ),
-
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 8, right: 8),
-                  child: Row(
-                    children: [
-                      Image.asset(Assets.images.avatar.path),
-                      SizedBox(width: 8),
-                      Text(
-                        'لیلا زارع',
-                        style: TextStyle(
-                          fontFamily: FontFamily.iranSansXMedium,
-                          fontSize: 12,
-                          color: AppColors.courseDetailScreenSubTextColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.only(right: 48),
-                  child: Text(
-                    'حتی با این که دوره آفلاین بود، پشتیبانی بسیار عالی داشتند.👌',
-                    style: TextStyle(
-                      fontFamily: FontFamily.iranSansXMedium,
-                      fontSize: 10,
-                      color: AppColors.courseDetailScreenMessageColor,
-                    ),
-                  ),
-                ),
-
-                Container(
-                  width: double.infinity,
-                  height: 1,
-                  margin: EdgeInsets.fromLTRB(24, 17.5, 24, 4),
-                  decoration: BoxDecoration(
-                    color: AppColors.courseDetailScreenBorderBottomTextColor,
-                  ),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.only(right: 28),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 32,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(200),
-                          child: Image.asset(Assets.images.adminAvatar.path),
-                        ),
-                      ),
-                      SizedBox(width: 8),
-                      Text(
-                        'ادمین',
-                        style: TextStyle(
-                          fontFamily: FontFamily.iranSansXMedium,
-                          fontSize: 12,
-                          color: AppColors.courseDetailScreenSubTextColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.only(right: 68, top: 8),
-                  child: Text(
-                    'خداروشکر که از تدریس اساتید و پشتیبانی رضایت داشتید❤',
-                    style: TextStyle(
-                      fontFamily: FontFamily.iranSansXMedium,
-                      fontSize: 10,
-                      color: AppColors.courseDetailScreenMessageColor,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
   }
 }
 
@@ -548,74 +356,6 @@ class CourseDescription extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class TabViewCustom extends StatelessWidget {
-  final int selectedIndex;
-  final ValueChanged<int> onTabChanged;
-
-  const TabViewCustom({
-    super.key,
-    required this.selectedIndex,
-    required this.onTabChanged,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 1.93),
-      height: 40,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18),
-        color: AppColors.coruseDetailScreenTabViewColor,
-      ),
-      child: Row(
-        children: [
-          _buildTabItem(title: 'توضیحات دوره', index: 0),
-          _buildTabItem(title: 'جلسات دوره', index: 1),
-          _buildTabItem(title: 'نظرات کاربران', index: 2),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildTabItem({required String title, required int index}) {
-    final isSelected = selectedIndex == index;
-
-    return Expanded(
-      child: GestureDetector(
-        onTap: () => onTabChanged(index),
-        child: Container(
-          decoration: BoxDecoration(
-            color: isSelected ? Colors.white : Colors.transparent,
-            borderRadius: BorderRadius.circular(16),
-            boxShadow: isSelected
-                ? [
-                    BoxShadow(
-                      color: AppColors.courseDetailScreenShadowTabColor,
-                      blurRadius: 20,
-                      offset: const Offset(0, 5),
-                    ),
-                  ]
-                : [],
-          ),
-          child: Center(
-            child: Text(
-              title,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontFamily: FontFamily.iranSansXDemiBold,
-                fontSize: 14,
-                color: isSelected
-                    ? AppColors.courseDetailScreenPrimaryColor
-                    : Colors.black,
-              ),
-            ),
-          ),
-        ),
       ),
     );
   }

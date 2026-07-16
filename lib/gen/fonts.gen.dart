@@ -11,6 +11,9 @@
 class FontFamily {
   FontFamily._();
 
+  /// Font family: Gilroy-Extra-Bold
+  static const String gilroyExtraBold = 'Gilroy-Extra-Bold';
+
   /// Font family: Gilroy-Medium
   static const String gilroyMedium = 'Gilroy-Medium';
 
