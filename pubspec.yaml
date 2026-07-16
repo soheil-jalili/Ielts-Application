@@ -78,6 +78,10 @@ flutter:
     fonts:
     - asset: assets/fonts/IRANSansXFaNum-Regular.ttf
 
+  - family: IranSansX-regular-without-FaNum
+    fonts:
+    - asset: assets/fonts/IRANSansX-Regular.ttf
+
   - family: IranSansX-thin
     fonts:
     - asset: assets/fonts/IRANSansX-Thin.ttf

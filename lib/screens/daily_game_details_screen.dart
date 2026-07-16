@@ -116,20 +116,27 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
             ),
 
             if (selectedIndex == 0) ...{
-              SliverPadding(
-                padding: EdgeInsetsGeometry.only(right: 20, left: 20, top: 35),
-                sliver: SliverToBoxAdapter(
-                  child: Column(
-                    children: [
-                      TitleIcon(
+              SliverToBoxAdapter(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        right: 20,
+                        left: 20,
+                        top: 35,
+                      ),
+                      child: TitleIcon(
                         title: 'توضیحات بازی',
                         fontFamily: FontFamily.iranSansXMedium,
                         fontSize: 14,
                         textColor: AppColors.titleIconTextColor,
                       ),
-                      SizedBox(height: 16),
+                    ),
+                    SizedBox(height: 16),
 
-                      Text(
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20, left: 20),
+                      child: Text(
                         'این بازی دارای کاربری آسان و طراحی جذابی است که لذت انجام آن را دو چندان می‌سازد. صدایی که در طول بازی کلمات را بیان می‌کند، بسیار واضح بوده و به صورت شمرده کلمه را می‌خواند تا یادگیری آن برای شما سخت نباشد.',
                         style: TextStyle(
                           fontSize: 14,
@@ -137,8 +144,11 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                           color: AppColors.neutralTertiaryColor,
                         ),
                       ),
-                      SizedBox(height: 4),
-                      Text(
+                    ),
+                    SizedBox(height: 4),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20, left: 20),
+                      child: Text(
                         'هر جمله در صورت وجود اشتباه، بلافاصله بررسی و تصحیح شده و همین ویژگی مهارت‌های شما را تقویت خواهد کرد. اگر به کلمه جدیدی برخوردید و دوست داشتید اطلاعات بیشتری در مورد آن پیدا کنید، تنها کافیست بر روی کلمه کلیک کرده و اطلاعات مورد نظر خود را مشاهده کنید. می‌توانید آمار کلمات و اشتباهات را بررسی کنید و به مرور زمان متوجه پیشرفت زبان انگلیسی خود خواهید شد.',
                         style: TextStyle(
                           fontSize: 14,
@@ -146,21 +156,643 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                           color: AppColors.neutralTertiaryColor,
                         ),
                       ),
+                    ),
 
-                      SizedBox(height: 56),
-
-  
-
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(55, 64, 55, 40),
-                        child: ButtonPrimary(
-                          title: 'شروع بازی',
-                          onPressed: () {},
-                          fontFamily: FontFamily.iranSansXBold,
+                    SizedBox(height: 56),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10, left: 10),
+                      child: Table(
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
+                        columnWidths: const {
+                          0: FlexColumnWidth(0.85),
+                          1: FlexColumnWidth(1.85),
+                          2: FlexColumnWidth(0.85),
+                          3: FlexColumnWidth(1.85),
+                          4: FlexColumnWidth(0.85),
+                          5: FlexColumnWidth(1.85),
+                        },
+                        border: TableBorder.all(
+                          color: AppColors.secondary900Color,
+                          width: 1,
                         ),
+                        children: [
+                          const TableRow(
+                            decoration: BoxDecoration(
+                              color: AppColors.primaryColor,
+                            ),
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 6,
+                                  right: 6,
+                                  top: 6,
+                                  bottom: 6,
+                                ),
+                                child: Text(
+                                  'سطح',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontFamily: FontFamily.iranSansXRegular,
+                                  ),
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 4,
+                                  vertical: 6,
+                                ),
+                                child: Text(
+                                  '200 امتیاز',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontFamily: FontFamily.iranSansXRegular,
+                                  ),
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 6,
+                                  right: 6,
+                                  top: 6,
+                                  bottom: 6,
+                                ),
+                                child: Text(
+                                  'سطح',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontFamily: FontFamily.iranSansXRegular,
+                                  ),
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 4,
+                                  vertical: 6,
+                                ),
+                                child: Text(
+                                  '200 امتیاز',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontFamily: FontFamily.iranSansXRegular,
+                                  ),
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 6,
+                                  right: 6,
+                                  top: 6,
+                                  bottom: 6,
+                                ),
+                                child: Text(
+                                  'سطح',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontFamily: FontFamily.iranSansXRegular,
+                                  ),
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 4,
+                                  vertical: 6,
+                                ),
+                                child: Text(
+                                  '200 امتیاز',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontFamily: FontFamily.iranSansXRegular,
+                                  ),
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const TableRow(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text(
+                                  'A1',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.secondary900Color,
+                                    fontFamily:
+                                        FontFamily.iranSansXRegularWithoutFaNum,
+                                    fontSize: 15.16,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '10% ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: FontFamily.iranSansXBold,
+                                          color: AppColors.secondary900Color,
+                                        ),
+                                      ),
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Text(
+                                          'تخفیف',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.normal,
+                                            fontFamily:
+                                                FontFamily.iranSansXRegular,
+                                            color: AppColors.secondary900Color,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text(
+                                  'B1',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.secondary900Color,
+                                    fontFamily:
+                                        FontFamily.iranSansXRegularWithoutFaNum,
+                                    fontSize: 15.16,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '15% ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: FontFamily.iranSansXBold,
+                                          color: AppColors.secondary900Color,
+                                        ),
+                                      ),
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Text(
+                                          'تخفیف',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.normal,
+                                            fontFamily:
+                                                FontFamily.iranSansXRegular,
+                                            color: AppColors.secondary900Color,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text(
+                                  'C1',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.secondary900Color,
+                                        fontFamily:
+                                        FontFamily.iranSansXRegularWithoutFaNum,
+                                    fontSize: 15.16,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '15% ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: FontFamily.iranSansXBold,
+                                          color: AppColors.secondary900Color,
+                                        ),
+                                      ),
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Text(
+                                          'تخفیف',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.normal,
+                                            fontFamily:
+                                                FontFamily.iranSansXRegular,
+                                            color: AppColors.secondary900Color,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const TableRow(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text(
+                                  'A2',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.secondary900Color,
+                                    fontFamily:
+                                        FontFamily.iranSansXRegularWithoutFaNum,
+                                    fontSize: 15.16,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '15% ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: FontFamily.iranSansXBold,
+                                          color: AppColors.secondary900Color,
+                                        ),
+                                      ),
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Text(
+                                          'تخفیف',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.normal,
+                                            fontFamily:
+                                                FontFamily.iranSansXRegular,
+                                            color: AppColors.secondary900Color,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text(
+                                  'B2',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.secondary900Color,
+                                    fontFamily:
+                                        FontFamily.iranSansXRegularWithoutFaNum,
+
+                                    fontSize: 15.16,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '15% ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: FontFamily.iranSansXBold,
+                                          color: AppColors.secondary900Color,
+                                        ),
+                                      ),
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Text(
+                                          'تخفیف',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.normal,
+                                            fontFamily:
+                                                FontFamily.iranSansXRegular,
+                                            color: AppColors.secondary900Color,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text(
+                                  'C2',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.secondary900Color,
+                                    fontFamily: FontFamily.iranSansXRegular,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '20% ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: FontFamily.iranSansXBold,
+                                          color: AppColors.secondary900Color,
+                                        ),
+                                      ),
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Text(
+                                          'تخفیف',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.normal,
+                                            fontFamily:
+                                                FontFamily.iranSansXRegular,
+                                            color: AppColors.secondary900Color,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const TableRow(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text(
+                                  'A3',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.secondary900Color,
+                                    fontFamily:
+                                        FontFamily.iranSansXRegularWithoutFaNum,
+                                    fontSize: 15.16,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '20% ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: FontFamily.iranSansXBold,
+                                          color: AppColors.secondary900Color,
+                                        ),
+                                      ),
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Text(
+                                          'تخفیف',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.normal,
+                                            fontFamily:
+                                                FontFamily.iranSansXRegular,
+                                            color: AppColors.secondary900Color,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text(
+                                  'B3',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.secondary900Color,
+                                    fontFamily:
+                                        FontFamily.iranSansXRegularWithoutFaNum,
+                                    fontSize: 15.16,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '20% ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: FontFamily.iranSansXBold,
+                                          color: AppColors.secondary900Color,
+                                        ),
+                                      ),
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Text(
+                                          'تخفیف',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.normal,
+                                            fontFamily:
+                                                FontFamily.iranSansXRegular,
+                                            color: AppColors.secondary900Color,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text(
+                                  'C3',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.secondary900Color,
+                                           fontFamily:
+                                        FontFamily.iranSansXRegularWithoutFaNum,
+                                    fontSize: 15.16,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 11,
+                                ),
+                                child: Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '20% ',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: FontFamily.iranSansXBold,
+                                          color: AppColors.secondary900Color,
+                                        ),
+                                      ),
+                                      WidgetSpan(
+                                        alignment: PlaceholderAlignment.middle,
+                                        child: Text(
+                                          'تخفیف',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.normal,
+                                            fontFamily:
+                                                FontFamily.iranSansXRegular,
+                                            color: AppColors.secondary900Color,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  softWrap: false,
+                                  overflow: TextOverflow.visible,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(55, 64, 55, 40),
+                      child: ButtonPrimary(
+                        title: 'شروع بازی',
+                        onPressed: () {},
+                        fontFamily: FontFamily.iranSansXBold,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             } else if (selectedIndex == 1) ...{

@@ -47,6 +47,10 @@ class FontFamily {
   /// Font family: IranSansX-regular
   static const String iranSansXRegular = 'IranSansX-regular';
 
+  /// Font family: IranSansX-regular-without-FaNum
+  static const String iranSansXRegularWithoutFaNum =
+      'IranSansX-regular-without-FaNum';
+
   /// Font family: IranSansX-thin
   static const String iranSansXThin = 'IranSansX-thin';
 

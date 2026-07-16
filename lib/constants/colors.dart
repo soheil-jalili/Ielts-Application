@@ -11,6 +11,8 @@ class AppColors {
   static Color primary800Color = Color(0xff98400F);
   static Color titleIconTextColor = Color(0xffF15223);
   static Color neutralTertiaryColor = Color(0xff767676);
+  static const Color secondary900Color = Color(0xff49495F);
+
 
   static final Color shadowWhiteColor = const Color(
     0xff7090B0,
