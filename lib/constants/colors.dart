@@ -5,6 +5,7 @@ class AppColors {
 
   static Color scaffoldColor = const Color(0xffFCFCFC).withValues(alpha: 0.98);
   static Color scaffoldColor2 = const Color(0xffF6F6F9);
+  static Color scaffoldColor3 = const Color(0xffFCFCFC);
 
   static const Color primaryColor = Color(0xffFFA31A);
   static Color primary400Color = Color(0xffFFBD1B);
@@ -12,7 +13,6 @@ class AppColors {
   static Color titleIconTextColor = Color(0xffF15223);
   static Color neutralTertiaryColor = Color(0xff767676);
   static const Color secondary900Color = Color(0xff49495F);
-
 
   static final Color shadowWhiteColor = const Color(
     0xff7090B0,
@@ -260,6 +260,10 @@ class AppColors {
   static Color bornDateColor = Color(0xffB5B5B5);
   static Color bornDateContainerColor = Color(0xffF6F6F9);
   static Color topBarMakeAccountContainerColor = Color(0xffFDD97A);
+
+  // Daily Checklist Screen
+  static Color dailyChecklistSubTextColor = Color(0xff8B8B8B);
+  static const Color containerDailyCheckListColor = Color(0xffFFF6DE);
 
   // Drawer
   static Color logoutTextDrawerColor = const Color(0xffFF1D1D);

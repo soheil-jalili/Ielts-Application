@@ -161,6 +161,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/dictionary.svg
   String get dictionary => 'assets/images/dictionary.svg';
 
+  /// File path: assets/images/down-daily-checklist.svg
+  String get downDailyChecklist => 'assets/images/down-daily-checklist.svg';
+
   /// File path: assets/images/down-make-account.svg
   String get downMakeAccount => 'assets/images/down-make-account.svg';
 
@@ -211,6 +214,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/horizental-line-circle.svg
   String get horizentalLineCircle => 'assets/images/horizental-line-circle.svg';
+
+  /// File path: assets/images/info-grey.svg
+  String get infoGrey => 'assets/images/info-grey.svg';
 
   /// File path: assets/images/info.svg
   String get info => 'assets/images/info.svg';
@@ -377,8 +383,17 @@ class $AssetsImagesGen {
   /// File path: assets/images/shape-container.svg
   String get shapeContainer => 'assets/images/shape-container.svg';
 
+  /// File path: assets/images/shape-daily-checklist.png
+  AssetGenImage get shapeDailyChecklist =>
+      const AssetGenImage('assets/images/shape-daily-checklist.png');
+
   /// File path: assets/images/shape-game-details.svg
   String get shapeGameDetails => 'assets/images/shape-game-details.svg';
+
+  /// File path: assets/images/shape-left-bottom-daily-checklist.png
+  AssetGenImage get shapeLeftBottomDailyChecklist => const AssetGenImage(
+    'assets/images/shape-left-bottom-daily-checklist.png',
+  );
 
   /// File path: assets/images/shape-quiz.svg
   String get shapeQuiz => 'assets/images/shape-quiz.svg';
@@ -453,6 +468,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/two.png
   AssetGenImage get two => const AssetGenImage('assets/images/two.png');
 
+  /// File path: assets/images/type-for-daily-checklist.svg
+  String get typeForDailyChecklist =>
+      'assets/images/type-for-daily-checklist.svg';
+
   /// File path: assets/images/unlock.svg
   String get unlock => 'assets/images/unlock.svg';
 
@@ -520,6 +539,7 @@ class $AssetsImagesGen {
     dailyChallengeRightShape,
     deleteInput,
     dictionary,
+    downDailyChecklist,
     downMakeAccount,
     down,
     fire,
@@ -536,6 +556,7 @@ class $AssetsImagesGen {
     home,
     homeActive,
     horizentalLineCircle,
+    infoGrey,
     info,
     italyFlag,
     italy,
@@ -588,7 +609,9 @@ class $AssetsImagesGen {
     shapeC,
     shapeContainerGames1Right,
     shapeContainer,
+    shapeDailyChecklist,
     shapeGameDetails,
+    shapeLeftBottomDailyChecklist,
     shapeQuiz,
     shapeFreeCourse,
     shapeFreeCourse2,
@@ -611,6 +634,7 @@ class $AssetsImagesGen {
     travel,
     treeOfWord,
     two,
+    typeForDailyChecklist,
     unlock,
     up,
     videoImage,

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ielts/screens/daily_game_details_screen.dart';
+import 'package:ielts/screens/main_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-
   runApp(const MyApp());
 }
 
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Directionality(
         textDirection: TextDirection.rtl,
-        child: DailyGameDetailsScreen(),
+        child: MainScreen(),
       ),
     );
   }

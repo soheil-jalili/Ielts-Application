@@ -22,6 +22,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.scaffoldColor2,
+
       body: SafeArea(
         bottom: false,
         child: CustomScrollView(

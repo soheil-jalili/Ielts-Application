@@ -139,7 +139,7 @@ class _MakeAccountScreenState extends State<MakeAccountScreen> {
               top: 113,
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: AppColors.scaffoldColor3,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(32),
                     topRight: Radius.circular(32),
