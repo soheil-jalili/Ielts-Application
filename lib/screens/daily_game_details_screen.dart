@@ -410,7 +410,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: AppColors.secondary900Color,
-                                        fontFamily:
+                                    fontFamily:
                                         FontFamily.iranSansXRegularWithoutFaNum,
                                     fontSize: 15.16,
                                   ),
@@ -735,7 +735,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: AppColors.secondary900Color,
-                                           fontFamily:
+                                    fontFamily:
                                         FontFamily.iranSansXRegularWithoutFaNum,
                                     fontSize: 15.16,
                                   ),
