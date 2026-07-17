@@ -13,6 +13,7 @@ class AppColors {
   static Color titleIconTextColor = Color(0xffF15223);
   static Color neutralTertiaryColor = Color(0xff767676);
   static const Color secondary900Color = Color(0xff49495F);
+  static Color notificationContainerColor = Color(0xffD80027);
 
   static final Color shadowWhiteColor = const Color(
     0xff7090B0,
@@ -23,9 +24,12 @@ class AppColors {
   static final Color fillProfileColor = const Color(0xfff7b662);
 
   static const Color primaryTextColor = Color.fromRGBO(0, 0, 0, 0.80);
+  static const Color black8Color = Color.fromRGBO(0, 0, 0, 0.08);
   static const Color secondaryTextColor = Color.fromRGBO(0, 0, 0, 0.60);
   static const Color tertiaryTextColor = Color.fromRGBO(0, 0, 0, 0.50);
   static const Color quaternaryTextColor = Color.fromRGBO(0, 0, 0, 0.80);
+  static const Color black20Color = Color.fromRGBO(0, 0, 0, 0.20);
+  static const Color black40Color = Color.fromRGBO(0, 0, 0, 0.40);
 
   static const Color greenColor = Color(0xff37E353);
   static const Color greenDarkerColor = Color(0xff21BA3A);
@@ -99,11 +103,11 @@ class AppColors {
   // Profile Gradient Color
   static final List<Color> profileOneColor = [
     const Color(0xffF5B544).withValues(alpha: 0.0),
-    const Color(0xff2772F0).withValues(alpha: 0.24), // 60 -> 24 درصد
+    const Color(0xff2772F0).withValues(alpha: 0.24),
   ];
   static final List<Color> profileTwoColor = [
     const Color(0xff4B9F47).withValues(alpha: 0.0),
-    const Color(0xffF5B544).withValues(alpha: 0.39), // 100 -> 39 درصد
+    const Color(0xffF5B544).withValues(alpha: 0.39),
   ];
 
   // Video Courses
@@ -264,6 +268,32 @@ class AppColors {
   // Daily Checklist Screen
   static Color dailyChecklistSubTextColor = Color(0xff8B8B8B);
   static const Color containerDailyCheckListColor = Color(0xffFFF6DE);
+
+  // Cafe Hopping Screen
+  static final List<Color> cafeContainer1GradientColors = [
+    Color.fromARGB(100, 245, 181, 68),
+    Color.fromARGB(100, 39, 114, 240),
+  ];
+  static final List<Color> cafeContainer2GradientColors = [
+    Color.fromARGB(100, 79, 159, 71),
+    Color.fromARGB(100, 245, 181, 68),
+  ];
+  static final List<Color> cafeContainer3GradientColors = [
+    Color.fromARGB(100, 247, 121, 125),
+    Color.fromARGB(100, 24, 114, 77),
+  ];
+
+  static Color primaryBtnCafeScreenColor = const Color(0xff091B3D);
+  static Color cafeContainerShadowColor = const Color(
+    0xff000000,
+  ).withValues(alpha: 0.06);
+
+  static Color cafeContainerStrokeCategoryColor = const Color(
+    0xff000000,
+  ).withValues(alpha: 0.5);
+  static Color avatarSquareColor = const Color(0xff0AB36D);
+  static Color containerForForgroundProgressEn = const Color(0xff0AB36D);
+  static Color containerForForgroundProgressJP = const Color(0xffF6B055);
 
   // Drawer
   static Color logoutTextDrawerColor = const Color(0xffFF1D1D);

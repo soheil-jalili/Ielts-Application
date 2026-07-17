@@ -98,6 +98,14 @@ flutter:
     fonts:
     - asset: assets/fonts/GilroyMedium.ttf
 
+  - family: Gilroy-Semi-Bold
+    fonts:
+    - asset: assets/fonts/Gilroy-SemiBold.ttf
+
   - family: Gilroy-Extra-Bold
     fonts:
     - asset: assets/fonts/GilroyExtraBold.ttf
+
+  - family: DMSans-Regular
+    fonts:
+    - asset: assets/fonts/DMSans-Regular.ttf

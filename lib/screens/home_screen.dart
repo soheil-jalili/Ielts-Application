@@ -395,7 +395,7 @@ class VideoCourse extends StatelessWidget {
                                     )
                                   : Padding(
                                       padding: EdgeInsets.only(
-                                        left: index == 0 ? 0 : 4,
+                                        left: index == 4 ? 0 : 4,
                                       ),
                                       child: Image.asset(
                                         Assets.images.starFill.path,

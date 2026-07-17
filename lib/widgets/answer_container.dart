@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/widgets/custom_radio.dart';
+import 'package:ielts/widgets/custom_radio_button.dart';
 
 class AnswerContainer extends StatelessWidget {
   const AnswerContainer({

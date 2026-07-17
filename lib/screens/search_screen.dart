@@ -484,24 +484,26 @@ class ContainerWithText extends StatelessWidget {
     this.title,
     this.isFillable = false,
     this.haveLeftIcon = false,
+    this.fillColor,
+    this.textColor = AppColors.secondaryTextColor,
+    this.onTap,
   });
 
   final String? title;
   final String? icon;
+  final Color? fillColor;
+  final Color textColor;
 
   final bool isFillable;
   final bool haveLeftIcon;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
+    final effectiveColor =
+        fillColor ?? AppColors.activContainereSearchScreenColor;
     return GestureDetector(
-      onTap: () {
-        if (title != null) {
-          debugPrint('ContainerWithText tapped: $title');
-        } else {
-          debugPrint('ContainerWithText tapped: icon');
-        }
-      },
+      onTap: onTap,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
         decoration: BoxDecoration(
@@ -510,7 +512,7 @@ class ContainerWithText extends StatelessWidget {
               ? Border.all(color: AppColors.borderSearchScreenColor, width: 1)
               : null,
           color: isFillable
-              ? AppColors.activContainereSearchScreenColor
+              ? effectiveColor
               : AppColors.fillContainereSearchScreenColor,
         ),
         child: icon != null
@@ -522,7 +524,7 @@ class ContainerWithText extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: FontFamily.iranSansXMedium,
                       fontSize: 12,
-                      color: AppColors.secondaryTextColor,
+                      color: textColor,
                     ),
                   ),
 

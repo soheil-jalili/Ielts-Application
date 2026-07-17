@@ -11,6 +11,9 @@
 class FontFamily {
   FontFamily._();
 
+  /// Font family: DMSans-Regular
+  static const String dMSansRegular = 'DMSans-Regular';
+
   /// Font family: Gilroy-Extra-Bold
   static const String gilroyExtraBold = 'Gilroy-Extra-Bold';
 
@@ -19,6 +22,9 @@ class FontFamily {
 
   /// Font family: Gilroy-Regular
   static const String gilroyRegular = 'Gilroy-Regular';
+
+  /// Font family: Gilroy-Semi-Bold
+  static const String gilroySemiBold = 'Gilroy-Semi-Bold';
 
   /// Font family: IranSansX-Demi-bold
   static const String iranSansXDemiBold = 'IranSansX-Demi-bold';

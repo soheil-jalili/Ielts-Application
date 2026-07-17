@@ -32,6 +32,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/apple.png
   AssetGenImage get apple => const AssetGenImage('assets/images/apple.png');
 
+  /// File path: assets/images/avatar-cafe.png
+  AssetGenImage get avatarCafe =>
+      const AssetGenImage('assets/images/avatar-cafe.png');
+
   /// File path: assets/images/avatar.png
   AssetGenImage get avatar => const AssetGenImage('assets/images/avatar.png');
 
@@ -58,12 +62,64 @@ class $AssetsImagesGen {
   /// File path: assets/images/britain.svg
   String get britain => 'assets/images/britain.svg';
 
+  /// File path: assets/images/cafe-canada-flag.png
+  AssetGenImage get cafeCanadaFlag =>
+      const AssetGenImage('assets/images/cafe-canada-flag.png');
+
+  /// File path: assets/images/cafe-down.svg
+  String get cafeDown => 'assets/images/cafe-down.svg';
+
+  /// File path: assets/images/cafe-france-flag.png
+  AssetGenImage get cafeFranceFlag =>
+      const AssetGenImage('assets/images/cafe-france-flag.png');
+
+  /// File path: assets/images/cafe-italy-flag.png
+  AssetGenImage get cafeItalyFlag =>
+      const AssetGenImage('assets/images/cafe-italy-flag.png');
+
+  /// File path: assets/images/cafe-notification.svg
+  String get cafeNotification => 'assets/images/cafe-notification.svg';
+
+  /// File path: assets/images/cafe-profile1-item-2.png
+  AssetGenImage get cafeProfile1Item2 =>
+      const AssetGenImage('assets/images/cafe-profile1-item-2.png');
+
+  /// File path: assets/images/cafe-profile1.png
+  AssetGenImage get cafeProfile1 =>
+      const AssetGenImage('assets/images/cafe-profile1.png');
+
+  /// File path: assets/images/cafe-profile2.png
+  AssetGenImage get cafeProfile2 =>
+      const AssetGenImage('assets/images/cafe-profile2.png');
+
+  /// File path: assets/images/cafe-profile3.png
+  AssetGenImage get cafeProfile3 =>
+      const AssetGenImage('assets/images/cafe-profile3.png');
+
+  /// File path: assets/images/cafe-right-profile-2.png
+  AssetGenImage get cafeRightProfile2 =>
+      const AssetGenImage('assets/images/cafe-right-profile-2.png');
+
+  /// File path: assets/images/cafe-right-profile-3.png
+  AssetGenImage get cafeRightProfile3 =>
+      const AssetGenImage('assets/images/cafe-right-profile-3.png');
+
+  /// File path: assets/images/cafe-right-profile.png
+  AssetGenImage get cafeRightProfile =>
+      const AssetGenImage('assets/images/cafe-right-profile.png');
+
+  /// File path: assets/images/cafe-search.svg
+  String get cafeSearch => 'assets/images/cafe-search.svg';
+
   /// File path: assets/images/calendar.png
   AssetGenImage get calendar =>
       const AssetGenImage('assets/images/calendar.png');
 
   /// File path: assets/images/calender.svg
   String get calender => 'assets/images/calender.svg';
+
+  /// File path: assets/images/change.svg
+  String get change => 'assets/images/change.svg';
 
   /// File path: assets/images/circle.png
   AssetGenImage get circle => const AssetGenImage('assets/images/circle.png');
@@ -502,6 +558,7 @@ class $AssetsImagesGen {
     timeSquare,
     adminAvatar,
     apple,
+    avatarCafe,
     avatar,
     backIcon,
     banner1Profile,
@@ -510,8 +567,22 @@ class $AssetsImagesGen {
     bannerTeacherScreen,
     blur,
     britain,
+    cafeCanadaFlag,
+    cafeDown,
+    cafeFranceFlag,
+    cafeItalyFlag,
+    cafeNotification,
+    cafeProfile1Item2,
+    cafeProfile1,
+    cafeProfile2,
+    cafeProfile3,
+    cafeRightProfile2,
+    cafeRightProfile3,
+    cafeRightProfile,
+    cafeSearch,
     calendar,
     calender,
+    change,
     circle,
     clockDrawer,
     clock,

@@ -13,6 +13,7 @@ class ButtonOutlinePrimary extends StatelessWidget {
     this.fontSize = 20,
     this.fontFamily = FontFamily.iranSansXRegular,
     this.fillColor,
+    this.textColor = AppColors.primaryColor,
     required this.strokeColor,
   });
 
@@ -25,6 +26,7 @@ class ButtonOutlinePrimary extends StatelessWidget {
   final double fontSize;
   final Color? fillColor;
   final Color strokeColor;
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -46,13 +48,14 @@ class ButtonOutlinePrimary extends StatelessWidget {
           ),
           elevation: 0,
           splashFactory: NoSplash.splashFactory,
+          shadowColor: Colors.transparent,
         ),
         child: Text(
           title,
           style: TextStyle(
             fontSize: fontSize,
             fontFamily: fontFamily,
-            color: AppColors.primaryColor,
+            color: textColor,
           ),
         ),
       ),
