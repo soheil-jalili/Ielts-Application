@@ -8,14 +8,18 @@ class StudentAndLanguageBox extends StatelessWidget {
     required this.index,
     this.width = 52,
     this.height = 52,
-
+    this.imageSrc,
     this.widthImage = 48,
     this.heightImage = 48,
     this.leftSide = 8,
-
+    this.rightSide = 10,
     this.flagWidthImage = 16,
     this.flagHeightImage = 16,
+
+    this.leftPosition = -6,
+    this.topPosition = -6,
   });
+
   final int index;
 
   final double width;
@@ -25,12 +29,19 @@ class StudentAndLanguageBox extends StatelessWidget {
   final double heightImage;
 
   final double leftSide;
+  final double rightSide;
 
   final double flagWidthImage;
   final double flagHeightImage;
 
+  final double leftPosition;
+  final double topPosition;
+
+  final String? imageSrc;
+
   @override
   Widget build(BuildContext context) {
+    String imageSrcMain = imageSrc ?? Assets.images.mojAvatar.path;
     return Container(
       width: width,
       height: height,
@@ -41,7 +52,7 @@ class StudentAndLanguageBox extends StatelessWidget {
           color: AppColors.borderAvatarTopOfMonthColor,
         ),
       ),
-      margin: EdgeInsets.only(right: 10, left: leftSide),
+      margin: EdgeInsets.only(right: rightSide, left: leftSide),
       padding: EdgeInsets.all(2),
       child: Stack(
         clipBehavior: Clip.none,
@@ -50,7 +61,7 @@ class StudentAndLanguageBox extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: Image.asset(
-                Assets.images.mojAvatar.path,
+                imageSrcMain,
                 width: widthImage,
                 height: heightImage,
                 fit: BoxFit.cover,
@@ -58,8 +69,8 @@ class StudentAndLanguageBox extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: -6,
-            top: -6,
+            left: leftPosition,
+            top: topPosition,
             child: Image.asset(
               Assets.images.germanFlag.path,
               width: flagWidthImage,

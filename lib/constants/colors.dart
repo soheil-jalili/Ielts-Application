@@ -6,8 +6,12 @@ class AppColors {
   static Color scaffoldColor = const Color(0xffFCFCFC).withValues(alpha: 0.98);
   static Color scaffoldColor2 = const Color(0xffF6F6F9);
   static Color scaffoldColor3 = const Color(0xffFCFCFC);
+  static Color scaffoldColor4 = const Color(0xffFCFCFC).withValues(alpha: 0.95);
 
   static const Color primaryColor = Color(0xffFFA31A);
+  static Color primaryLightColor = Color(0xffFAA224).withAlpha(20);
+  static Color primaryLightWithoutAlphaColor = Color(0xffFAA224);
+  static Color primaryLight2Color = Color(0xffFA9E25);
   static Color primary400Color = Color(0xffFFBD1B);
   static Color primary800Color = Color(0xff98400F);
   static Color titleIconTextColor = Color(0xffF15223);
@@ -43,6 +47,8 @@ class AppColors {
   static final Color shadowBoxColor = const Color(
     0xff161616,
   ).withValues(alpha: 0.04);
+
+  static final Color shadowBlack = Color.fromARGB(0, 0, 0, 0);
 
   static const Color bannerHomeColor = Color(0xffFFFBEA);
   static const Color elevatedButtonBackgroundColor = Color(0xffFFBD1B);
@@ -294,6 +300,9 @@ class AppColors {
   static Color avatarSquareColor = const Color(0xff0AB36D);
   static Color containerForForgroundProgressEn = const Color(0xff0AB36D);
   static Color containerForForgroundProgressJP = const Color(0xffF6B055);
+
+  // Cafe Main Screen
+  static Color cafeBtnIntroColor = const Color(0xffF6F6F6);
 
   // Drawer
   static Color logoutTextDrawerColor = const Color(0xffFF1D1D);

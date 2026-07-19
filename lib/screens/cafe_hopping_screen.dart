@@ -339,7 +339,7 @@ class CafeCompanion extends StatelessWidget {
   }
 
   Future<dynamic> showSortDialog({required BuildContext context}) {
-    String? _selectedCapital;
+    String? selectedCapital;
 
     return showDialog(
       context: context,
@@ -382,10 +382,10 @@ class CafeCompanion extends StatelessWidget {
 
                               CustomCheckBox(
                                 title: 'Tehran',
-                                value: _selectedCapital == 'Tehran',
+                                value: selectedCapital == 'Tehran',
                                 onChanged: (value) {
                                   setDialogState(() {
-                                    _selectedCapital = value == true
+                                    selectedCapital = value == true
                                         ? 'Tehran'
                                         : null;
                                   });
@@ -393,10 +393,10 @@ class CafeCompanion extends StatelessWidget {
                               ),
                               CustomCheckBox(
                                 title: 'Cairo',
-                                value: _selectedCapital == 'Cairo',
+                                value: selectedCapital == 'Cairo',
                                 onChanged: (value) {
                                   setDialogState(() {
-                                    _selectedCapital = value == true
+                                    selectedCapital = value == true
                                         ? 'Cairo'
                                         : null;
                                   });
@@ -404,10 +404,10 @@ class CafeCompanion extends StatelessWidget {
                               ),
                               CustomCheckBox(
                                 title: 'Paris',
-                                value: _selectedCapital == 'Paris',
+                                value: selectedCapital == 'Paris',
                                 onChanged: (value) {
                                   setDialogState(() {
-                                    _selectedCapital = value == true
+                                    selectedCapital = value == true
                                         ? 'Paris'
                                         : null;
                                   });

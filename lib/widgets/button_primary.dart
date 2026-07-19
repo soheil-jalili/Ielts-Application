@@ -13,6 +13,8 @@ class ButtonPrimary extends StatelessWidget {
     this.fontSize = 20,
     this.fontFamily = FontFamily.iranSansXRegular,
     this.fillColor,
+    this.haveShadow = true,
+    this.textColor = Colors.white,
   });
 
   final String title;
@@ -23,22 +25,26 @@ class ButtonPrimary extends StatelessWidget {
   final double borderRadius;
   final double fontSize;
   final Color? fillColor;
+  final Color textColor;
+  final bool haveShadow;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
       height: height,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, 16),
-            blurRadius: 32,
-            spreadRadius: -10,
-            color: AppColors.buttonShadowColor,
-          ),
-        ],
-      ),
+      decoration: haveShadow
+          ? BoxDecoration(
+              boxShadow: [  
+                BoxShadow(
+                  offset: Offset(0, 16),
+                  blurRadius: 32,
+                  spreadRadius: -10,
+                  color: AppColors.buttonShadowColor,
+                ),
+              ],
+            )
+          : null,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -57,7 +63,7 @@ class ButtonPrimary extends StatelessWidget {
           style: TextStyle(
             fontSize: fontSize,
             fontFamily: fontFamily,
-            color: Colors.white,
+            color: textColor,
           ),
         ),
       ),

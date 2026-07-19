@@ -62,6 +62,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/britain.svg
   String get britain => 'assets/images/britain.svg';
 
+  /// File path: assets/images/cafe-banner-main.png
+  AssetGenImage get cafeBannerMain =>
+      const AssetGenImage('assets/images/cafe-banner-main.png');
+
   /// File path: assets/images/cafe-canada-flag.png
   AssetGenImage get cafeCanadaFlag =>
       const AssetGenImage('assets/images/cafe-canada-flag.png');
@@ -76,6 +80,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/cafe-italy-flag.png
   AssetGenImage get cafeItalyFlag =>
       const AssetGenImage('assets/images/cafe-italy-flag.png');
+
+  /// File path: assets/images/cafe-main-german-flag.png
+  AssetGenImage get cafeMainGermanFlag =>
+      const AssetGenImage('assets/images/cafe-main-german-flag.png');
 
   /// File path: assets/images/cafe-notification.svg
   String get cafeNotification => 'assets/images/cafe-notification.svg';
@@ -322,6 +330,10 @@ class $AssetsImagesGen {
   AssetGenImage get mojAvatar =>
       const AssetGenImage('assets/images/moj-avatar.png');
 
+  /// File path: assets/images/moj-avatar2.png
+  AssetGenImage get mojAvatar2 =>
+      const AssetGenImage('assets/images/moj-avatar2.png');
+
   /// File path: assets/images/not-found.svg
   String get notFound => 'assets/images/not-found.svg';
 
@@ -484,6 +496,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/star-bold.svg
   String get starBold => 'assets/images/star-bold.svg';
 
+  /// File path: assets/images/star-cafe.svg
+  String get starCafe => 'assets/images/star-cafe.svg';
+
   /// File path: assets/images/star-colorless.png
   AssetGenImage get starColorless =>
       const AssetGenImage('assets/images/star-colorless.png');
@@ -567,10 +582,12 @@ class $AssetsImagesGen {
     bannerTeacherScreen,
     blur,
     britain,
+    cafeBannerMain,
     cafeCanadaFlag,
     cafeDown,
     cafeFranceFlag,
     cafeItalyFlag,
+    cafeMainGermanFlag,
     cafeNotification,
     cafeProfile1Item2,
     cafeProfile1,
@@ -643,6 +660,7 @@ class $AssetsImagesGen {
     logout,
     mic,
     mojAvatar,
+    mojAvatar2,
     notFound,
     onboarding1,
     onboarding2,
@@ -693,6 +711,7 @@ class $AssetsImagesGen {
     sort,
     spainFlag,
     starBold,
+    starCafe,
     starColorless,
     starFill,
     star,

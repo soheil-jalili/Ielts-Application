@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ielts/screens/cafe_hopping_screen.dart';
+import 'package:ielts/screens/cafe_main_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Directionality(
         textDirection: TextDirection.rtl,
-        child: CafeHoppingScreen(),
+        child: CafeMainScreen(),
       ),
     );
   }
