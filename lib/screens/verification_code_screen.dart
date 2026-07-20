@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/reset_password_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
@@ -145,11 +146,19 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                               String result =
                                   '${textFieldCode1.text}${textFieldCode2.text}${textFieldCode3.text}${textFieldCode4.text}';
                               debugPrint(result);
+
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => ResetPasswordScreen(),
+                                ),
+                              );
                             },
                           ),
                           const SizedBox(height: 24),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.of(context).pop();
+                            },
                             child: Text(
                               'لغو',
                               style: TextStyle(

@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/main_screen.dart';
 import 'package:ielts/widgets/button_outline_primar.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/text_field_optional.dart';
@@ -31,311 +32,329 @@ class _MakeAccountScreenState extends State<MakeAccountScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        bottom: false,
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: [
-            Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                height: 140,
-                color: AppColors.topBarMakeAccountContainerColor,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: SizedBox(
-                    height: 113,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          bottom: 0,
-                          child: Center(
-                            child: GestureDetector(
-                              behavior: HitTestBehavior.opaque,
-                              onTap: () {
-                                if (_carouselController.ready) {
-                                  _carouselController.previousPage(
-                                    duration: const Duration(milliseconds: 200),
-                                    curve: Curves.easeOutCubic,
-                                  );
-                                }
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.all(20.0),
-                                child: SvgPicture.asset(Assets.images.leftMake),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          right: 0,
-                          top: 0,
-                          bottom: 0,
-                          child: Center(
-                            child: GestureDetector(
-                              behavior: HitTestBehavior.opaque,
-                              onTap: () {
-                                if (_carouselController.ready) {
-                                  _carouselController.nextPage(
-                                    duration: const Duration(milliseconds: 200),
-                                    curve: Curves.easeOutCubic,
-                                  );
-                                }
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.all(20.0),
-                                child: SvgPicture.asset(Assets.images.right),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Positioned.fill(
-                          left: 40,
-                          right: 40,
-                          child: Center(
-                            child: ValueListenableBuilder<int>(
-                              valueListenable: _currentIndexNotifier,
-                              builder: (context, currentIndex, _) {
-                                return CarouselSlider.builder(
-                                  carouselController: _carouselController,
-                                  itemCount: 5,
-                                  itemBuilder: (context, index, realIndex) {
-                                    return _buildProfileAvatar(
-                                      Assets.images.profileMake.path,
-                                      index,
-                                      currentIndex,
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        body: SafeArea(
+          bottom: false,
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  height: 140,
+                  color: AppColors.topBarMakeAccountContainerColor,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: SizedBox(
+                      height: 113,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            bottom: 0,
+                            child: Center(
+                              child: GestureDetector(
+                                behavior: HitTestBehavior.opaque,
+                                onTap: () {
+                                  if (_carouselController.ready) {
+                                    _carouselController.previousPage(
+                                      duration: const Duration(
+                                        milliseconds: 200,
+                                      ),
+                                      curve: Curves.easeOutCubic,
                                     );
-                                  },
-                                  options: CarouselOptions(
-                                    height: 80,
-                                    viewportFraction: 0.2,
-                                    enlargeCenterPage: true,
-                                    enlargeFactor: 0.33,
-                                    enableInfiniteScroll: true,
-                                    scrollDirection: Axis.horizontal,
-                                    onPageChanged: (index, reason) {
-                                      _currentIndexNotifier.value = index;
-                                    },
+                                  }
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.all(20.0),
+                                  child: SvgPicture.asset(
+                                    Assets.images.leftMake,
                                   ),
-                                );
-                              },
+                                ),
+                              ),
                             ),
                           ),
+                          Positioned(
+                            right: 0,
+                            top: 0,
+                            bottom: 0,
+                            child: Center(
+                              child: GestureDetector(
+                                behavior: HitTestBehavior.opaque,
+                                onTap: () {
+                                  if (_carouselController.ready) {
+                                    _carouselController.nextPage(
+                                      duration: const Duration(
+                                        milliseconds: 200,
+                                      ),
+                                      curve: Curves.easeOutCubic,
+                                    );
+                                  }
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.all(20.0),
+                                  child: SvgPicture.asset(Assets.images.right),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned.fill(
+                            left: 40,
+                            right: 40,
+                            child: Center(
+                              child: ValueListenableBuilder<int>(
+                                valueListenable: _currentIndexNotifier,
+                                builder: (context, currentIndex, _) {
+                                  return CarouselSlider.builder(
+                                    carouselController: _carouselController,
+                                    itemCount: 5,
+                                    itemBuilder: (context, index, realIndex) {
+                                      return _buildProfileAvatar(
+                                        Assets.images.profileMake.path,
+                                        index,
+                                        currentIndex,
+                                      );
+                                    },
+                                    options: CarouselOptions(
+                                      height: 80,
+                                      viewportFraction: 0.2,
+                                      enlargeCenterPage: true,
+                                      enlargeFactor: 0.33,
+                                      enableInfiniteScroll: true,
+                                      scrollDirection: Axis.horizontal,
+                                      onPageChanged: (index, reason) {
+                                        _currentIndexNotifier.value = index;
+                                      },
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Positioned.fill(
+                top: 113,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.scaffoldColor3,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(32),
+                      topRight: Radius.circular(32),
+                    ),
+                  ),
+
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 29, bottom: 32),
+                          child: Row(
+                            children: [
+                              TitleIcon(
+                                title: 'مشخصات کاربر',
+                                fontFamily: FontFamily.iranSansXRegular,
+                                fontSize: 16,
+                                textColor: Colors.black,
+                              ),
+
+                              SizedBox(width: 8),
+
+                              SvgPicture.asset(Assets.images.info),
+                            ],
+                          ),
                         ),
+
+                        Row(
+                          children: [
+                            Expanded(
+                              child: TextFieldPrimary(
+                                hintText: 'نام',
+                                controller: TextEditingController(),
+                                hintFontSize: 18,
+                              ),
+                            ),
+                            const SizedBox(width: 22),
+                            Expanded(
+                              child: TextFieldPrimary(
+                                hintText: 'نام خانوادگی',
+                                controller: TextEditingController(),
+                                hintFontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        const SizedBox(height: 32),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: TextFieldPrimary(
+                                hintText: 'جنسیت',
+                                controller: TextEditingController(),
+                                isDropdown: true,
+                                dropdownItems: const {
+                                  'male': 'مرد',
+                                  'female': 'زن',
+                                },
+                                onDropdownChanged: (selectedValue) {},
+                                hintFontSize: 18,
+                              ),
+                            ),
+                            const SizedBox(width: 22),
+                            Expanded(
+                              child: TextFieldPrimary(
+                                hintText: 'سن',
+                                controller: TextEditingController(),
+                                hintFontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        SizedBox(height: 32),
+
+                        Row(
+                          children: [
+                            Text(
+                              'تاریخ تولد : ',
+                              style: TextStyle(
+                                color: AppColors.bornDateColor,
+                                fontSize: 18,
+                                fontFamily: FontFamily.iranSansXRegular,
+                              ),
+                            ),
+
+                            Spacer(),
+                            BornDatePicker(),
+                          ],
+                        ),
+
+                        SizedBox(height: 40),
+
+                        TextFieldPrimary(
+                          hintText: 'شماره موبایل',
+                          controller: TextEditingController(),
+                          isPhoneNumber: true,
+                          width: 318,
+                        ),
+                        SizedBox(height: 32),
+                        TextFieldOptional(
+                          hintText: 'ایمیل',
+                          controller: TextEditingController(),
+                          width: 318,
+                        ),
+                        SizedBox(height: 32),
+
+                        TitlePage(
+                          title: 'زبان های مورد علاقه خود را انتخاب کنید.',
+                          seeMoreIsText: true,
+                          horizentalPadding: 0,
+                          fontFamily: FontFamily.iranSansXRegular,
+                          fontSize: 16,
+                          onTap: () {},
+                        ),
+
+                        SizedBox(height: 43),
+
+                        Row(
+                          children: [
+                            Expanded(
+                              child: LanguageBox(
+                                widgetIconOrImage: SvgPicture.asset(
+                                  Assets.images.britain,
+                                  fit: BoxFit.cover,
+                                ),
+                                title: 'انگلیسی',
+                              ),
+                            ),
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: LanguageBox(
+                                widgetIconOrImage: SvgPicture.asset(
+                                  Assets.images.italyFlag,
+                                  fit: BoxFit.cover,
+                                ),
+                                title: 'ایتالیایی',
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 16),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: LanguageBox(
+                                widgetIconOrImage: Image.asset(
+                                  Assets.images.russiaFlag.path,
+                                  fit: BoxFit.cover,
+                                ),
+                                title: 'روسی',
+                              ),
+                            ),
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: LanguageBox(
+                                widgetIconOrImage: SvgPicture.asset(
+                                  Assets.images.france,
+                                ),
+                                title: 'فرانسوی',
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 36),
+
+                        Row(
+                          children: [
+                            TextFieldOptional(
+                              hintText: 'کد معرف',
+                              controller: TextEditingController(),
+                              width: 184,
+                            ),
+                            Spacer(),
+                            ButtonOutlinePrimary(
+                              title: 'ثبت',
+                              onPressed: () {},
+                              strokeColor: AppColors.primaryColor,
+                              width: 111,
+                              height: 45,
+                              fillColor: Colors.white,
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 25),
+                        ButtonPrimary(
+                          title: 'تایید نهایی',
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => MainScreen(),
+                              ),
+                            );
+                          },
+                        ),
+                        SizedBox(height: 88),
                       ],
                     ),
                   ),
                 ),
               ),
-            ),
-            Positioned.fill(
-              top: 113,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: AppColors.scaffoldColor3,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(32),
-                    topRight: Radius.circular(32),
-                  ),
-                ),
-
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 29, bottom: 32),
-                        child: Row(
-                          children: [
-                            TitleIcon(
-                              title: 'مشخصات کاربر',
-                              fontFamily: FontFamily.iranSansXRegular,
-                              fontSize: 16,
-                              textColor: Colors.black,
-                            ),
-
-                            SizedBox(width: 8),
-
-                            SvgPicture.asset(Assets.images.info),
-                          ],
-                        ),
-                      ),
-
-                      Row(
-                        children: [
-                          Expanded(
-                            child: TextFieldPrimary(
-                              hintText: 'نام',
-                              controller: TextEditingController(),
-                              hintFontSize: 18,
-                            ),
-                          ),
-                          const SizedBox(width: 22),
-                          Expanded(
-                            child: TextFieldPrimary(
-                              hintText: 'نام خانوادگی',
-                              controller: TextEditingController(),
-                              hintFontSize: 18,
-                            ),
-                          ),
-                        ],
-                      ),
-
-                      const SizedBox(height: 32),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: TextFieldPrimary(
-                              hintText: 'جنسیت',
-                              controller: TextEditingController(),
-                              isDropdown: true,
-                              dropdownItems: const {
-                                'male': 'مرد',
-                                'female': 'زن',
-                              },
-                              onDropdownChanged: (selectedValue) {},
-                              hintFontSize: 18,
-                            ),
-                          ),
-                          const SizedBox(width: 22),
-                          Expanded(
-                            child: TextFieldPrimary(
-                              hintText: 'سن',
-                              controller: TextEditingController(),
-                              hintFontSize: 18,
-                            ),
-                          ),
-                        ],
-                      ),
-
-                      SizedBox(height: 32),
-
-                      Row(
-                        children: [
-                          Text(
-                            'تاریخ تولد : ',
-                            style: TextStyle(
-                              color: AppColors.bornDateColor,
-                              fontSize: 18,
-                              fontFamily: FontFamily.iranSansXRegular,
-                            ),
-                          ),
-
-                          Spacer(),
-                          BornDatePicker(),
-                        ],
-                      ),
-
-                      SizedBox(height: 40),
-
-                      TextFieldPrimary(
-                        hintText: 'شماره موبایل',
-                        controller: TextEditingController(),
-                        isPhoneNumber: true,
-                        width: 318,
-                      ),
-                      SizedBox(height: 32),
-                      TextFieldOptional(
-                        hintText: 'ایمیل',
-                        controller: TextEditingController(),
-                        width: 318,
-                      ),
-                      SizedBox(height: 32),
-
-                      TitlePage(
-                        title: 'زبان های مورد علاقه خود را انتخاب کنید.',
-                        seeMoreIsText: true,
-                        horizentalPadding: 0,
-                        fontFamily: FontFamily.iranSansXRegular,
-                        fontSize: 16,
-                        onTap: () {},
-                      ),
-
-                      SizedBox(height: 43),
-
-                      Row(
-                        children: [
-                          Expanded(
-                            child: LanguageBox(
-                              widgetIconOrImage: SvgPicture.asset(
-                                Assets.images.britain,
-                                fit: BoxFit.cover,
-                              ),
-                              title: 'انگلیسی',
-                            ),
-                          ),
-                          const SizedBox(width: 16),
-                          Expanded(
-                            child: LanguageBox(
-                              widgetIconOrImage: SvgPicture.asset(
-                                Assets.images.italyFlag,
-                                fit: BoxFit.cover,
-                              ),
-                              title: 'ایتالیایی',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 16),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: LanguageBox(
-                              widgetIconOrImage: Image.asset(
-                                Assets.images.russiaFlag.path,
-                                fit: BoxFit.cover,
-                              ),
-                              title: 'روسی',
-                            ),
-                          ),
-                          const SizedBox(width: 16),
-                          Expanded(
-                            child: LanguageBox(
-                              widgetIconOrImage: SvgPicture.asset(
-                                Assets.images.france,
-                              ),
-                              title: 'فرانسوی',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 36),
-
-                      Row(
-                        children: [
-                          TextFieldOptional(
-                            hintText: 'کد معرف',
-                            controller: TextEditingController(),
-                            width: 184,
-                          ),
-                          Spacer(),
-                          ButtonOutlinePrimary(
-                            title: 'ثبت',
-                            onPressed: () {},
-                            strokeColor: AppColors.primaryColor,
-                            width: 111,
-                            height: 45,
-                            fillColor: Colors.white,
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 25),
-                      ButtonPrimary(title: 'تایید نهایی', onPressed: () {}),
-                      SizedBox(height: 88),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

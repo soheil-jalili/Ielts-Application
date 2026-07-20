@@ -40,7 +40,10 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                  child: TitleAndBack(title: 'آموزش گرامر با بازی'),
+                  child: TitleAndBack(
+                    title: 'آموزش گرامر با بازی',
+                    onTap: () => Navigator.of(context).pop(),
+                  ),
                 ),
               ),
 

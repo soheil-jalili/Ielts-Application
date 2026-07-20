@@ -127,7 +127,13 @@ class Onboarding3Screen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(right: 12),
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => Onboarding4Screen(),
+                            ),
+                          );
+                        },
                         child: Text(
                           'رد کردن',
                           style: TextStyle(

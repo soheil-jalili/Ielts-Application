@@ -105,6 +105,7 @@ class TextFieldPrimary extends StatelessWidget {
               },
             )
           : TextField(
+            textAlign: TextAlign.right,
               obscureText: isPassword,
               keyboardType: isPhoneNumber ? TextInputType.phone : null,
               style: const TextStyle(

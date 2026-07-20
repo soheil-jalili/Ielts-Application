@@ -4,6 +4,7 @@ import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/screens/onboarding_2_screen.dart';
+import 'package:ielts/screens/onboarding_4_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 
@@ -133,7 +134,13 @@ class Onboarding1Screen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(right: 12),
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => Onboarding4Screen(),
+                            ),
+                          );
+                        },
                         child: Text(
                           'رد کردن',
                           style: TextStyle(

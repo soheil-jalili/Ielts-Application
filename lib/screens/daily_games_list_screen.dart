@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/daily_game_details_screen.dart';
 import 'package:ielts/widgets/button_secondary.dart';
 import 'package:ielts/widgets/title_and_back.dart';
 
@@ -11,87 +12,114 @@ class DailyGamesListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.scaffoldColor2,
-      body: SafeArea(
-        bottom: false,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  child: TitleAndBack(
-                    title: 'بازی ها سطح A1',
-                    onTap: () => Navigator.of(context).pop(),
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        backgroundColor: AppColors.scaffoldColor2,
+        body: SafeArea(
+          bottom: false,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: TitleAndBack(
+                      title: 'بازی ها سطح A1',
+                      onTap: () => Navigator.of(context).pop(),
+                    ),
                   ),
                 ),
-              ),
 
-              SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 16)),
-              SliverToBoxAdapter(
-                child: Row(
-                  children: [
-                    _gameContainer(
-                      nameOfGame: 'Adaptive Spelling Quiz',
-                      level: 'مبتدی/متوسط',
-                      onPressed: () {},
-                    ),
-                    Expanded(
-                      child: SvgPicture.asset(Assets.images.dailyGames1),
-                    ),
-                  ],
+                SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 16)),
+                SliverToBoxAdapter(
+                  child: Row(
+                    children: [
+                      _gameContainer(
+                        nameOfGame: 'Adaptive Spelling Quiz',
+                        level: 'مبتدی/متوسط',
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DailyGameDetailsScreen(),
+                            ),
+                          );
+                        },
+                      ),
+                      Expanded(
+                        child: SvgPicture.asset(Assets.images.dailyGames1),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 16)),
-              SliverToBoxAdapter(
-                child: Row(
-                  children: [
-                    SvgPicture.asset(Assets.images.dailyGames2),
-                    SizedBox(width: 6),
-                    _gameContainer(
-                      nameOfGame: 'Human Brain Cloud',
-                      level: 'مبتدی',
-                      onPressed: () {},
-                      shape: Assets.images.containerGames1ShapeFull,
-                    ),
-                  ],
+                SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 16)),
+                SliverToBoxAdapter(
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(Assets.images.dailyGames2),
+                      SizedBox(width: 6),
+                      _gameContainer(
+                        nameOfGame: 'Human Brain Cloud',
+                        level: 'مبتدی',
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DailyGameDetailsScreen(),
+                            ),
+                          );
+                        },
+                        shape: Assets.images.containerGames1ShapeFull,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 16)),
+                SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 16)),
 
-              SliverToBoxAdapter(
-                child: Row(
-                  children: [
-                    _gameContainer(
-                      nameOfGame: '4 Pics 1 Word',
-                      level: 'مبتدی',
-                      onPressed: () {},
-                      haveRightShape: true,
-                    ),
-                    SizedBox(width: 8),
-                    SvgPicture.asset(Assets.images.dailyGames3),
-                  ],
+                SliverToBoxAdapter(
+                  child: Row(
+                    children: [
+                      _gameContainer(
+                        nameOfGame: '4 Pics 1 Word',
+                        level: 'مبتدی',
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DailyGameDetailsScreen(),
+                            ),
+                          );
+                        },
+                        haveRightShape: true,
+                      ),
+                      SizedBox(width: 8),
+                      SvgPicture.asset(Assets.images.dailyGames3),
+                    ],
+                  ),
                 ),
-              ),
-              SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 16)),
+                SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 16)),
 
-              SliverToBoxAdapter(
-                child: Row(
-                  children: [
-                    SvgPicture.asset(Assets.images.dailyGames4),
-                    SizedBox(width: 10),
-                    _gameContainer(
-                      nameOfGame: 'Human Brain Cloud',
-                      level: 'مبتدی',
-                      onPressed: () {},
-                    ),
-                  ],
+                SliverToBoxAdapter(
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(Assets.images.dailyGames4),
+                      SizedBox(width: 10),
+                      _gameContainer(
+                        nameOfGame: 'Human Brain Cloud',
+                        level: 'مبتدی',
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DailyGameDetailsScreen(),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 124)),
-            ],
+                SliverPadding(padding: EdgeInsetsGeometry.only(bottom: 124)),
+              ],
+            ),
           ),
         ),
       ),

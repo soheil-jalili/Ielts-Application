@@ -107,7 +107,11 @@ class QuizGuideLineScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 24),
-                      BackQuiz(onTap: () {}),
+                      BackQuiz(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
 
                       const SizedBox(height: 16),
                     ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/make_account_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 import 'package:ielts/widgets/text_field_primary.dart';
@@ -68,10 +69,21 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         ),
                         const SizedBox(height: 24),
 
-                        ButtonPrimary(title: 'ورود', onPressed: () {}),
+                        ButtonPrimary(
+                          title: 'ورود',
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => MakeAccountScreen(),
+                              ),
+                            );
+                          },
+                        ),
                         const SizedBox(height: 24),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
                           child: Text(
                             'لغو',
                             style: TextStyle(
@@ -87,7 +99,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 ),
               ),
             ),
-           HorizentalLine()
+            HorizentalLine(),
           ],
         ),
       ),

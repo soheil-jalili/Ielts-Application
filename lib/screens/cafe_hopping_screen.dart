@@ -20,92 +20,95 @@ class _CafeHoppingScreenState extends State<CafeHoppingScreen> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.scaffoldColor,
-      body: SafeArea(
-        bottom: false,
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(40, 18, 40, 19),
-                child: Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'کـافه گـردی',
-                          style: TextStyle(
-                            color: AppColors.primaryTextColor,
-                            fontSize: 14,
-                            fontFamily: FontFamily.iranSansXBlack,
-                          ),
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'گردشی در بهترین کافه‌های دنیا با تجربه‌ای متفاوت از طعم و فضا',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 10,
-                            fontFamily: FontFamily.iranSansXRegular,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Spacer(),
-                    GestureDetector(
-                      onTap: () {},
-                      child: Stack(
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        backgroundColor: AppColors.scaffoldColor,
+        body: SafeArea(
+          bottom: false,
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(40, 18, 40, 19),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SvgPicture.asset(Assets.images.cafeNotification),
-
-                          Positioned(
-                            right: 0,
-                            top: 3,
-                            child: Container(
-                              width: 5,
-                              height: 5,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: AppColors.notificationContainerColor,
-                              ),
+                          Text(
+                            'کـافه گـردی',
+                            style: TextStyle(
+                              color: AppColors.primaryTextColor,
+                              fontSize: 14,
+                              fontFamily: FontFamily.iranSansXBlack,
+                            ),
+                          ),
+                          SizedBox(height: 3),
+                          Text(
+                            'گردشی در بهترین کافه‌های دنیا با تجربه‌ای متفاوت از طعم و فضا',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 10,
+                              fontFamily: FontFamily.iranSansXRegular,
                             ),
                           ),
                         ],
                       ),
-                    ),
-                    SizedBox(width: 9),
-                    GestureDetector(
-                      onTap: () {},
-                      child: SvgPicture.asset(Assets.images.cafeSearch),
-                    ),
-                  ],
+                      Spacer(),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Stack(
+                          children: [
+                            SvgPicture.asset(Assets.images.cafeNotification),
+
+                            Positioned(
+                              right: 0,
+                              top: 3,
+                              child: Container(
+                                width: 5,
+                                height: 5,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: AppColors.notificationContainerColor,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 9),
+                      GestureDetector(
+                        onTap: () {},
+                        child: SvgPicture.asset(Assets.images.cafeSearch),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
 
-            SliverPadding(
-              padding: EdgeInsets.symmetric(horizontal: 40),
-              sliver: SliverToBoxAdapter(
-                child: TabViewCustom(
-                  selectedIndex: selectedIndex,
-                  onTabChanged: (value) {
-                    setState(() {
-                      selectedIndex = value;
-                    });
-                  },
-                  titles: ['دورهمی', 'همصحبت'],
+              SliverPadding(
+                padding: EdgeInsets.symmetric(horizontal: 40),
+                sliver: SliverToBoxAdapter(
+                  child: TabViewCustom(
+                    selectedIndex: selectedIndex,
+                    onTabChanged: (value) {
+                      setState(() {
+                        selectedIndex = value;
+                      });
+                    },
+                    titles: ['دورهمی', 'همصحبت'],
+                  ),
                 ),
               ),
-            ),
 
-            if (selectedIndex == 0) ...{
-              Gatherings(),
-            } else if (selectedIndex == 1) ...{
-              CafeCompanion(),
-            },
-          ],
+              if (selectedIndex == 0) ...{
+                Gatherings(),
+              } else if (selectedIndex == 1) ...{
+                CafeCompanion(),
+              },
+            ],
+          ),
         ),
       ),
     );

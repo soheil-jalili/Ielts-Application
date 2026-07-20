@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/screens/course_detail_screen.dart';
+import 'package:ielts/screens/main_screen.dart';
 import 'package:ielts/widgets/title_and_back.dart';
 
 class CourseScreen extends StatelessWidget {
@@ -19,7 +20,12 @@ class CourseScreen extends StatelessWidget {
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                child: TitleAndBack(title: 'دوره های آموزشی'),
+                child: TitleAndBack(
+                  title: 'دوره های آموزشی',
+                  onTap: () => Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (context) => MainScreen())),
+                ),
               ),
             ),
 

@@ -4,6 +4,7 @@ import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/screens/forget_password_screen.dart';
+import 'package:ielts/screens/make_account_screen.dart';
 import 'package:ielts/screens/sign_up_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
@@ -37,7 +38,9 @@ class _LoginScreenState extends State<LoginScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 12, left: 16),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -55,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-          
+
               Padding(
                 padding: const EdgeInsets.only(top: 47),
                 child: Text(
@@ -67,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-          
+
               Expanded(
                 child: Container(
                   margin: const EdgeInsets.fromLTRB(24, 32, 24, 16.5),
@@ -88,16 +91,16 @@ class _LoginScreenState extends State<LoginScreen> {
                             controller: usernameController,
                             hintText: 'نام کاربری',
                           ),
-          
+
                           SizedBox(height: 24),
                           TextFieldPrimary(
                             controller: passwordController,
                             hintText: 'رمز عبور',
                             isPassword: true,
                           ),
-          
+
                           SizedBox(height: 27),
-          
+
                           Row(
                             children: [
                               Checkbox(
@@ -115,7 +118,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   }
                                   return Colors.white;
                                 }),
-                                side: WidgetStateBorderSide.resolveWith((states) {
+                                side: WidgetStateBorderSide.resolveWith((
+                                  states,
+                                ) {
                                   return BorderSide(
                                     color: AppColors.loginScreenPrimaryColor,
                                     width: 2,
@@ -128,9 +133,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   vertical: -4,
                                 ),
                               ),
-          
+
                               SizedBox(width: 4),
-          
+
                               Text(
                                 'مرا بخاطر بسپار',
                                 style: TextStyle(
@@ -161,10 +166,19 @@ class _LoginScreenState extends State<LoginScreen> {
                             ],
                           ),
                           SizedBox(height: 14),
-          
-                          ButtonPrimary(title: 'ورود', onPressed: () {}),
+
+                          ButtonPrimary(
+                            title: 'ورود',
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => MakeAccountScreen(),
+                                ),
+                              );
+                            },
+                          ),
                           SizedBox(height: 16),
-          
+
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -220,8 +234,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-          
-             HorizentalLine()
+
+              HorizentalLine(),
             ],
           ),
         ),

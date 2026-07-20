@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/daily_challenge_guide_line_1_screen.dart';
+import 'package:ielts/screens/daily_challenge_games_screen.dart';
 import 'package:ielts/widgets/back_quiz.dart';
 import 'package:ielts/widgets/button_primary.dart';
 
@@ -137,7 +137,7 @@ class DailyChallengeGuideLine2Screen extends StatelessWidget {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    DailyChallengeGuideLine1Screen(),
+                                    DailyChallengeGamesScreen(),
                               ),
                             );
                           },
@@ -145,7 +145,11 @@ class DailyChallengeGuideLine2Screen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 24),
-                      BackQuiz(onTap: () {}),
+                      BackQuiz(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
                       const SizedBox(height: 16),
                     ],
                   ),

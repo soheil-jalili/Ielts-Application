@@ -3,7 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/cafe_hopping_screen.dart';
 import 'package:ielts/screens/course_screen.dart';
+import 'package:ielts/screens/daily_challenge_guide_line_1_screen.dart';
+import 'package:ielts/screens/daily_checklist_screen.dart';
 import 'package:ielts/screens/home_screen.dart';
 import 'package:ielts/screens/profile_screen.dart';
 import 'package:ielts/screens/search_screen.dart';
@@ -172,7 +175,14 @@ class _MainScreenState extends State<MainScreen> {
                                     ),
                                   ),
                                   ListTile(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              DailyChecklistScreen(),
+                                        ),
+                                      );
+                                    },
                                     title: Text(
                                       'چک لیست روزانه',
                                       style: TextStyle(
@@ -183,7 +193,14 @@ class _MainScreenState extends State<MainScreen> {
                                     ),
                                   ),
                                   ListTile(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              CafeHoppingScreen(),
+                                        ),
+                                      );
+                                    },
                                     title: Text(
                                       'کافه سطح A2 انگلیسی',
                                       style: TextStyle(
@@ -257,7 +274,14 @@ class _MainScreenState extends State<MainScreen> {
                                     ),
                                   ),
                                   ListTile(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              DailyChallengeGuideLine1Screen(),
+                                        ),
+                                      );
+                                    },
                                     title: Text(
                                       'چالش های روزانه',
                                       style: TextStyle(

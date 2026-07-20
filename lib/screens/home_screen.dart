@@ -6,6 +6,10 @@ import 'package:ielts/extensions/string_extensions.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/models/skill_model.dart';
+import 'package:ielts/screens/cafe_main_screen.dart';
+import 'package:ielts/screens/course_detail_screen.dart';
+import 'package:ielts/screens/quiz_landing_screen.dart';
+import 'package:ielts/screens/teacher_screen.dart';
 import 'package:ielts/widgets/profile_avatar.dart';
 import 'package:ielts/widgets/student_and_learn_language.dart';
 import 'package:ielts/widgets/title_page.dart';
@@ -289,144 +293,153 @@ class VideoCourse extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: 3,
-        itemBuilder: (context, index) => Container(
-          margin: EdgeInsets.only(
-            right: index == 0 ? 16 : 0,
-            left: index == 2 ? 16 : 8.3,
-          ),
+        itemBuilder: (context, index) => GestureDetector(
+          onTap: () => Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (context) => CourseDetailScreen())),
+          child: Container(
+            margin: EdgeInsets.only(
+              right: index == 0 ? 16 : 0,
+              left: index == 2 ? 16 : 8.3,
+            ),
 
-          width: 307.7,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: Stack(
-              children: [
-                Image.asset(Assets.images.videoImage.path),
+            width: 307.7,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Stack(
+                children: [
+                  Image.asset(Assets.images.videoImage.path),
 
-                Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Color(0xff040415).withValues(alpha: 0.2),
-                        Color(0xff040415).withValues(alpha: 0.8),
-                      ],
-                    ),
-                  ),
-                ),
-
-                Positioned(
-                  top: 9,
-                  left: 8,
-                  child: Container(
-                    width: 65,
-                    height: 28,
+                  Container(
                     decoration: BoxDecoration(
-                      color: AppColors.videoCourseTimeLineBackground,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: Text(
-                        '12:45',
-                        style: TextStyle(
-                          fontFamily: FontFamily.iranSansXBold,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-
-                Positioned(
-                  bottom: 11.94,
-                  right: 11.79,
-                  left: 13,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'زمان گذشته استمراری',
-                        style: TextStyle(
-                          fontFamily: FontFamily.iranSansXBold,
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            'سطح: مبتدی',
-                            style: TextStyle(
-                              color: AppColors.videoCourseLevel,
-                              fontFamily: FontFamily.iranSansXMedium,
-                              fontSize: 13,
-                            ),
-                          ),
-                          Spacer(),
-                          Text(
-                            '4.3K',
-                            style: TextStyle(
-                              fontFamily: FontFamily.iranSansXBold,
-                              fontSize: 12,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(width: 1),
-                          Text(
-                            'بازید',
-                            style: TextStyle(
-                              fontFamily: FontFamily.iranSansXMedium,
-                              fontSize: 8,
-                              color: Colors.white,
-                            ),
-                          ),
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(0xff040415).withValues(alpha: 0.2),
+                          Color(0xff040415).withValues(alpha: 0.8),
                         ],
                       ),
+                    ),
+                  ),
 
-                      Padding(
-                        padding: EdgeInsets.only(top: 7),
-                        child: Row(
+                  Positioned(
+                    top: 9,
+                    left: 8,
+                    child: Container(
+                      width: 65,
+                      height: 28,
+                      decoration: BoxDecoration(
+                        color: AppColors.videoCourseTimeLineBackground,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          '12:45',
+                          style: TextStyle(
+                            fontFamily: FontFamily.iranSansXBold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  Positioned(
+                    bottom: 11.94,
+                    right: 11.79,
+                    left: 13,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'زمان گذشته استمراری',
+                          style: TextStyle(
+                            fontFamily: FontFamily.iranSansXBold,
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Row(
                           children: [
-                            ...List.generate(
-                              5,
-                              (index) => index == 4
-                                  ? Image.asset(
-                                      Assets.images.starColorless.path,
-                                    )
-                                  : Padding(
-                                      padding: EdgeInsets.only(
-                                        left: index == 4 ? 0 : 4,
-                                      ),
-                                      child: Image.asset(
-                                        Assets.images.starFill.path,
-                                      ),
-                                    ),
+                            Text(
+                              'سطح: مبتدی',
+                              style: TextStyle(
+                                color: AppColors.videoCourseLevel,
+                                fontFamily: FontFamily.iranSansXMedium,
+                                fontSize: 13,
+                              ),
                             ),
                             Spacer(),
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              physics: const BouncingScrollPhysics(),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: List.generate(skills.length, (index) {
-                                  final skillName = skills[index];
-
-                                  return Padding(
-                                    padding: EdgeInsets.only(
-                                      left: index == skills.length - 1 ? 0 : 4,
-                                    ),
-                                    child: SkillBadge(skill: skillName),
-                                  );
-                                }),
+                            Text(
+                              '4.3K',
+                              style: TextStyle(
+                                fontFamily: FontFamily.iranSansXBold,
+                                fontSize: 12,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(width: 1),
+                            Text(
+                              'بازید',
+                              style: TextStyle(
+                                fontFamily: FontFamily.iranSansXMedium,
+                                fontSize: 8,
+                                color: Colors.white,
                               ),
                             ),
                           ],
                         ),
-                      ),
-                    ],
+
+                        Padding(
+                          padding: EdgeInsets.only(top: 7),
+                          child: Row(
+                            children: [
+                              ...List.generate(
+                                5,
+                                (index) => index == 4
+                                    ? Image.asset(
+                                        Assets.images.starColorless.path,
+                                      )
+                                    : Padding(
+                                        padding: EdgeInsets.only(
+                                          left: index == 4 ? 0 : 4,
+                                        ),
+                                        child: Image.asset(
+                                          Assets.images.starFill.path,
+                                        ),
+                                      ),
+                              ),
+                              Spacer(),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                physics: const BouncingScrollPhysics(),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: List.generate(skills.length, (
+                                    index,
+                                  ) {
+                                    final skillName = skills[index];
+
+                                    return Padding(
+                                      padding: EdgeInsets.only(
+                                        left: index == skills.length - 1
+                                            ? 0
+                                            : 4,
+                                      ),
+                                      child: SkillBadge(skill: skillName),
+                                    );
+                                  }),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
@@ -448,192 +461,203 @@ class CafeSection extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         itemCount: 3,
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => Container(
-          margin: EdgeInsets.only(right: index == 0 ? 22 : 0, left: 11),
-          width: 255,
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                offset: Offset(0, 4),
-                blurRadius: 4,
-                spreadRadius: 0,
-                color: Colors.black.withValues(alpha: 0.06),
-              ),
-            ],
-            gradient: RadialGradient(
-              center: Alignment.bottomRight,
-              radius: 1,
-              colors: index == 1
-                  ? AppColors.profileTwoColor
-                  : AppColors.profileOneColor,
-            ),
-            borderRadius: BorderRadius.circular(16),
-          ),
-
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(12, 8, 11, 0),
-            child: Column(
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'کافه ایتالیایی ها',
-                          style: TextStyle(
-                            fontFamily: FontFamily.iranSansXBold,
-                            fontSize: 13,
-                            color: AppColors.primaryTextColor,
-                          ),
-                        ),
-                        SizedBox(height: 3),
-                        Row(
-                          children: [
-                            Image.asset(
-                              Assets.images.lamp.path,
-                              width: 14,
-                              height: 14,
-                            ),
-                            Text(
-                              'اینجا میتونی با دوستای جدید آنلاین صحبت کنی',
-                              style: TextStyle(
-                                fontFamily: FontFamily.iranSansXRegular,
-                                fontSize: 8,
-                                color: AppColors.secondaryTextColor,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Spacer(),
-                    ClipRRect(
-                      borderRadius: BorderRadiusGeometry.circular(1000),
-
-                      child: Image.asset(
-                        Assets.images.italy.path,
-                        width: 33,
-                        height: 33,
-                      ),
-                    ),
-                  ],
+        itemBuilder: (context, index) => GestureDetector(
+          onTap: () => Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (context) => CafeMainScreen())),
+          child: Container(
+            margin: EdgeInsets.only(right: index == 0 ? 22 : 0, left: 11),
+            width: 255,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0, 4),
+                  blurRadius: 4,
+                  spreadRadius: 0,
+                  color: Colors.black.withValues(alpha: 0.06),
                 ),
+              ],
+              gradient: RadialGradient(
+                center: Alignment.bottomRight,
+                radius: 1,
+                colors: index == 1
+                    ? AppColors.profileTwoColor
+                    : AppColors.profileOneColor,
+              ),
+              borderRadius: BorderRadius.circular(16),
+            ),
 
-                SizedBox(height: 27),
-                Row(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          width: 0.7,
-                          color: AppColors.strokeProfileColor,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(12, 8, 11, 0),
+              child: Column(
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'کافه ایتالیایی ها',
+                            style: TextStyle(
+                              fontFamily: FontFamily.iranSansXBold,
+                              fontSize: 13,
+                              color: AppColors.primaryTextColor,
+                            ),
+                          ),
+                          SizedBox(height: 3),
+                          Row(
+                            children: [
+                              Image.asset(
+                                Assets.images.lamp.path,
+                                width: 14,
+                                height: 14,
+                              ),
+                              Text(
+                                'اینجا میتونی با دوستای جدید آنلاین صحبت کنی',
+                                style: TextStyle(
+                                  fontFamily: FontFamily.iranSansXRegular,
+                                  fontSize: 8,
+                                  color: AppColors.secondaryTextColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      ClipRRect(
+                        borderRadius: BorderRadiusGeometry.circular(1000),
+
+                        child: Image.asset(
+                          Assets.images.italy.path,
+                          width: 33,
+                          height: 33,
                         ),
                       ),
-                      child: Image.asset(
-                        Assets.images.profile1.path,
-                        width: 26,
-                        height: 26,
-                      ),
-                    ),
+                    ],
+                  ),
 
-                    SizedBox(width: 4),
-
-                    Text(
-                      'کافه من:',
-                      style: TextStyle(
-                        fontFamily: FontFamily.iranSansXRegular,
-                        fontSize: 8,
-                        color: Colors.black,
+                  SizedBox(height: 27),
+                  Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            width: 0.7,
+                            color: AppColors.strokeProfileColor,
+                          ),
+                        ),
+                        child: Image.asset(
+                          Assets.images.profile1.path,
+                          width: 26,
+                          height: 26,
+                        ),
                       ),
-                    ),
-                    SizedBox(width: 1),
-                    Text(
-                      'Alessandro',
-                      style: TextStyle(
-                        fontFamily: FontFamily.gilroyMedium,
-                        fontSize: 8,
-                        color: Colors.black,
-                      ),
-                    ),
 
-                    Spacer(),
-                    SizedBox(
-                      height: 24,
-                      width: 72,
-                      child: Stack(
-                        alignment: Alignment.centerRight,
-                        children: [
-                          Positioned(
-                            right: 42,
-                            child: Container(
-                              width: 24,
-                              height: 24,
-                              decoration: BoxDecoration(shape: BoxShape.circle),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.asset(Assets.images.pic4.path),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            right: 28,
-                            child: Container(
-                              width: 24,
-                              height: 24,
-                              decoration: BoxDecoration(shape: BoxShape.circle),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.asset(Assets.images.pic2.path),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            right: 14,
-                            child: Container(
-                              width: 24,
-                              height: 24,
-                              decoration: BoxDecoration(shape: BoxShape.circle),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.asset(Assets.images.pic1.path),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            right: 0,
-                            child: Container(
-                              width: 24,
-                              height: 24,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                  width: 1,
-                                  color: Colors.white,
+                      SizedBox(width: 4),
+
+                      Text(
+                        'کافه من:',
+                        style: TextStyle(
+                          fontFamily: FontFamily.iranSansXRegular,
+                          fontSize: 8,
+                          color: Colors.black,
+                        ),
+                      ),
+                      SizedBox(width: 1),
+                      Text(
+                        'Alessandro',
+                        style: TextStyle(
+                          fontFamily: FontFamily.gilroyMedium,
+                          fontSize: 8,
+                          color: Colors.black,
+                        ),
+                      ),
+
+                      Spacer(),
+                      SizedBox(
+                        height: 24,
+                        width: 72,
+                        child: Stack(
+                          alignment: Alignment.centerRight,
+                          children: [
+                            Positioned(
+                              right: 42,
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
                                 ),
-                                color: AppColors.fillProfileColor,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(12),
+                                  child: Image.asset(Assets.images.pic4.path),
+                                ),
                               ),
-                              child: Center(
-                                child: Text(
-                                  '+16',
-                                  textDirection: TextDirection.ltr,
-                                  style: TextStyle(
+                            ),
+                            Positioned(
+                              right: 28,
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(12),
+                                  child: Image.asset(Assets.images.pic2.path),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              right: 14,
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(12),
+                                  child: Image.asset(Assets.images.pic1.path),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              right: 0,
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    width: 1,
                                     color: Colors.white,
-                                    fontSize: 8,
-                                    fontFamily: FontFamily.iranSansXBold,
+                                  ),
+                                  color: AppColors.fillProfileColor,
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '+16',
+                                    textDirection: TextDirection.ltr,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 8,
+                                      fontFamily: FontFamily.iranSansXBold,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -823,32 +847,37 @@ class Course extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: 24,
-                height: 24,
-                decoration: BoxDecoration(shape: BoxShape.circle),
-                child: Image.asset(Assets.images.profileCard.path),
-              ),
-              SizedBox(width: 4.5),
-              Text(
-                'مدرس',
-                style: TextStyle(
-                  fontFamily: FontFamily.iranSansXRegular,
-                  fontSize: 10,
+          GestureDetector(
+            onTap: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => TeacherScreen())),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 24,
+                  height: 24,
+                  decoration: BoxDecoration(shape: BoxShape.circle),
+                  child: Image.asset(Assets.images.profileCard.path),
                 ),
-              ),
-              SizedBox(width: 4),
-              Text(
-                'علی تقوی',
-                style: TextStyle(
-                  fontFamily: FontFamily.iranSansXExtraBlack,
-                  fontSize: 10,
+                SizedBox(width: 4.5),
+                Text(
+                  'مدرس',
+                  style: TextStyle(
+                    fontFamily: FontFamily.iranSansXRegular,
+                    fontSize: 10,
+                  ),
                 ),
-              ),
-            ],
+                SizedBox(width: 4),
+                Text(
+                  'علی تقوی',
+                  style: TextStyle(
+                    fontFamily: FontFamily.iranSansXExtraBlack,
+                    fontSize: 10,
+                  ),
+                ),
+              ],
+            ),
           ),
           SizedBox(height: 10),
           Row(
@@ -1229,27 +1258,35 @@ class FreeCourse extends StatelessWidget {
                                         ),
                                       ),
                                       const SizedBox(width: 4),
-                                      Text.rich(
-                                        TextSpan(
-                                          children: [
-                                            TextSpan(
-                                              text: 'مدرس:',
-                                              style: TextStyle(
-                                                fontSize: 8,
-                                                fontFamily:
-                                                    FontFamily.iranSansXRegular,
+                                      GestureDetector(
+                                        onTap: () => Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                TeacherScreen(),
+                                          ),
+                                        ),
+                                        child: Text.rich(
+                                          TextSpan(
+                                            children: [
+                                              TextSpan(
+                                                text: 'مدرس:',
+                                                style: TextStyle(
+                                                  fontSize: 8,
+                                                  fontFamily: FontFamily
+                                                      .iranSansXRegular,
+                                                ),
                                               ),
-                                            ),
-                                            const TextSpan(text: ' '),
-                                            TextSpan(
-                                              text: 'نسترن محمدی',
-                                              style: TextStyle(
-                                                fontSize: 8,
-                                                fontFamily:
-                                                    FontFamily.iranSansXBold,
+                                              const TextSpan(text: ' '),
+                                              TextSpan(
+                                                text: 'نسترن محمدی',
+                                                style: TextStyle(
+                                                  fontSize: 8,
+                                                  fontFamily:
+                                                      FontFamily.iranSansXBold,
+                                                ),
                                               ),
-                                            ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -1415,7 +1452,13 @@ class HomeBanner extends StatelessWidget {
                     SizedBox(height: 27.88),
 
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => QuizLandingScreen(),
+                          ),
+                        );
+                      },
                       child: Container(
                         margin: const EdgeInsets.only(right: 43.65),
                         width: 86,
@@ -1652,24 +1695,31 @@ class CourseBox extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text.rich(
-                          TextSpan(
-                            children: [
-                              TextSpan(
-                                text: "مدرس: ",
-                                style: TextStyle(
-                                  fontFamily: FontFamily.iranSansXRegular,
-                                  fontSize: 12,
+                        GestureDetector(
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => TeacherScreen(),
+                            ),
+                          ),
+                          child: Text.rich(
+                            TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: "مدرس: ",
+                                  style: TextStyle(
+                                    fontFamily: FontFamily.iranSansXRegular,
+                                    fontSize: 12,
+                                  ),
                                 ),
-                              ),
-                              TextSpan(
-                                text: "نسیم موسوی",
-                                style: TextStyle(
-                                  fontFamily: FontFamily.iranSansXBlack,
-                                  fontSize: 12,
+                                TextSpan(
+                                  text: "نسیم موسوی",
+                                  style: TextStyle(
+                                    fontFamily: FontFamily.iranSansXBlack,
+                                    fontSize: 12,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         SizedBox(height: 3),

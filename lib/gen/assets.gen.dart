@@ -330,10 +330,6 @@ class $AssetsImagesGen {
   AssetGenImage get mojAvatar =>
       const AssetGenImage('assets/images/moj-avatar.png');
 
-  /// File path: assets/images/moj-avatar2.png
-  AssetGenImage get mojAvatar2 =>
-      const AssetGenImage('assets/images/moj-avatar2.png');
-
   /// File path: assets/images/not-found.svg
   String get notFound => 'assets/images/not-found.svg';
 
@@ -660,7 +656,6 @@ class $AssetsImagesGen {
     logout,
     mic,
     mojAvatar,
-    mojAvatar2,
     notFound,
     onboarding1,
     onboarding2,

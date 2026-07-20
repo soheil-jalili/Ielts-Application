@@ -4,6 +4,7 @@ import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/screens/login_screen.dart';
+import 'package:ielts/screens/make_account_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/horizental_line.dart';
 import 'package:ielts/widgets/login_with.dart';
@@ -37,7 +38,9 @@ class _SignupScreenState extends State<SignupScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 12, left: 16),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -151,7 +154,16 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                           SizedBox(height: 10),
 
-                          ButtonPrimary(title: 'ورود', onPressed: () {}),
+                          ButtonPrimary(
+                            title: 'ورود',
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => MakeAccountScreen(),
+                                ),
+                              );
+                            },
+                          ),
                           SizedBox(height: 16),
 
                           Row(
