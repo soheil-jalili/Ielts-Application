@@ -9,14 +9,14 @@ import 'package:ielts/widgets/title_and_back.dart';
 import 'package:ielts/widgets/title_icon.dart';
 import 'package:ielts/widgets/user_comment.dart';
 
-class DailyGameDetailsScreen extends StatefulWidget {
-  const DailyGameDetailsScreen({super.key});
+class DailyGameDetailScreen extends StatefulWidget {
+  const DailyGameDetailScreen({super.key});
 
   @override
-  State<DailyGameDetailsScreen> createState() => _DailyGameDetailsScreenState();
+  State<DailyGameDetailScreen> createState() => _DailyGameDetailScreenState();
 }
 
-class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
+class _DailyGameDetailScreenState extends State<DailyGameDetailScreen> {
   int selectedIndex = 0;
 
   @override
@@ -25,7 +25,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: AppColors.scaffoldColor2,
-      
+
         body: SafeArea(
           bottom: false,
           child: CustomScrollView(
@@ -42,7 +42,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                   ),
                 ),
               ),
-      
+
               SliverPadding(
                 padding: EdgeInsets.only(bottom: 24, right: 20, left: 20),
                 sliver: SliverToBoxAdapter(
@@ -54,15 +54,17 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                       color: AppColors.primary400Color,
                       borderRadius: BorderRadius.circular(16),
                     ),
-      
+
                     child: Stack(
                       children: [
                         Positioned(
                           bottom: 0,
                           left: 0,
-                          child: SvgPicture.asset(Assets.images.shapeGameDetails),
+                          child: SvgPicture.asset(
+                            Assets.images.shapeGameDetails,
+                          ),
                         ),
-      
+
                         Positioned(
                           bottom: 0,
                           left: 0,
@@ -70,7 +72,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                             Assets.images.controllerGameDetails.path,
                           ),
                         ),
-      
+
                         Positioned.fill(
                           child: Padding(
                             padding: const EdgeInsets.only(right: 24, top: 24),
@@ -103,7 +105,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                   ),
                 ),
               ),
-      
+
               SliverPadding(
                 padding: EdgeInsets.symmetric(horizontal: 40),
                 sliver: SliverToBoxAdapter(
@@ -118,7 +120,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                   ),
                 ),
               ),
-      
+
               if (selectedIndex == 0) ...{
                 SliverToBoxAdapter(
                   child: Column(
@@ -137,7 +139,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                         ),
                       ),
                       SizedBox(height: 16),
-      
+
                       Padding(
                         padding: const EdgeInsets.only(right: 20, left: 20),
                         child: Text(
@@ -161,7 +163,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                           ),
                         ),
                       ),
-      
+
                       SizedBox(height: 56),
                       Padding(
                         padding: const EdgeInsets.only(right: 10, left: 10),
@@ -308,8 +310,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: AppColors.secondary900Color,
-                                      fontFamily:
-                                          FontFamily.iranSansXRegularWithoutFaNum,
+                                      fontFamily: FontFamily
+                                          .iranSansXRegularWithoutFaNum,
                                       fontSize: 15.16,
                                     ),
                                   ),
@@ -327,12 +329,14 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
-                                            fontFamily: FontFamily.iranSansXBold,
+                                            fontFamily:
+                                                FontFamily.iranSansXBold,
                                             color: AppColors.secondary900Color,
                                           ),
                                         ),
                                         WidgetSpan(
-                                          alignment: PlaceholderAlignment.middle,
+                                          alignment:
+                                              PlaceholderAlignment.middle,
                                           child: Text(
                                             'تخفیف',
                                             style: TextStyle(
@@ -340,7 +344,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                               fontWeight: FontWeight.normal,
                                               fontFamily:
                                                   FontFamily.iranSansXRegular,
-                                              color: AppColors.secondary900Color,
+                                              color:
+                                                  AppColors.secondary900Color,
                                             ),
                                           ),
                                         ),
@@ -361,8 +366,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: AppColors.secondary900Color,
-                                      fontFamily:
-                                          FontFamily.iranSansXRegularWithoutFaNum,
+                                      fontFamily: FontFamily
+                                          .iranSansXRegularWithoutFaNum,
                                       fontSize: 15.16,
                                     ),
                                   ),
@@ -380,12 +385,14 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
-                                            fontFamily: FontFamily.iranSansXBold,
+                                            fontFamily:
+                                                FontFamily.iranSansXBold,
                                             color: AppColors.secondary900Color,
                                           ),
                                         ),
                                         WidgetSpan(
-                                          alignment: PlaceholderAlignment.middle,
+                                          alignment:
+                                              PlaceholderAlignment.middle,
                                           child: Text(
                                             'تخفیف',
                                             style: TextStyle(
@@ -393,7 +400,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                               fontWeight: FontWeight.normal,
                                               fontFamily:
                                                   FontFamily.iranSansXRegular,
-                                              color: AppColors.secondary900Color,
+                                              color:
+                                                  AppColors.secondary900Color,
                                             ),
                                           ),
                                         ),
@@ -414,8 +422,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: AppColors.secondary900Color,
-                                      fontFamily:
-                                          FontFamily.iranSansXRegularWithoutFaNum,
+                                      fontFamily: FontFamily
+                                          .iranSansXRegularWithoutFaNum,
                                       fontSize: 15.16,
                                     ),
                                   ),
@@ -433,12 +441,14 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
-                                            fontFamily: FontFamily.iranSansXBold,
+                                            fontFamily:
+                                                FontFamily.iranSansXBold,
                                             color: AppColors.secondary900Color,
                                           ),
                                         ),
                                         WidgetSpan(
-                                          alignment: PlaceholderAlignment.middle,
+                                          alignment:
+                                              PlaceholderAlignment.middle,
                                           child: Text(
                                             'تخفیف',
                                             style: TextStyle(
@@ -446,7 +456,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                               fontWeight: FontWeight.normal,
                                               fontFamily:
                                                   FontFamily.iranSansXRegular,
-                                              color: AppColors.secondary900Color,
+                                              color:
+                                                  AppColors.secondary900Color,
                                             ),
                                           ),
                                         ),
@@ -471,8 +482,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: AppColors.secondary900Color,
-                                      fontFamily:
-                                          FontFamily.iranSansXRegularWithoutFaNum,
+                                      fontFamily: FontFamily
+                                          .iranSansXRegularWithoutFaNum,
                                       fontSize: 15.16,
                                     ),
                                   ),
@@ -490,12 +501,14 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
-                                            fontFamily: FontFamily.iranSansXBold,
+                                            fontFamily:
+                                                FontFamily.iranSansXBold,
                                             color: AppColors.secondary900Color,
                                           ),
                                         ),
                                         WidgetSpan(
-                                          alignment: PlaceholderAlignment.middle,
+                                          alignment:
+                                              PlaceholderAlignment.middle,
                                           child: Text(
                                             'تخفیف',
                                             style: TextStyle(
@@ -503,7 +516,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                               fontWeight: FontWeight.normal,
                                               fontFamily:
                                                   FontFamily.iranSansXRegular,
-                                              color: AppColors.secondary900Color,
+                                              color:
+                                                  AppColors.secondary900Color,
                                             ),
                                           ),
                                         ),
@@ -524,9 +538,9 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: AppColors.secondary900Color,
-                                      fontFamily:
-                                          FontFamily.iranSansXRegularWithoutFaNum,
-      
+                                      fontFamily: FontFamily
+                                          .iranSansXRegularWithoutFaNum,
+
                                       fontSize: 15.16,
                                     ),
                                   ),
@@ -544,12 +558,14 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
-                                            fontFamily: FontFamily.iranSansXBold,
+                                            fontFamily:
+                                                FontFamily.iranSansXBold,
                                             color: AppColors.secondary900Color,
                                           ),
                                         ),
                                         WidgetSpan(
-                                          alignment: PlaceholderAlignment.middle,
+                                          alignment:
+                                              PlaceholderAlignment.middle,
                                           child: Text(
                                             'تخفیف',
                                             style: TextStyle(
@@ -557,7 +573,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                               fontWeight: FontWeight.normal,
                                               fontFamily:
                                                   FontFamily.iranSansXRegular,
-                                              color: AppColors.secondary900Color,
+                                              color:
+                                                  AppColors.secondary900Color,
                                             ),
                                           ),
                                         ),
@@ -595,12 +612,14 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
-                                            fontFamily: FontFamily.iranSansXBold,
+                                            fontFamily:
+                                                FontFamily.iranSansXBold,
                                             color: AppColors.secondary900Color,
                                           ),
                                         ),
                                         WidgetSpan(
-                                          alignment: PlaceholderAlignment.middle,
+                                          alignment:
+                                              PlaceholderAlignment.middle,
                                           child: Text(
                                             'تخفیف',
                                             style: TextStyle(
@@ -608,7 +627,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                               fontWeight: FontWeight.normal,
                                               fontFamily:
                                                   FontFamily.iranSansXRegular,
-                                              color: AppColors.secondary900Color,
+                                              color:
+                                                  AppColors.secondary900Color,
                                             ),
                                           ),
                                         ),
@@ -633,8 +653,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: AppColors.secondary900Color,
-                                      fontFamily:
-                                          FontFamily.iranSansXRegularWithoutFaNum,
+                                      fontFamily: FontFamily
+                                          .iranSansXRegularWithoutFaNum,
                                       fontSize: 15.16,
                                     ),
                                   ),
@@ -652,12 +672,14 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
-                                            fontFamily: FontFamily.iranSansXBold,
+                                            fontFamily:
+                                                FontFamily.iranSansXBold,
                                             color: AppColors.secondary900Color,
                                           ),
                                         ),
                                         WidgetSpan(
-                                          alignment: PlaceholderAlignment.middle,
+                                          alignment:
+                                              PlaceholderAlignment.middle,
                                           child: Text(
                                             'تخفیف',
                                             style: TextStyle(
@@ -665,7 +687,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                               fontWeight: FontWeight.normal,
                                               fontFamily:
                                                   FontFamily.iranSansXRegular,
-                                              color: AppColors.secondary900Color,
+                                              color:
+                                                  AppColors.secondary900Color,
                                             ),
                                           ),
                                         ),
@@ -686,8 +709,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: AppColors.secondary900Color,
-                                      fontFamily:
-                                          FontFamily.iranSansXRegularWithoutFaNum,
+                                      fontFamily: FontFamily
+                                          .iranSansXRegularWithoutFaNum,
                                       fontSize: 15.16,
                                     ),
                                   ),
@@ -705,12 +728,14 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
-                                            fontFamily: FontFamily.iranSansXBold,
+                                            fontFamily:
+                                                FontFamily.iranSansXBold,
                                             color: AppColors.secondary900Color,
                                           ),
                                         ),
                                         WidgetSpan(
-                                          alignment: PlaceholderAlignment.middle,
+                                          alignment:
+                                              PlaceholderAlignment.middle,
                                           child: Text(
                                             'تخفیف',
                                             style: TextStyle(
@@ -718,7 +743,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                               fontWeight: FontWeight.normal,
                                               fontFamily:
                                                   FontFamily.iranSansXRegular,
-                                              color: AppColors.secondary900Color,
+                                              color:
+                                                  AppColors.secondary900Color,
                                             ),
                                           ),
                                         ),
@@ -739,8 +765,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: AppColors.secondary900Color,
-                                      fontFamily:
-                                          FontFamily.iranSansXRegularWithoutFaNum,
+                                      fontFamily: FontFamily
+                                          .iranSansXRegularWithoutFaNum,
                                       fontSize: 15.16,
                                     ),
                                   ),
@@ -758,12 +784,14 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
-                                            fontFamily: FontFamily.iranSansXBold,
+                                            fontFamily:
+                                                FontFamily.iranSansXBold,
                                             color: AppColors.secondary900Color,
                                           ),
                                         ),
                                         WidgetSpan(
-                                          alignment: PlaceholderAlignment.middle,
+                                          alignment:
+                                              PlaceholderAlignment.middle,
                                           child: Text(
                                             'تخفیف',
                                             style: TextStyle(
@@ -771,7 +799,8 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                                               fontWeight: FontWeight.normal,
                                               fontFamily:
                                                   FontFamily.iranSansXRegular,
-                                              color: AppColors.secondary900Color,
+                                              color:
+                                                  AppColors.secondary900Color,
                                             ),
                                           ),
                                         ),
@@ -787,7 +816,7 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                           ],
                         ),
                       ),
-      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(55, 64, 55, 40),
                         child: ButtonPrimary(
@@ -801,7 +830,11 @@ class _DailyGameDetailsScreenState extends State<DailyGameDetailsScreen> {
                 ),
               } else if (selectedIndex == 1) ...{
                 SliverPadding(
-                  padding: EdgeInsetsGeometry.only(right: 20, left: 20, top: 35),
+                  padding: EdgeInsetsGeometry.only(
+                    right: 20,
+                    left: 20,
+                    top: 35,
+                  ),
                   sliver: UserComment(),
                 ),
               },

@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
-import 'package:ielts/screens/daily_game_details_screen.dart';
+import 'package:ielts/screens/daily_game_detail_screen.dart';
 import 'package:ielts/widgets/button_secondary.dart';
 import 'package:ielts/widgets/title_and_back.dart';
 
@@ -42,7 +42,7 @@ class DailyGamesListScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => DailyGameDetailsScreen(),
+                              builder: (context) => DailyGameDetailScreen(),
                             ),
                           );
                         },
@@ -65,7 +65,7 @@ class DailyGamesListScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => DailyGameDetailsScreen(),
+                              builder: (context) => DailyGameDetailScreen(),
                             ),
                           );
                         },
@@ -85,7 +85,7 @@ class DailyGamesListScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => DailyGameDetailsScreen(),
+                              builder: (context) => DailyGameDetailScreen(),
                             ),
                           );
                         },
@@ -109,7 +109,7 @@ class DailyGamesListScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => DailyGameDetailsScreen(),
+                              builder: (context) => DailyGameDetailScreen(),
                             ),
                           );
                         },

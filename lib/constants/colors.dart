@@ -9,6 +9,8 @@ class AppColors {
   static Color scaffoldColor4 = const Color(0xffFCFCFC).withValues(alpha: 0.95);
 
   static const Color primaryColor = Color(0xffFFA31A);
+  static const Color primary500Color = Color(0xffFFA31A);
+  static const Color primary50Color = Color(0xffFFFBEA);
   static Color primaryLightColor = Color(0xffFAA224).withAlpha(20);
   static Color primaryLightWithoutAlphaColor = Color(0xffFAA224);
   static Color primaryLight2Color = Color(0xffFA9E25);
@@ -34,6 +36,9 @@ class AppColors {
   static const Color quaternaryTextColor = Color.fromRGBO(0, 0, 0, 0.80);
   static const Color black20Color = Color.fromRGBO(0, 0, 0, 0.20);
   static const Color black40Color = Color.fromRGBO(0, 0, 0, 0.40);
+  static const Color black950Color = Color(0xff0F0F0F);
+
+
 
   static const Color greenColor = Color(0xff37E353);
   static const Color greenDarkerColor = Color(0xff21BA3A);
@@ -303,6 +308,14 @@ class AppColors {
 
   // Cafe Main Screen
   static Color cafeBtnIntroColor = const Color(0xffF6F6F6);
+
+  // Daily Checklist details
+  static Color dailyChecklistDetailContainerShadowColor = Color(
+    0xff7090B0,
+  ).withAlpha(20);
+  static Color dailyChecklistDetailContainerBackgroundColor = const Color(0xffF6F6F9);
+  static Color dailyChecklistDetailCheckBoxBackgroundColor = const Color(0xffE9EAF0);
+  static Color dailyChecklistDetailContainerDetailBackgroundColor = const Color(0xffF2F1F3);
 
   // Drawer
   static Color logoutTextDrawerColor = const Color(0xffFF1D1D);

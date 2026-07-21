@@ -515,6 +515,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/three.png
   AssetGenImage get three => const AssetGenImage('assets/images/three.png');
 
+  /// File path: assets/images/tick.svg
+  String get tick => 'assets/images/tick.svg';
+
   /// File path: assets/images/time.png
   AssetGenImage get time => const AssetGenImage('assets/images/time.png');
 
@@ -713,6 +716,7 @@ class $AssetsImagesGen {
     student,
     support,
     three,
+    tick,
     time,
     topArrow,
     trash,

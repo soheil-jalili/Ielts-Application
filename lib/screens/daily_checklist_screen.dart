@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/screens/daily_checklist_detail_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
 import 'package:ielts/widgets/title_icon.dart';
 
@@ -105,7 +106,9 @@ class DailyChecklistScreen extends StatelessWidget {
                                 padding: EdgeInsets.symmetric(horizontal: 59),
                                 child: ButtonPrimary(
                                   title: 'بزن بریم!',
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => DailyChecklistDetailScreen(),));
+                                  },
                                 ),
                               ),
                             ],
