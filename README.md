@@ -1,2 +1,2 @@
 # Ielts Application
-![cover of app](cover.jpg)
+![cover of app](./assets/images/cover.jpg)
