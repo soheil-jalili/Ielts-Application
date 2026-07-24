@@ -1,13 +1,33 @@
 import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ielts/constants/colors.dart';
 import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
+import 'package:ielts/widgets/date_picker_overlay.dart';
 import 'package:ielts/widgets/title_icon.dart';
+import 'package:shamsi_date/shamsi_date.dart';
 
-class DailyChecklistDetailScreen extends StatelessWidget {
+class DailyChecklistDetailScreen extends StatefulWidget {
   const DailyChecklistDetailScreen({super.key});
+
+  @override
+  State<DailyChecklistDetailScreen> createState() =>
+      _DailyChecklistDetailScreenState();
+}
+
+class _DailyChecklistDetailScreenState
+    extends State<DailyChecklistDetailScreen> {
+  late Jalali _todayDate;
+  late Jalali _tomorrowDate;
+
+  @override
+  void initState() {
+    super.initState();
+    _todayDate = Jalali.now();
+    _tomorrowDate = Jalali.now().addDays(1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,22 +50,13 @@ class DailyChecklistDetailScreen extends StatelessWidget {
                         textColor: Colors.black,
                       ),
                       const Spacer(),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Row(
-                          children: [
-                            Text(
-                              'تاریخ :1403/02/16',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                                fontFamily: FontFamily.iranSansXRegular,
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            SvgPicture.asset(Assets.images.downDailyChecklist),
-                          ],
-                        ),
+                      DatePickerOverlay(
+                        initialDate: _todayDate,
+                        onDateSelected: (selectedDate) {
+                          setState(() {
+                            _todayDate = selectedDate;
+                          });
+                        },
                       ),
                     ],
                   ),
@@ -100,22 +111,13 @@ class DailyChecklistDetailScreen extends StatelessWidget {
                         textColor: Colors.black,
                       ),
                       const Spacer(),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Row(
-                          children: [
-                            Text(
-                              'تاریخ :1403/02/16',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                                fontFamily: FontFamily.iranSansXRegular,
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            SvgPicture.asset(Assets.images.downDailyChecklist),
-                          ],
-                        ),
+                      DatePickerOverlay(
+                        initialDate: _tomorrowDate,
+                        onDateSelected: (selectedDate) {
+                          setState(() {
+                            _tomorrowDate = selectedDate;
+                          });
+                        },
                       ),
                     ],
                   ),

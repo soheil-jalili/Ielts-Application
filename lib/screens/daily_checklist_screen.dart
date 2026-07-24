@@ -5,10 +5,19 @@ import 'package:ielts/gen/assets.gen.dart';
 import 'package:ielts/gen/fonts.gen.dart';
 import 'package:ielts/screens/daily_checklist_detail_screen.dart';
 import 'package:ielts/widgets/button_primary.dart';
+import 'package:ielts/widgets/date_picker_overlay.dart';
 import 'package:ielts/widgets/title_icon.dart';
+import 'package:shamsi_date/shamsi_date.dart';
 
-class DailyChecklistScreen extends StatelessWidget {
+class DailyChecklistScreen extends StatefulWidget {
   const DailyChecklistScreen({super.key});
+
+  @override
+  State<DailyChecklistScreen> createState() => _DailyChecklistScreenState();
+}
+
+class _DailyChecklistScreenState extends State<DailyChecklistScreen> {
+  Jalali _selectedDate = Jalali.now();
 
   @override
   Widget build(BuildContext context) {
@@ -31,22 +40,13 @@ class DailyChecklistScreen extends StatelessWidget {
                         textColor: Colors.black,
                       ),
                       Spacer(),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Row(
-                          children: [
-                            Text(
-                              'تاریخ :1403/02/16',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                                fontFamily: FontFamily.iranSansXRegular,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            SvgPicture.asset(Assets.images.downDailyChecklist),
-                          ],
-                        ),
+                      DatePickerOverlay(
+                        initialDate: _selectedDate,
+                        onDateSelected: (newDate) {
+                          setState(() {
+                            _selectedDate = newDate;
+                          });
+                        },
                       ),
                     ],
                   ),
@@ -97,7 +97,7 @@ class DailyChecklistScreen extends StatelessWidget {
                                     fontFamily: FontFamily.iranSansXMedium,
                                     fontSize: 18,
                                     color: Colors.black,
-                                    height: 1.2,
+                                    height: 1.444,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -107,7 +107,12 @@ class DailyChecklistScreen extends StatelessWidget {
                                 child: ButtonPrimary(
                                   title: 'بزن بریم!',
                                   onPressed: () {
-                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => DailyChecklistDetailScreen(),));
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            DailyChecklistDetailScreen(),
+                                      ),
+                                    );
                                   },
                                 ),
                               ),

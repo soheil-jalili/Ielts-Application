@@ -37,8 +37,7 @@ class AppColors {
   static const Color black20Color = Color.fromRGBO(0, 0, 0, 0.20);
   static const Color black40Color = Color.fromRGBO(0, 0, 0, 0.40);
   static const Color black950Color = Color(0xff0F0F0F);
-
-
+  static const Color overlayColor = Color.fromRGBO(0, 0, 0, 0.60);
 
   static const Color greenColor = Color(0xff37E353);
   static const Color greenDarkerColor = Color(0xff21BA3A);
@@ -236,6 +235,7 @@ class AppColors {
   // Time Up Dialog
   static Color borderInsideTimeUpDialogColor = Color(0xff9DA3BD);
   static Color primaryTimeUpDialogColor = Color(0xff858AAC);
+
   // Progress Bar Onboarding
   static Color progressBarBackgroundColor = Color(0xffFFFBEA);
 
@@ -243,6 +243,63 @@ class AppColors {
   static Color backgroundColorStudyAnalyticsStatusDialogBoxColor = Color(
     0xffF0F0F4,
   );
+
+  // Date Picker Overlay
+  static const Color datePickerOverlayHeaderColor = Color(0xFFFFA31A);
+  static const Color datePickerOverlaySelectedDayBg = Color(0xFFFFF2C5);
+  static const Color datePickerOverlayChoiceBtnText = Color(0xFF939393);
+  static const Color datePickerOverlayUnselectedDayBg = Color.fromRGBO(
+    0,
+    0,
+    0,
+    0.02,
+  );
+  static const Color datePickerOverlayFridayColor = Color(0xFFE81739);
+  static const Color datePickerOverlayDividerColor = Color.fromRGBO(
+    0,
+    0,
+    0,
+    0.30,
+  );
+  static const Color datePickerOverlayConfirmBtnBg = Color.fromARGB(
+    100,
+    246,
+    246,
+    249,
+  );
+  static const Color datePickerOverlayConfirmBtnText = Color(0xFF939393);
+  static const Color datePickerOverlayTodayBtnBg = Color(0xFFFFA31A);
+  static const Color datePickerOverlayTodayBtnText = Color(0xFFFFFFFF);
+  static const Color datePickerOverlayTextPrimary = Color.fromRGBO(
+    0,
+    0,
+    0,
+    0.60,
+  );
+  static const Color datePickerOverlayTextSecondary = Color.fromRGBO(
+    0,
+    0,
+    0,
+    0.50,
+  );
+  static const Color datePickerOverlayCardBg = Color(0xFFFCFCFC);
+
+  static const Color datePickerOverlayDayTextFirstHalf = Color.fromRGBO(
+    0,
+    0,
+    0,
+    0.40,
+  );
+  static const Color datePickerOverlayDayTextSecondHalf = Color.fromRGBO(
+    0,
+    0,
+    0,
+    0.70,
+  );
+
+  static const Color datePickerOverlayChoiceBtnContainer = Color(0xFFF0EFF5);
+  static const Color datePickerOverlayBg = Color.fromRGBO(0, 0, 0, 0.4);
+  static const Color datePickerOverlayShadowBox = Color.fromRGBO(0, 0, 0, 0.1);
 
   // Profile Screen
   static final Color achievementBoxShadowProfileScreenColor = const Color(
@@ -313,9 +370,15 @@ class AppColors {
   static Color dailyChecklistDetailContainerShadowColor = Color(
     0xff7090B0,
   ).withAlpha(20);
-  static Color dailyChecklistDetailContainerBackgroundColor = const Color(0xffF6F6F9);
-  static Color dailyChecklistDetailCheckBoxBackgroundColor = const Color(0xffE9EAF0);
-  static Color dailyChecklistDetailContainerDetailBackgroundColor = const Color(0xffF2F1F3);
+  static Color dailyChecklistDetailContainerBackgroundColor = const Color(
+    0xffF6F6F9,
+  );
+  static Color dailyChecklistDetailCheckBoxBackgroundColor = const Color(
+    0xffE9EAF0,
+  );
+  static Color dailyChecklistDetailContainerDetailBackgroundColor = const Color(
+    0xffF2F1F3,
+  );
 
   // Drawer
   static Color logoutTextDrawerColor = const Color(0xffFF1D1D);
